@@ -71,12 +71,14 @@ class _AuthThreePageState extends State<AuthThreePage> {
                   children: <Widget>[
                     const SizedBox(width: 10.0),
                     Expanded(
-                      child: RaisedButton(
-                        color: Colors.red,
-                        textColor: Colors.white,
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          foregroundColor: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
+                        ),
                         ),
                         child: Text("Login"),
                         onPressed: () {
@@ -89,12 +91,14 @@ class _AuthThreePageState extends State<AuthThreePage> {
                     ),
                     const SizedBox(width: 10.0),
                     Expanded(
-                      child: RaisedButton(
-                        color: Colors.grey.shade700,
-                        textColor: Colors.white,
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey.shade700,
+                          foregroundColor: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
+                        ),
                         ),
                         child: Text("Signup"),
                         onPressed: () {
@@ -109,12 +113,14 @@ class _AuthThreePageState extends State<AuthThreePage> {
                   ],
                 ),
                 const SizedBox(height: 40.0),
-                OutlineButton.icon(
-                  borderSide: BorderSide(color: Colors.red),
-                  color: Colors.red,
-                  textColor: Colors.white,
-                  shape: RoundedRectangleBorder(
+                OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(color: Colors.red),
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
+                  ),
                   ),
                   icon: Icon(FontAwesomeIcons.google),
                   label: Text("Continue with Google"),
@@ -137,15 +143,16 @@ class _AuthThreePageState extends State<AuthThreePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            RaisedButton(
-                              textColor: _formsIndex == 1
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                foregroundColor: _formsIndex == 1
                                   ? Colors.white
                                   : Colors.black,
-                              color:
-                                  _formsIndex == 1 ? Colors.red : Colors.white,
-                              child: Text("Login"),
-                              shape: RoundedRectangleBorder(
+                                backgroundColor: _formsIndex == 1 ? Colors.red : Colors.white,
+                                shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20.0)),
+                              ),
+                              child: Text("Login"),
                               onPressed: () {
                                 setState(() {
                                   _formsIndex = 1;
@@ -153,15 +160,16 @@ class _AuthThreePageState extends State<AuthThreePage> {
                               },
                             ),
                             const SizedBox(width: 10.0),
-                            RaisedButton(
-                              textColor: _formsIndex == 2
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                foregroundColor: _formsIndex == 2
                                   ? Colors.white
                                   : Colors.black,
-                              color:
-                                  _formsIndex == 2 ? Colors.red : Colors.white,
-                              child: Text("Signup"),
-                              shape: RoundedRectangleBorder(
+                                backgroundColor: _formsIndex == 2 ? Colors.red : Colors.white,
+                                shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20.0)),
+                              ),
+                              child: Text("Signup"),
                               onPressed: () {
                                 setState(() {
                                   _formsIndex = 2;
@@ -229,12 +237,14 @@ class LoginForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10.0),
-          RaisedButton(
-            color: Colors.red,
-            textColor: Colors.white,
-            elevation: 0,
-            shape: RoundedRectangleBorder(
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              foregroundColor: Colors.white,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
+            ),
             ),
             child: Text("Login"),
             onPressed: () {},
@@ -285,12 +295,14 @@ class SignupForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10.0),
-          RaisedButton(
-            color: Colors.red,
-            textColor: Colors.white,
-            elevation: 0,
-            shape: RoundedRectangleBorder(
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              foregroundColor: Colors.white,
+              elevation: 0,
+              shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
+            ),
             ),
             child: Text("Signup"),
             onPressed: () {},

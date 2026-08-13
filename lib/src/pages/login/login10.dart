@@ -71,12 +71,14 @@ class LoginTenPage extends StatelessWidget {
                           alignment: Alignment.centerRight,
                           child: Text("Forgot your Password?")),
                       const SizedBox(height: 20.0),
-                      RaisedButton(
-                        padding: const EdgeInsets.all(16.0),
-                        shape: RoundedRectangleBorder(
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0)),
-                        color: Colors.orange,
-                        textColor: Colors.white,
+                          backgroundColor: Colors.orange,
+                          foregroundColor: Colors.white,
+                        ),
                         onPressed: () {},
                         child: Text("Login"),
                       ),

@@ -111,8 +111,10 @@ class _InvitationAuthPageState extends State<InvitationAuthPage> {
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16.0,
                   ),
-                  child: OutlineButton.icon(
-                    padding: const EdgeInsets.all(16.0),
+                  child: OutlinedButton.icon(
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.all(16.0),
+                    ),
                     icon: Icon(FontAwesomeIcons.google,color: Colors.red,),
                     label: Text("Google"),
                     onPressed: () {},
@@ -161,11 +163,12 @@ class SignUp extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
               horizontal: 32.0,
             ),
-            child: RaisedButton(
-              elevation: 0,
-              highlightElevation: 0,
-              textColor: Colors.white,
-              color: Colors.pink,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                elevation: 0,
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.pink,
+              ),
               onPressed: (){},
               child: Text("Sign up"),
             ),
@@ -211,10 +214,11 @@ class SignIn extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
               horizontal: 32.0,
             ),
-            child: RaisedButton(
-              elevation: 0,
-              highlightElevation: 0,
-              textColor: Colors.white,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                elevation: 0,
+                foregroundColor: Colors.white,
+              ),
               onPressed: () => Navigator.pushNamed(context, 'home'),
               child: Text("Sign In"),
             ),

@@ -104,23 +104,27 @@ class QuizFinishedPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  RaisedButton(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
-                    shape: RoundedRectangleBorder(
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
+                      shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    color: Colors.pink.withOpacity(0.8),
-                    textColor: Colors.white,
+                      backgroundColor: Colors.pink.withOpacity(0.8),
+                      foregroundColor: Colors.white,
+                    ),
                     child: Text("Goto Home"),
                     onPressed: () => Navigator.pop(context),
                   ),
-                  RaisedButton(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
-                    shape: RoundedRectangleBorder(
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
+                      shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    color: Colors.deepPurple.withOpacity(0.8),
-                    textColor: Colors.white,
+                      backgroundColor: Colors.deepPurple.withOpacity(0.8),
+                      foregroundColor: Colors.white,
+                    ),
                     child: Text("Check Answers"),
                     onPressed: (){
                       Navigator.of(context).push(MaterialPageRoute(

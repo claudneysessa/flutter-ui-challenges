@@ -64,7 +64,7 @@ class _IntroSixPageState extends State<IntroSixPage> {
           ),
           Align(
             alignment: Alignment.bottomLeft,
-            child: FlatButton(
+            child: TextButton(
               child: Text("Skip"),
               onPressed: () {
                 Navigator.pop(context);

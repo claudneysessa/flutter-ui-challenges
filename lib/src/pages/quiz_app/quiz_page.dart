@@ -101,12 +101,14 @@ class _QuizPageState extends State<QuizPage> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.bottomCenter,
-                      child: RaisedButton(
-                        shape: RoundedRectangleBorder(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0)
                         ),
-                        color: Theme.of(context).primaryColor,
-                        textColor: Colors.white,
+                          backgroundColor: Theme.of(context).primaryColor,
+                          foregroundColor: Colors.white,
+                        ),
                         child: Text( _currentIndex == (widget.questions.length - 1) ? "Submit" : "Next"),
                         onPressed: _nextSubmit,
                       ),
@@ -147,13 +149,13 @@ class _QuizPageState extends State<QuizPage> {
           content: Text("Are you sure you want to quit the quiz? All your progress will be lost."),
           title: Text("Warning!"),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text("Yes"),
               onPressed: (){
                 Navigator.pop(context,true);
               },
             ),
-            FlatButton(
+            TextButton(
               child: Text("No"),
               onPressed: (){
                 Navigator.pop(context,false);

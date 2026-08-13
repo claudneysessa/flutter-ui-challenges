@@ -97,7 +97,7 @@ class BikeHomePage extends StatelessWidget {
                     "Recent Posts",
                   ),
                   Spacer(),
-                  FlatButton(
+                  TextButton(
                     child: Text("View all"),
                     onPressed: () {},
                   ),

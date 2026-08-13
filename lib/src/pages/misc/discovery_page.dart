@@ -37,8 +37,10 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
 
   Expanded getExpanded(String imageName, String mainText, String subText) {
     return Expanded(
-      child: FlatButton(
-        padding: EdgeInsets.all(0),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.all(0),
+        ),
         child: Container(
           child: Center(
             child: Column(

@@ -94,11 +94,13 @@ class AvocadoPage extends StatelessWidget {
                   SizedBox(height: 20.0),
                   SizedBox(
                       width: double.infinity,
-                      child: RaisedButton(
-                        shape: RoundedRectangleBorder(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5.0)),
-                        color: Colors.pink.shade200,
-                        textColor: Colors.white,
+                          backgroundColor: Colors.pink.shade200,
+                          foregroundColor: Colors.white,
+                        ),
                         child: Text("Add to Cart"),
                         onPressed: () {},
                       )),

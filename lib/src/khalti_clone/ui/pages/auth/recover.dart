@@ -41,9 +41,11 @@ class RecoverPasswordPage extends StatelessWidget {
                     const SizedBox(height: 20.0),
                     SizedBox(
                       width:double.infinity,
-                      child: RaisedButton(
-                        color: Theme.of(context).primaryColor,
-                        textColor: Colors.white,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Theme.of(context).primaryColor,
+                          foregroundColor: Colors.white,
+                        ),
                         child: Text("Recover".toUpperCase()),
                         onPressed: (){},
                       )

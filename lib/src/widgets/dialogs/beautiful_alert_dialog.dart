@@ -48,26 +48,28 @@ class BeautifulAlertDialog extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         Expanded(
-                          child: RaisedButton(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                            ),
                             child: Text("No"),
-                            color: Colors.red,
-                            colorBrightness: Brightness.dark,
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                           ),
                         ),
                         SizedBox(width: 10.0),
                         Expanded(
-                          child: RaisedButton(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.green,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                            ),
                             child: Text("Yes"),
-                            color: Colors.green,
-                            colorBrightness: Brightness.dark,
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                           ),
                         ),
                       ],

@@ -57,12 +57,14 @@ class LoginSixPage extends StatelessWidget {
             const SizedBox(height: 120.0),
             Align(
               alignment: Alignment.centerRight,
-              child: RaisedButton(
-                padding: const EdgeInsets.fromLTRB(40.0, 16.0, 30.0, 16.0),
-                color: Colors.yellow,
-                elevation: 0,
-                shape: RoundedRectangleBorder(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.fromLTRB(40.0, 16.0, 30.0, 16.0),
+                  backgroundColor: Colors.yellow,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), bottomLeft: Radius.circular(30.0))),
+                ),
                 onPressed: () {},
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -84,16 +86,17 @@ class LoginSixPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                OutlineButton.icon(
-                  padding: const EdgeInsets.symmetric(
+                OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
                     vertical: 8.0,
                     horizontal: 30.0,
                   ),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-                  borderSide: BorderSide(color: Colors.red),
-                  color: Colors.red,
-                  highlightedBorderColor: Colors.red,
-                  textColor: Colors.red,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                    side: BorderSide(color: Colors.red),
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.red,
+                  ),
                   icon: Icon(
                     FontAwesomeIcons.googlePlusG,
                     size: 18.0,
@@ -102,16 +105,17 @@ class LoginSixPage extends StatelessWidget {
                   onPressed: () {},
                 ),
                 const SizedBox(width: 10.0),
-                OutlineButton.icon(
-                  padding: const EdgeInsets.symmetric(
+                OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
                     vertical: 8.0,
                     horizontal: 30.0,
                   ),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-                  highlightedBorderColor: Colors.indigo,
-                  borderSide: BorderSide(color: Colors.indigo),
-                  color: Colors.indigo,
-                  textColor: Colors.indigo,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                    side: BorderSide(color: Colors.indigo),
+                    backgroundColor: Colors.indigo,
+                    foregroundColor: Colors.indigo,
+                  ),
                   icon: Icon(
                     FontAwesomeIcons.facebookF,
                     size: 18.0,

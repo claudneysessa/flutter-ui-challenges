@@ -138,7 +138,7 @@ class _LoginSevenPageState extends State<LoginSevenPage> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(100)),
                     color: Color(0xffff3a5a)),
-                child: FlatButton(
+                child: TextButton(
                   child: Text(
                     "Login",
                     style: TextStyle(

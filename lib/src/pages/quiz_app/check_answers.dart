@@ -46,13 +46,15 @@ class CheckAnswersPage extends StatelessWidget {
   }
   Widget _buildItem(BuildContext context, int index) {
     if(index == questions.length) {
-      return RaisedButton(
-        child: Text("Done"),
-        shape: RoundedRectangleBorder(
+      return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0)
         ),
-        color: Theme.of(context).primaryColor,
-        textColor: Colors.white,
+          backgroundColor: Theme.of(context).primaryColor,
+          foregroundColor: Colors.white,
+        ),
+        child: Text("Done"),
         onPressed: (){
           Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (_) => QuizHomePage()

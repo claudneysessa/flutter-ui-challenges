@@ -82,7 +82,7 @@ class LoginFourPage extends StatelessWidget {
                     ),
                     SizedBox(
                       width: double.infinity,
-                      child: RaisedButton(
+                      child: ElevatedButton(
                         child: Text("Sigi In".toUpperCase()),
                         onPressed: () {},
                       ),

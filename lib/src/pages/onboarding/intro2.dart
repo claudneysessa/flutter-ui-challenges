@@ -66,8 +66,10 @@ class _IntroTwoPageState extends State<IntroTwoPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          FlatButton(
-            textColor: Colors.white70,
+          TextButton(
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white70,
+            ),
             child: Text("Skip"),
             onPressed: () {
               Navigator.of(context).pushReplacementNamed('challenge_home');

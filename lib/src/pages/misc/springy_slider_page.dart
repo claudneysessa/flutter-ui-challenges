@@ -9,8 +9,10 @@ import 'package:flutter_ui_challenges/src/widgets/springy_slider/springy_slider.
 class SpringySliderPage extends StatelessWidget {
   static final String path = "lib/src/pages/misc/springy_slider_page.dart";
   _buildTextButton(String title, bool isOnLight) {
-    return FlatButton(
-      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+    return TextButton(
+      style: TextButton.styleFrom(
+        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+      ),
       onPressed: () {},
       child: Text(title.toUpperCase(),
           style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold, color: isOnLight ? Colors.pink : Colors.white)),

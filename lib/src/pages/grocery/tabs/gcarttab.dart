@@ -75,8 +75,10 @@ class GroceryCartTabView extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 10.0,),
-                RaisedButton(
-                  color: Colors.green,
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
                   onPressed: (){},
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,

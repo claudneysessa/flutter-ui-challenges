@@ -71,7 +71,7 @@ class ProfileTwoPage extends StatelessWidget {
           Text(
             "Collection",
           ),
-          FlatButton(
+          TextButton(
             onPressed: () {},
             child: Text(
               "Create new",

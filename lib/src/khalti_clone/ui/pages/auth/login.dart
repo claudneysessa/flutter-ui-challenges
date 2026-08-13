@@ -62,9 +62,11 @@ class LoginPage extends StatelessWidget {
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 16.0),
                       width:double.infinity,
-                      child: RaisedButton(
-                        color: Theme.of(context).primaryColor,
-                        textColor: Colors.white,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Theme.of(context).primaryColor,
+                          foregroundColor: Colors.white,
+                        ),
                         child: Text("Login".toUpperCase()),
                         onPressed: () => Navigator.pushReplacementNamed(context, 'home'),
                       )

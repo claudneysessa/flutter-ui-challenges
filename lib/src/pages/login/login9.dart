@@ -122,8 +122,10 @@ class LoginNinePage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 20.0),
-                        FlatButton(
-                          textColor: Colors.white,
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.white,
+                          ),
                           child: Text("Create new account"),
                           onPressed: () {},
                         ),
@@ -135,11 +137,13 @@ class LoginNinePage extends StatelessWidget {
             ),
           ),
           if (MediaQuery.of(context).viewInsets == EdgeInsets.zero)
-            RaisedButton(
-              padding: const EdgeInsets.all(32.0),
-              elevation: 0,
-              textColor: Colors.white,
-              color: Colors.deepOrange,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(32.0),
+                elevation: 0,
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.deepOrange,
+              ),
               child: Text("Continue".toUpperCase()),
               onPressed: () {},
             )

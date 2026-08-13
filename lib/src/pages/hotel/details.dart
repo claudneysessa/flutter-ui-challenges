@@ -122,17 +122,19 @@ class HotelDetailsPage extends StatelessWidget {
                       const SizedBox(height: 30.0),
                       SizedBox(
                         width: double.infinity,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-                          color: Colors.purple,
-                          textColor: Colors.white,
-                          child: Text("Book Now", style: TextStyle(
-                            fontWeight: FontWeight.normal
-                          ),),
-                          padding: const EdgeInsets.symmetric(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                            backgroundColor: Colors.purple,
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(
                             vertical: 16.0,
                             horizontal: 32.0,
                           ),
+                          ),
+                          child: Text("Book Now", style: TextStyle(
+                            fontWeight: FontWeight.normal
+                          ),),
                           onPressed: () {},
                         ),
                       ),

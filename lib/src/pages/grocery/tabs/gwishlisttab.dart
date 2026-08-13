@@ -38,8 +38,10 @@ class GroceryWishlistTabView extends StatelessWidget {
   Widget _buildTotals() {
     return Container(
       padding: EdgeInsets.only(left: 20.0, right: 20.0),
-      child: RaisedButton(
-        color: Colors.green,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.green,
+        ),
         onPressed: (){},
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

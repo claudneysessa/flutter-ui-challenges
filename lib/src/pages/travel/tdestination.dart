@@ -68,8 +68,10 @@ class DestinationPage extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Expanded(child: Text("Places to visit")),
-                  FlatButton(
-                      textColor: Colors.red,
+                  TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.red,
+                      ),
                       onPressed: () {},
                       child: Text("See All")),
                 ],

@@ -37,8 +37,10 @@ class GalleryPageOne extends StatelessWidget {
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Colors.black),
         actions: <Widget>[
-          FlatButton(
-            textColor: Colors.blue,
+          TextButton(
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.blue,
+            ),
             child: Text("Add New"),
             onPressed: () {},
           )

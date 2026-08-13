@@ -114,11 +114,13 @@ class SignupOnePage extends StatelessWidget {
                 height: 420,
                 child: Align(
                   alignment: Alignment.bottomCenter,
-                  child: RaisedButton(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
+                      backgroundColor: Colors.blue,
+                    ),
                     onPressed: (){},
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
                     child: Text("Sign Up", style: TextStyle(color: Colors.white70)),
-                    color: Colors.blue,
                   ),
                 ),
               )

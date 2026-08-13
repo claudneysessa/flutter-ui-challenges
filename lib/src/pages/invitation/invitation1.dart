@@ -30,8 +30,10 @@ class InvitationPageOne extends StatelessWidget {
               icon: Icon(Icons.arrow_back_ios),
               onPressed: () {},
             ),
-            trailing: FlatButton(
-              textColor: Colors.white,
+            trailing: TextButton(
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+              ),
               onPressed: () {},
               child: Text("Skip"),
             ),

@@ -127,10 +127,12 @@ class RecipeSinglePage extends StatelessWidget {
             Positioned(
               top: 325,
               right: 20,
-              child: RaisedButton(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                ),
                 child: Text("Read More".toUpperCase()),
-                color: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(
                     builder: (_) => RecipeDetailsPage()
