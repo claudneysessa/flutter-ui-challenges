@@ -9,7 +9,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/src/pages/invitation/inauth.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../../constants.dart';
 import 'code_view.dart';
@@ -69,7 +69,8 @@ class _DesignPreviewsPageState extends State<DesignPreviewsPage> {
             icon: kIsWeb ? Icon(Icons.share) : Platform.isIOS ? Icon(Icons.ios_share) : Icon(Icons.share),
             tooltip: "Share code",
             onPressed: () {
-              Share.share('$githubRepo/blob/master/${widget.path}');
+              SharePlus.instance
+                  .share(ShareParams(uri: Uri.parse('$githubRepo/blob/master/${widget.path}')));
             },
           )
         ],
