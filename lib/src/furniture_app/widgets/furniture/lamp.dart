@@ -20,7 +20,7 @@ class Lamp extends StatelessWidget {
           margin: EdgeInsets.only(left: 25.0),
           //color: Colors.yellow,
           child: Stack(
-            overflow: Overflow.visible,
+            clipBehavior: Clip.none,
             //fit: StackFit.passthrough,
             children: <Widget>[
               Container(
@@ -60,7 +60,7 @@ class Lamp extends StatelessWidget {
               Positioned(
                 bottom: index == 0 ? 20.0 : 40.0,
                 child: Stack(
-                  overflow: Overflow.visible,
+                  clipBehavior: Clip.none,
                   children: <Widget>[
                     Material(
                       elevation: 10.0,

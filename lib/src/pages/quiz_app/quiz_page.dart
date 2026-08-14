@@ -125,7 +125,7 @@ class _QuizPageState extends State<QuizPage> {
 
   void _nextSubmit() {
     if(_answers[_currentIndex] == null) {
-      _key.currentState!.showSnackBar(SnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text("You must select an answer to continue."),
       ));
       return;

@@ -23,7 +23,7 @@ class MenuPage extends StatelessWidget {
                 ListTile(
                   onTap: (){},
                   leading: Stack(
-                    overflow: Overflow.visible,
+                    clipBehavior: Clip.none,
                     children: <Widget>[
                       CircleAvatar(
                         backgroundColor: Colors.white,
