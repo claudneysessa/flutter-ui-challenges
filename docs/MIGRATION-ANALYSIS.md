@@ -198,6 +198,14 @@ Flutter 3.44 marks `IconData` final, which is exactly why the package changed. V
 11 was adopted: `Icon(FontAwesomeIcons.x)` becomes `FaIcon(...)` at 65 sites, and the
 64 references feeding an `IconData` typed model field read `.data` off the wrapper.
 
+**Every remote image was dead, and no automated check could see it.** The app
+built, analysed clean and passed 141 tests while most screens rendered blank.
+The original author's Firebase Storage bucket had been withdrawn from the
+no-cost plan and answers HTTP 402, and a failed network image throws nothing —
+it simply paints nothing. Only running the app on a device showed it. This is
+the clearest argument in the whole migration for finishing on real hardware
+rather than on a green test run.
+
 **flare_flutter could not be saved.** Patching its single `hashValues()` call only
 exposed the real blocker: the runtime applies a dozen ordinary classes as mixins,
 which Dart 3 rejects unless they are declared `mixin class`, and their hierarchies
@@ -211,7 +219,7 @@ the `bus.flr` asset and the Intro 5 demo were removed instead.
 | `flutter analyze` errors | 208 | 0 |
 | `flutter analyze` warnings | 74 | 0 |
 | `deprecated_member_use` | 128 | 0 |
-| Tests | none | 141 passing |
+| Tests | none | 142 passing |
 | `flutter build web` | fails | succeeds |
 | `flutter build apk` | fails | succeeds |
 | `flutter build windows` | not configured | succeeds |
@@ -239,8 +247,11 @@ work.
 ## 8. Definition of done
 
 - `flutter analyze` reports zero errors and zero warnings. **Met.**
-- `flutter test` passes. **Met, 141 tests.**
+- `flutter test` passes. **Met, 142 tests.**
 - `flutter build web`, `flutter build windows` and `flutter build apk` all succeed.
   **Met.**
-- The app launches and the home menu navigates. **Covered by `app_smoke_test.dart`;
-  still worth a manual pass on a device.**
+- The app launches and the home menu navigates. **Met.** Verified on a Galaxy Tab
+  S9 FE (SM-X510, Android 16, arm64) with the release APK: the home page, the
+  catalogue, an authentication demo, the fl_chart dashboard, the staggered
+  gallery and the animated loaders all render, and logcat reports no Flutter
+  error across the session.

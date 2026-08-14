@@ -12,7 +12,8 @@ Flutter 2.5. Everything below that line is the revival effort.
 
 Brings the project forward from Flutter 2.5 (September 2021) to Flutter 3.44.6 /
 Dart 3.12.2. It went from 208 analyzer errors and no build on any platform to a clean
-analyzer, 141 passing tests, and working release builds for web, Android and Windows.
+analyzer, 142 passing tests, working release builds for web, Android and Windows,
+and a verified run on a physical Android tablet.
 
 The major version bump is for the removed onboarding demo and the raised SDK floor;
 everything else is compatible.
@@ -58,6 +59,17 @@ everything else is compatible.
   embedding `FlutterApplication` entry.
 
 ### Fixed
+
+**All 86 remote image URLs.** They pointed at the original author's Firebase
+Storage bucket, which Google withdrew from the no-cost Spark plan; every one now
+returns HTTP 402. Nothing in the codebase noticed, because a failed network image
+throws no exception — it just paints nothing — so the analyzer was clean and the
+tests passed while most of the app rendered as blank rectangles. This was only
+caught by running the app on a device. The URLs now point at picsum.photos
+(seeded, so each demo always gets the same photo) and i.pravatar.cc (for avatar
+slots), and all of them live in `assets.dart`, including the dozen that had been
+hard-coded into seven other files. The original artwork was themed and is gone
+with the bucket; these are stand-ins.
 
 Framework API removals, all of them mechanical but pervasive:
 
@@ -109,11 +121,12 @@ Genuine defects, none of them caused by the migration:
 
 ### Added
 
-- **A test suite, where there was none: 141 tests.** `pages_render_test.dart` builds
+- **A test suite, where there was none: 142 tests.** `pages_render_test.dart` builds
   all 134 demos, one test each; `catalogue_test.dart` checks the menu and that every
   declared source path exists; `app_smoke_test.dart` boots the app and walks its named
   routes. The suite is what found the dispose ordering, score formatting and broken
-  path defects above.
+  path defects above. It also guards against the dead Firebase bucket returning,
+  since nothing else can see a blank image.
 - `docs/MIGRATION-ANALYSIS.md`, recording the Flutter 2.5 baseline, the analyzer
   results at adoption time, the dependency audit and the execution plan.
 - This changelog.
@@ -126,10 +139,11 @@ Genuine defects, none of them caused by the migration:
 | Check | Result |
 |---|---|
 | `flutter analyze` | 0 errors, 0 warnings |
-| `flutter test` | 141 passed |
+| `flutter test` | 142 passed |
 | `flutter build web --release` | success |
 | `flutter build apk --release` | success, 59.2 MB |
 | `flutter build windows --release` | success |
+| Release APK on a Galaxy Tab S9 FE (Android 16) | launches, navigates, no Flutter error in logcat |
 
 ## [3.1.0] - 2021
 

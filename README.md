@@ -20,7 +20,7 @@ branch.
 ```bash
 flutter pub get
 flutter run          # or: flutter run -d chrome / -d windows
-flutter test         # 141 tests, builds every demo in the catalogue
+flutter test         # 142 tests, builds every demo in the catalogue
 flutter analyze      # expected to be clean of errors and warnings
 ```
 
