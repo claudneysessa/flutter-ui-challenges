@@ -9,9 +9,24 @@ My effort on replicating various apps UI on flutter.
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/flutter-ui-challenges)
 
-## Building and running the code [ **Updated** ]
+## Building and running the code
 
-- Thank you all for your tremendous support. With latest update, I have removed all firebase dependency, and project now runs on web and desktop as well. Please use flutter master channel to run and build. If you want previous version with firebase please checkout [with-firebase](https://github.com/lohanidamodar/flutter_ui_challenges/tree/with-firebase) branch.
+The project targets **Flutter 3.38.1 or newer** on the stable channel, with Dart 3.10
+or newer. It runs on Android, iOS, web, Windows, Linux and macOS, and needs no
+Firebase configuration; if you want the older Firebase-backed version, check out the
+[with-firebase](https://github.com/lohanidamodar/flutter_ui_challenges/tree/with-firebase)
+branch.
+
+```bash
+flutter pub get
+flutter run          # or: flutter run -d chrome / -d windows
+flutter test         # 141 tests, builds every demo in the catalogue
+flutter analyze      # expected to be clean of errors and warnings
+```
+
+See [CHANGELOG.md](CHANGELOG.md) for what changed, and
+[docs/MIGRATION-ANALYSIS.md](docs/MIGRATION-ANALYSIS.md) for how the project was
+brought forward from Flutter 2.5.
 
 ### Table of contents
 - **[Animation Examples UI](#animations)**
@@ -48,8 +63,19 @@ My effort on replicating various apps UI on flutter.
 
 ## Packages Used
 
-- Flutter Swiper (https://pub.dartlang.org/packages/flutter_swiper_null_safety)
-- Flutter Custom Clippers (https://pub.dartlang.org/packages/flutter_custom_clippers)
+- [flutter_swiper_null_safety](https://pub.dev/packages/flutter_swiper_null_safety)
+- [flutter_custom_clippers](https://pub.dev/packages/flutter_custom_clippers)
+- [flutter_staggered_grid_view](https://pub.dev/packages/flutter_staggered_grid_view)
+- [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
+- [cached_network_image](https://pub.dev/packages/cached_network_image)
+- [fl_chart](https://pub.dev/packages/fl_chart)
+- [flutter_speed_dial](https://pub.dev/packages/flutter_speed_dial)
+- [intro_views_flutter](https://pub.dev/packages/intro_views_flutter)
+- [animator](https://pub.dev/packages/animator)
+- [bottomreveal](https://pub.dev/packages/bottomreveal)
+- [crop](https://pub.dev/packages/crop)
+- [share_plus](https://pub.dev/packages/share_plus)
+- [url_launcher](https://pub.dev/packages/url_launcher)
 
 ## Credits
 
@@ -99,7 +125,7 @@ The code for Springy Widget is taken and refactored from (https://github.com/mat
 
 (Smart walled onboarding is from https://www.uplabs.com/posts/smart-wallet-onboarding)
 
-<img height="480px" src="screenshots/intro6.gif"> <img height="480px" src="screenshots/intro4.gif"> <img height="480px" src="screenshots/onboard3.gif"> <img height="480px" src="screenshots/onboard2.gif"> <img height="480px" src="screenshots/onboarding1.gif"><img height="480px" src="screenshots/i5.gif">
+<img height="480px" src="screenshots/intro6.gif"> <img height="480px" src="screenshots/intro4.gif"> <img height="480px" src="screenshots/onboard3.gif"> <img height="480px" src="screenshots/onboard2.gif"> <img height="480px" src="screenshots/onboarding1.gif">
 
 ## miscellaneous widgets
 

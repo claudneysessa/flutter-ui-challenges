@@ -161,30 +161,86 @@ service-worker registration. Replaced by the generated `flutter_bootstrap.js` lo
 
 **Windows / Linux / macOS** runner scaffolding is from the same era and gets regenerated.
 
-## 7. Execution plan
+## 7. What was actually done
 
-Ordered so the tree only becomes analyzable once, and each step is independently committable.
+The plan below was followed in order, one commit per step. Two things did not survive
+contact with the compiler, both of them because `flutter analyze` does not analyse
+dependency sources — only a build does.
 
 1. `chore` — record baseline: this document plus `CHANGELOG.md`.
-2. `chore(deps)` — raise the SDK constraint to `^3.9.0`, bump every dependency, swap
-   `share` for `share_plus`.
-3. `fix(ui)` — legacy Material buttons.
-4. `fix(ui)` — `TextTheme` names.
-5. `fix(theme)` — `ThemeData` / `AppBar` property removals.
-6. `fix(ui)` — `BottomNavigationBarItem.label`.
-7. `fix(ui)` — `Overflow` → `clipBehavior`.
-8. `fix(ui)` — `ScaffoldMessenger` snack bars.
-9. `fix(deps)` — adapt to the breaking APIs in `fl_chart`, `flutter_speed_dial`,
-   `flutter_staggered_grid_view`, `font_awesome_flutter`.
-10. `chore(android)` — modernize the Gradle toolchain and manifest.
-11. `chore(web)` — regenerate the web bootstrap.
-12. `chore` — clear the remaining deprecation warnings.
-13. `test` — add a smoke test plus widget tests over the navigation surface.
-14. `build` — verify web, Windows and Android release builds.
+2. `chore(deps)` — SDK constraint to `>=3.10.0 <4.0.0`, every dependency bumped,
+   `share` swapped for `share_plus`.
+3. `fix(ui)` — legacy Material buttons, 103 call sites.
+4. `fix(theme)` — `ThemeData` and `TextTheme` removals.
+5. `fix(ui)` — `BottomNavigationBarItem.label`, 38 call sites.
+6. `fix(ui)` — `Overflow` and `ScaffoldMessenger`.
+7. `fix(deps)` — staggered grid, slider track shape, colon defaults.
+8. `feat(deps)!` — font_awesome_flutter 11 and the removal of flare_flutter.
+9. `chore(android)` — Gradle toolchain rebuilt on the current template.
+10. `chore(platforms)` — web, Windows and Linux scaffolding regenerated.
+11. `chore` — mechanical analyzer fixes; `build/` excluded from analysis.
+12. `fix` — the remaining 24 analyzer warnings.
+13. `chore` — every deprecated Flutter and package API.
+14. `fix` + `test` — the widget suite, and the three defects it exposed.
+
+### The two surprises
+
+**font_awesome_flutter could not be held back.** The first attempt pinned it to 10.12
+to avoid rewriting 129 call sites, since version 11 stops `FaIconData` from
+implementing `IconData`. That pin analysed clean and then failed to compile:
+
+```
+Error: The class 'IconData' can't be extended outside of its library
+because it's a final class.
+```
+
+Flutter 3.44 marks `IconData` final, which is exactly why the package changed. Version
+11 was adopted: `Icon(FontAwesomeIcons.x)` becomes `FaIcon(...)` at 65 sites, and the
+64 references feeding an `IconData` typed model field read `.data` off the wrapper.
+
+**flare_flutter could not be saved.** Patching its single `hashValues()` call only
+exposed the real blocker: the runtime applies a dozen ordinary classes as mixins,
+which Dart 3 rejects unless they are declared `mixin class`, and their hierarchies
+make them ineligible. A vendored copy was prepared and then abandoned; the dependency,
+the `bus.flr` asset and the Intro 5 demo were removed instead.
+
+### Result
+
+| Check | Before | After |
+|---|---|---|
+| `flutter analyze` errors | 208 | 0 |
+| `flutter analyze` warnings | 74 | 0 |
+| `deprecated_member_use` | 128 | 0 |
+| Tests | none | 141 passing |
+| `flutter build web` | fails | succeeds |
+| `flutter build apk` | fails | succeeds |
+| `flutter build windows` | not configured | succeeds |
+
+1053 analyzer infos remain. They are stylistic (widget key constructors, doc comment
+slashes, `SizedBox` for whitespace, child property ordering) and were left alone on
+purpose so the revival diff stayed reviewable. They are the obvious next piece of
+work.
+
+### Known trade-offs
+
+- Six dependencies still declare a `<3.0.0` SDK ceiling and rely on Dart 3's bound
+  relaxation: `bottomreveal`, `crop`, `flutter_custom_clippers`,
+  `flutter_swiper_null_safety` and `intro_views_flutter`. All of them compile today,
+  and their sources were checked for removed framework APIs, but none is actively
+  maintained. `flutter_swiper_null_safety` is the exposure worth watching: 15 call
+  sites depend on it.
+- `kotlin.incremental=false` in `android/gradle.properties`. Kotlin 2.3 with AGP 9 on
+  Windows fails the plugin modules with "Could not close incremental caches" on a
+  clean build. Verified by toggling the flag on a wiped build directory. It costs
+  build time, not correctness, and should be removed once the toolchain fixes it.
+- iOS and macOS were not rebuilt or verified; neither toolchain is available on this
+  machine.
 
 ## 8. Definition of done
 
-- `flutter analyze` reports zero errors and zero warnings.
-- `flutter test` passes.
+- `flutter analyze` reports zero errors and zero warnings. **Met.**
+- `flutter test` passes. **Met, 141 tests.**
 - `flutter build web`, `flutter build windows` and `flutter build apk` all succeed.
-- The app launches and the home menu navigates.
+  **Met.**
+- The app launches and the home menu navigates. **Covered by `app_smoke_test.dart`;
+  still worth a manual pass on a device.**
