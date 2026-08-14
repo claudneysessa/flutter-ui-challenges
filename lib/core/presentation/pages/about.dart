@@ -29,7 +29,7 @@ class AboutPage extends StatelessWidget {
                   padding: const EdgeInsets.all(16.0),
                   decoration: BoxDecoration(color: Colors.grey.shade200),
                   child: Text(
-                      "Flutter UI Challenges is our effort to replicate various UIs in flutter and share it with you for free."),
+                      "Flutter UI Challenges is an effort to replicate various UIs in flutter and share it with you for free."),
                 ),
                 const SizedBox(height: 20.0),
                 MaterialButton(
@@ -59,7 +59,7 @@ class AboutPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 10.0),
                       Text(
-                          "Find codes to all the UIs in our github repository."),
+                          "Find the code for every UI in this fork's repository."),
                     ],
                   ),
                 ),
@@ -97,7 +97,42 @@ class AboutPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20.0),
                 Text(
-                  "Contributors",
+                  "Maintainer",
+                  style: TextStyle(
+                      color: Theme.of(context).primaryColor,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 4.0),
+                Text(
+                  "This fork brings the project from Flutter 2.5 up to current Flutter. The app and its UIs are the original authors' work.",
+                  style: TextStyle(color: Colors.black54),
+                ),
+                SizedBox(height: 10.0),
+                _buildHeader(MAINTAINER),
+                Wrap(
+                  spacing: 8.0,
+                  children: <Widget>[
+                    OutlinedButton.icon(
+                      onPressed: () => _open(maintainerLinkedIn),
+                      icon: FaIcon(FontAwesomeIcons.linkedin, size: 16.0),
+                      label: Text("LinkedIn"),
+                    ),
+                    OutlinedButton.icon(
+                      onPressed: () => _open("mailto:$maintainerEmail"),
+                      icon: FaIcon(FontAwesomeIcons.envelope, size: 16.0),
+                      label: Text("Email"),
+                    ),
+                    OutlinedButton.icon(
+                      onPressed: () => _open(upstreamRepo),
+                      icon: FaIcon(FontAwesomeIcons.codeBranch, size: 16.0),
+                      label: Text("Original project"),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20.0),
+                Text(
+                  "Original authors",
                   style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontSize: 20.0,

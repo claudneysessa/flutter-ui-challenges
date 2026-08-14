@@ -94,6 +94,7 @@ const String devDamodar = 'assets/images/devDamodar.jpg';
 const String devSudip = 'assets/images/devSudip.jpg';
 const String devArpana = 'assets/images/devArpana.jpg';
 const String devSid = 'assets/images/devSid.jpg';
+const String devClaudney = 'assets/images/devClaudney.jpg';
 
 // Grocery app
 const String brocoli = 'assets/images/brocoli.jpg';
