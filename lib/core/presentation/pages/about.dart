@@ -178,7 +178,10 @@ class AboutPage extends StatelessWidget {
                         radius: 35.0,
                         backgroundImage: AssetImage(developer.imageUrl!)))),
             SizedBox(width: 20.0),
-            Column(
+            // Expanded so a long name or job title wraps instead of running off
+            // the side of the card.
+            Expanded(
+              child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
@@ -195,13 +198,16 @@ class AboutPage extends StatelessWidget {
                       color: Colors.black54,
                     ),
                     SizedBox(width: 10.0),
-                    Text(
-                      developer.address!,
-                      style: TextStyle(color: Colors.black54),
+                    Expanded(
+                      child: Text(
+                        developer.address!,
+                        style: TextStyle(color: Colors.black54),
+                      ),
                     ),
                   ],
                 ),
               ],
+              ),
             )
           ],
         ),

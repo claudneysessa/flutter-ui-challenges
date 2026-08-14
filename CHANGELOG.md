@@ -12,7 +12,7 @@ Flutter 2.5. Everything below that line is the revival effort.
 
 Brings the project forward from Flutter 2.5 (September 2021) to Flutter 3.44.6 /
 Dart 3.12.2. It went from 208 analyzer errors and no build on any platform to a clean
-analyzer, 142 passing tests, working release builds for web, Android and Windows,
+analyzer, 144 passing tests, working release builds for web, Android and Windows,
 and a verified run on a physical Android tablet.
 
 The major version bump is for the removed onboarding demo and the raised SDK floor;
@@ -60,16 +60,22 @@ everything else is compatible.
 
 ### Fixed
 
-**All 86 remote image URLs.** They pointed at the original author's Firebase
-Storage bucket, which Google withdrew from the no-cost Spark plan; every one now
-returns HTTP 402. Nothing in the codebase noticed, because a failed network image
-throws no exception — it just paints nothing — so the analyzer was clean and the
-tests passed while most of the app rendered as blank rectangles. This was only
-caught by running the app on a device. The URLs now point at picsum.photos
-(seeded, so each demo always gets the same photo) and i.pravatar.cc (for avatar
-slots), and all of them live in `assets.dart`, including the dozen that had been
-hard-coded into seven other files. The original artwork was themed and is gone
-with the bucket; these are stand-ins.
+**Every image the app loads.** They pointed at the original author's Firebase
+Storage bucket, which Google withdrew from the no-cost Spark plan; all 86 of those
+URLs return HTTP 402. Nothing in the codebase noticed, because a failed network
+image throws no exception — it just paints nothing — so the analyzer was clean and
+the tests passed while most of the app rendered as blank rectangles. Only running
+it on a device showed it.
+
+An audit of the rest found the same rot already spreading: of 55 third-party image
+URLs scattered through the demos, two pixabay images had started returning 403 and
+one host no longer resolved at all. So rather than swap one remote host for
+another, all 135 images are now downloaded, resized and committed under
+`assets/images/`. The app renders identically with no network at all, and nothing
+outside this repository can break it again. 80 `NetworkImage` became `AssetImage`,
+14 `Image.network` became `Image.asset`, and the 69 URLs hard-coded across 20 files
+became asset paths. The original artwork was themed and is gone with the bucket;
+these are stand-ins.
 
 Framework API removals, all of them mechanical but pervasive:
 
@@ -121,7 +127,7 @@ Genuine defects, none of them caused by the migration:
 
 ### Added
 
-- **A test suite, where there was none: 142 tests.** `pages_render_test.dart` builds
+- **A test suite, where there was none: 144 tests.** `pages_render_test.dart` builds
   all 134 demos, one test each; `catalogue_test.dart` checks the menu and that every
   declared source path exists; `app_smoke_test.dart` boots the app and walks its named
   routes. The suite is what found the dispose ordering, score formatting and broken
@@ -134,14 +140,42 @@ Genuine defects, none of them caused by the migration:
   every demo is declared as an asset and `flutter build` copies it into the bundle,
   where the analyzer was picking the copies up and reporting 190 phantom errors.
 
+### Credit
+
+- **The About screen now names the fork maintainer** alongside the original authors,
+  with a line making the split plain: the fork covers the migration, the app and its
+  UIs are the original authors' work. The old "Contributors" heading becomes
+  "Original authors", which is what that list has always been.
+- **In-app source links point at this fork.** Each demo's "view code" link is built
+  from `githubRepo`, which still pointed at the upstream repository — archived by its
+  author in 2024, and no longer the code being run. `upstreamRepo` keeps that address
+  and the About screen links to it as the project's origin.
+- A long name or job title used to run off the side of a contributor card; the row
+  wraps now.
+
+### Documentation
+
+- **The README is rebuilt.** It referenced a `screenshots/` folder that has never
+  been in this repository, so all ~120 image tags were broken, including the three
+  store badges. It now follows the layout used by `claudneysessa/flutter-playground`,
+  and its 134 screenshots are real: captured from this codebase on a physical Android
+  tablet by `integration_test/screenshots_test.dart`, at 1080x1920 and converted to
+  540px JPEG — 76 MB of PNG down to 5.6 MB, in `assets/screenshots/`. The preview
+  tables are generated from the catalogue rather than hand-written, so a demo cannot
+  be listed without an image or drop off the page unnoticed.
+- Factual corrections: the original repository is archived, not gone; three sections
+  were titled "Furniture App by Ambika Dulal" through copy-paste; the contributor list
+  was numbered 1, 2, 2, 3, 4, 5 with a broken link; and the licence is MIT,
+  `Copyright (c) 2019 Damodar Lohani`.
+
 ### Verified
 
 | Check | Result |
 |---|---|
 | `flutter analyze` | 0 errors, 0 warnings |
-| `flutter test` | 142 passed |
+| `flutter test` | 144 passed |
 | `flutter build web --release` | success |
-| `flutter build apk --release` | success, 59.2 MB |
+| `flutter build apk --release` | success, 66.8 MB |
 | `flutter build windows --release` | success |
 | Release APK on a Galaxy Tab S9 FE (Android 16) | launches, navigates, no Flutter error in logcat |
 

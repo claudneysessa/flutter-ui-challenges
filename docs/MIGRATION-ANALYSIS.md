@@ -206,6 +206,13 @@ it simply paints nothing. Only running the app on a device showed it. This is
 the clearest argument in the whole migration for finishing on real hardware
 rather than on a green test run.
 
+**The imagery had to come into the repository.** Replacing the dead Firebase
+bucket with a placeholder service fixed the blank screens but kept the shape of
+the problem, and an audit showed it had already spread: of the 55 third-party
+image URLs elsewhere in the demos, two returned 403 and one host no longer
+resolved. All 135 images are now committed under `assets/images/`, so the app
+renders with no network at all.
+
 **flare_flutter could not be saved.** Patching its single `hashValues()` call only
 exposed the real blocker: the runtime applies a dozen ordinary classes as mixins,
 which Dart 3 rejects unless they are declared `mixin class`, and their hierarchies
@@ -219,7 +226,7 @@ the `bus.flr` asset and the Intro 5 demo were removed instead.
 | `flutter analyze` errors | 208 | 0 |
 | `flutter analyze` warnings | 74 | 0 |
 | `deprecated_member_use` | 128 | 0 |
-| Tests | none | 142 passing |
+| Tests | none | 144 passing |
 | `flutter build web` | fails | succeeds |
 | `flutter build apk` | fails | succeeds |
 | `flutter build windows` | not configured | succeeds |
@@ -247,7 +254,7 @@ work.
 ## 8. Definition of done
 
 - `flutter analyze` reports zero errors and zero warnings. **Met.**
-- `flutter test` passes. **Met, 142 tests.**
+- `flutter test` passes. **Met, 144 tests.**
 - `flutter build web`, `flutter build windows` and `flutter build apk` all succeed.
   **Met.**
 - The app launches and the home menu navigates. **Met.** Verified on a Galaxy Tab

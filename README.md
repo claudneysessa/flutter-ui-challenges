@@ -6,7 +6,7 @@
 [![Flutter](https://img.shields.io/badge/Flutter-3.44.6-02569B?style=flat-square&logo=flutter&logoColor=white)](https://docs.flutter.dev/release/release-notes)
 [![Dart](https://img.shields.io/badge/Dart-3.12.2-0175C2?style=flat-square&logo=dart&logoColor=white)](https://dart.dev/guides/language/evolution)
 [![Platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=flat-square)](#build-status)
-[![Tests](https://img.shields.io/badge/tests-142%20passing-brightgreen?style=flat-square)](test)
+[![Tests](https://img.shields.io/badge/tests-144%20passing-brightgreen?style=flat-square)](test)
 [![Screens](https://img.shields.io/badge/screens-134-blueviolet?style=flat-square)](#preview)
 [![License](https://img.shields.io/github/license/claudneysessa/flutter-ui-challenges?style=flat-square)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/claudneysessa/flutter-ui-challenges?style=flat-square)](https://github.com/claudneysessa/flutter-ui-challenges/commits/master)
@@ -277,14 +277,14 @@ App version **4.0.0**, revived on **2026-08-13** by
 | Windows / Linux runners | Visual Studio `.vcxproj` | CMake |
 | Web bootstrap | `main.dart.js` + manual service worker | `flutter_bootstrap.js` |
 | Imagery | remote (Firebase Storage) | **bundled in this repository** |
-| Tests | none | **142** |
+| Tests | none | **144** |
 
 Verified on this revival:
 
 | Check | Result |
 | --- | --- |
 | `flutter analyze` | 0 errors, 0 warnings |
-| `flutter test` | 142/142 passing |
+| `flutter test` | 144/144 passing |
 | `flutter build web --release` | Success |
 | `flutter build apk --release` | Success |
 | `flutter build windows --release` | Success |
@@ -311,7 +311,7 @@ before a single line could be compiled, and no platform built. High level summar
   Kotlin 2.3, Kotlin DSL, Java 17, a namespace and the `INTERNET` permission. The Windows
   and Linux runners were regenerated as CMake projects; `flutter build windows` previously
   reported "No Windows desktop project configured".
-- **Test suite added** (142 tests, building every demo in the catalogue), which found
+- **Test suite added** (144 tests, building every demo in the catalogue), which found
   several long-standing bugs along the way: three widgets calling `super.dispose()` before
   disposing their controllers, a keep-alive that never called `super.build()` and so was
   not keeping anything alive, a quiz score printed as a raw double division, and three
