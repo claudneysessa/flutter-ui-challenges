@@ -6,7 +6,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/src/pages/animations/animation1/animation1.dart';
 import 'package:flutter_ui_challenges/src/utils/oval-right-clipper.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class DarkDrawerPage extends StatelessWidget {
   static final String path = "lib/src/pages/navigation/drawer1.dart";

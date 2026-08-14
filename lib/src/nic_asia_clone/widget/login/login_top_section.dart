@@ -4,7 +4,6 @@
   */
   
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import '../../util/constant.dart';
 
 class LoginTopSection extends StatelessWidget {

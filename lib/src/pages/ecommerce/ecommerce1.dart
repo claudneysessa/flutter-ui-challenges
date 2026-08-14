@@ -4,7 +4,6 @@
   */
 
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:flutter_ui_challenges/core/presentation/res/assets.dart'
@@ -311,13 +310,13 @@ class EcommerceOnePage extends StatelessWidget {
             child: Swiper(
               autoplay: true,
               itemBuilder: (BuildContext context, int index) {
-                return new PNetworkImage(
+                return PNetworkImage(
                   images[index],
                   fit: BoxFit.cover,
                 );
               },
               itemCount: 4,
-              pagination: new SwiperPagination(),
+              pagination: SwiperPagination(),
             ),
           ),
         ],

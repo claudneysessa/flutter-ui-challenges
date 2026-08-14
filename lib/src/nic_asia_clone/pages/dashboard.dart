@@ -1,10 +1,3 @@
-/**
- * Author: Mausam Rayamajhi
- * profile: https://github.com/mausamRayamajhi
-  */
-  
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../util/constant.dart';
 import '../widget/dashboard/categories.dart';

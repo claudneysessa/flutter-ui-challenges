@@ -9,13 +9,13 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_ui_challenges/src/widgets/springy_slider/slider_state.dart';
 
 class SpringySliderController extends ChangeNotifier {
-  final SpringDescription sliderSpring = new SpringDescription(
+  final SpringDescription sliderSpring = SpringDescription(
     mass: 1.0,
     stiffness: 1000.0,
     damping: 30.0,
   );
 
-  final SpringDescription crestSpring = new SpringDescription(
+  final SpringDescription crestSpring = SpringDescription(
     mass: 1.0,
     stiffness: 5.0,
     damping: 0.5,
@@ -127,7 +127,7 @@ class SpringySliderController extends ChangeNotifier {
       return;
     }
 
-    _sliderSpringSimulation = new SpringSimulation(
+    _sliderSpringSimulation = SpringSimulation(
       sliderSpring,
       _springStartPercent!,
       _springEndPercent!,
@@ -136,7 +136,7 @@ class SpringySliderController extends ChangeNotifier {
 
     final crestSpringNormal = (_crestSpringingEndPercent! - _crestSpringingStartPercent!) /
         (_crestSpringingEndPercent! - _crestSpringingStartPercent!).abs();
-    _crestSpringSimulation = new SpringSimulation(
+    _crestSpringSimulation = SpringSimulation(
       crestSpring,
       _crestSpringingStartPercent!,
       _crestSpringingEndPercent!,
@@ -157,7 +157,7 @@ class SpringySliderController extends ChangeNotifier {
     _springingPercent = _sliderSpringSimulation.x(_springTime);
 
     _crestSpringingPercent = _crestSpringSimulation.x(lastFrameTime);
-    _crestSpringSimulation = new SpringSimulation(
+    _crestSpringSimulation = SpringSimulation(
       crestSpring,
       _crestSpringingPercent!,
       _springingPercent!,

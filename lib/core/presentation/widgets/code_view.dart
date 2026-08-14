@@ -40,7 +40,7 @@ class MyCodeViewState extends State<MyCodeView> {
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: RichText(
-              textScaleFactor: this._textScaleFactor,
+              textScaleFactor: _textScaleFactor,
               text: TextSpan(
                 style: TextStyle(fontFamily: 'monospace', fontSize: 12.0),
                 children: <TextSpan>[
@@ -69,20 +69,20 @@ class MyCodeViewState extends State<MyCodeView> {
       SpeedDialChild(
         label: "Open",
         child: Icon(Icons.open_in_new),
-        onTap: () => url_launcher.launch(this.widget.githubPath),
+        onTap: () => url_launcher.launch(widget.githubPath),
       ),
       SpeedDialChild(
         child: Icon(Icons.zoom_out),
         label: 'Zoom out',
         onTap: () => setState(() {
-          this._textScaleFactor = max(0.8, this._textScaleFactor - 0.1);
+          _textScaleFactor = max(0.8, _textScaleFactor - 0.1);
         }),
       ),
       SpeedDialChild(
         child: Icon(Icons.zoom_in),
         label: 'Zoom in',
         onTap: () => setState(() {
-          this._textScaleFactor += 0.1;
+          _textScaleFactor += 0.1;
         }),
       ),
     ];

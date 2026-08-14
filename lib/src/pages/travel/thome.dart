@@ -6,7 +6,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
 import 'package:flutter_ui_challenges/src/pages/travel/tdestination.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
 
 class TravelHomePage extends StatelessWidget {

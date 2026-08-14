@@ -221,7 +221,7 @@ class _PodcastPlayerState extends State<MusicPlayer> {
         ),
         Text(
           '00:00',
-          style: new TextStyle(fontSize: 15.0, color: Colors.white),
+          style: TextStyle(fontSize: 15.0, color: Colors.white),
         ),
       ],
     );

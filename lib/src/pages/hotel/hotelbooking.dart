@@ -3,7 +3,6 @@
  * profile: https://github.com/Ambikadulal
   */
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 class Hotel {
   String? imageUrl;

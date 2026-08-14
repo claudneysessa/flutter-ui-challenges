@@ -300,7 +300,7 @@ class DonutPieChart extends StatelessWidget {
 
   /// Creates a [PieChart] with sample data and no transition.
   factory DonutPieChart.withSampleData() {
-    return new DonutPieChart(
+    return DonutPieChart(
       _createSampleData(),
     );
   }

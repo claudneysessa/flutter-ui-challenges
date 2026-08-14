@@ -5,10 +5,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/core/presentation/res/assets.dart'
     as assets;
-import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:math';
 
-import 'chatui.dart';
 
 class ChatTwoPage extends StatefulWidget {
   static final String path = "lib/src/pages/misc/chat2.dart";

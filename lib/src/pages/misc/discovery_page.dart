@@ -1,10 +1,3 @@
-/**
- * Author: Ambika Dulal
- * profile: https://github.com/Ambikadulal
- * design Source: uiplace.com
-  */
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DiscoveryPage extends StatefulWidget {

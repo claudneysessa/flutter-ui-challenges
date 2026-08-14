@@ -4,6 +4,6 @@
   */
 import 'package:flutter/material.dart';
 
-const TextStyle smallText = const TextStyle(
+const TextStyle smallText = TextStyle(
   fontSize: 12.0
 );

@@ -29,7 +29,7 @@ class SpringySlider extends StatefulWidget {
   });
 
   @override
-  _SpringySliderState createState() => new _SpringySliderState();
+  _SpringySliderState createState() => _SpringySliderState();
 }
 
 class _SpringySliderState extends State<SpringySlider> with TickerProviderStateMixin {
@@ -41,7 +41,7 @@ class _SpringySliderState extends State<SpringySlider> with TickerProviderStateM
   @override
   void initState() {
     super.initState();
-    sliderController = new SpringySliderController(
+    sliderController = SpringySliderController(
       sliderPercent: 0.5,
       vsync: this,
     )..addListener(() {
@@ -81,7 +81,7 @@ class _SpringySliderState extends State<SpringySlider> with TickerProviderStateM
               paddingBottom: paddingBottom,
             ),
           ),
-          new SliderPoints(
+          SliderPoints(
             sliderController: sliderController,
             paddingTop: paddingTop,
             paddingBottom: paddingBottom,

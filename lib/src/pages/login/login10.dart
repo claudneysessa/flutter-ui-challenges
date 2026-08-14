@@ -159,7 +159,7 @@ class LoginTenPage extends StatelessWidget {
 class RPSCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint_0 = new Paint()
+    Paint paint_0 = Paint()
       ..style = PaintingStyle.fill
       ..strokeWidth = 1;
     paint_0.shader = ui.Gradient.linear(
@@ -184,7 +184,7 @@ class RPSCustomPainter extends CustomPainter {
 
     canvas.drawPath(path_0, paint_0);
 
-    Paint paint_1 = new Paint()
+    Paint paint_1 = Paint()
       ..style = PaintingStyle.fill
       ..strokeWidth = 1;
     paint_1.shader = ui.Gradient.linear(

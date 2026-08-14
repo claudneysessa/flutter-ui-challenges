@@ -22,7 +22,7 @@ List<String> title = [
 class TravelStoryPage extends StatefulWidget {
     static final String path = "lib/src/pages/travel/tstory.dart";
   @override
-  _TravelStoryPageState createState() => new _TravelStoryPageState();
+  _TravelStoryPageState createState() => _TravelStoryPageState();
 }
 var cardAspectRatio = 12.0 / 16.0;
 var widgetAspectRatio = cardAspectRatio * 1.2;
@@ -221,7 +221,7 @@ class CardScrollWidget extends StatelessWidget {
   CardScrollWidget(this.currentPage);
   @override
   Widget build(BuildContext context) {
-    return new AspectRatio(
+    return AspectRatio(
       aspectRatio: widgetAspectRatio,
       child: LayoutBuilder(builder: (context, contraints) {
         var width = contraints.maxWidth;

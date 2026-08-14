@@ -92,7 +92,7 @@ class DetailPage extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(5),
-                  child: new SingleChildScrollView(
+                  child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row( 
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

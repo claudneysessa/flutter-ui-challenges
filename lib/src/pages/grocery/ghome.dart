@@ -16,7 +16,7 @@ class GroceryHomePage extends StatefulWidget {
 
   @override
   GroceryHomePageState createState() {
-    return new GroceryHomePageState();
+    return GroceryHomePageState();
   }
 }
 

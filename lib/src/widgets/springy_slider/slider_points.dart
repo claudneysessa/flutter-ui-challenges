@@ -41,7 +41,7 @@ class SliderPoints extends StatelessWidget {
               top: sliderY - 10.0 - (40.0 * pointsYouNeedPercent),
               child: FractionalTranslation(
                 translation: Offset(0.0, -1.0),
-                child: new Points(
+                child: Points(
                   points: pointsYouNeed,
                   isAboveSlider: true,
                   isPointsYouNeed: true,
@@ -52,7 +52,7 @@ class SliderPoints extends StatelessWidget {
             Positioned(
               left: 30.0,
               top: sliderY + 10.0 + (40.0 * pointsYouHavePercent),
-              child: new Points(
+              child: Points(
                 points: pointsYouHave,
                 isAboveSlider: false,
                 isPointsYouNeed: false,

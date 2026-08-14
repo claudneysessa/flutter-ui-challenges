@@ -40,7 +40,7 @@ class QuotesOnePage extends StatelessWidget {
               tween: Tween<double>(begin: -1, end: 0),
               builder: (context, state, child) {
                 return FractionalTranslation(
-                    translation: Offset(state.value as double, 0), child: child);
+                    translation: Offset(state.value, 0), child: child);
               },
               child: Text(
                 "Anyone who has never made a mistake has never tried anything new",
@@ -55,7 +55,7 @@ class QuotesOnePage extends StatelessWidget {
               tween: Tween<double>(begin: 1, end: 0),
               builder: (context, state, child) {
                 return FractionalTranslation(
-                  translation: Offset(state.value as double, 0),
+                  translation: Offset(state.value, 0),
                   child: child,
                 );
               },

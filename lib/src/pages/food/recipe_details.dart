@@ -6,7 +6,6 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class RecipeDetailsPage extends StatelessWidget {
   static final String path = "lib/src/pages/food/recipe_details.dart";

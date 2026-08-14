@@ -41,8 +41,8 @@ class GroceryListItemTwo extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                new GroceryTitle(text: title),
-                new GrocerySubtitle(text: subtitle)
+                GroceryTitle(text: title),
+                GrocerySubtitle(text: subtitle)
               ],
             ),
           ),

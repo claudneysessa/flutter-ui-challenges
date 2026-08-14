@@ -4,7 +4,6 @@
   */
 
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class PlaceList1 extends StatelessWidget {
   static final String path = "lib/src/pages/lists/list1.dart";

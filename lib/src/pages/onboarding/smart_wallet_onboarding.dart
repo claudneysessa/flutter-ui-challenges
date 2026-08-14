@@ -96,7 +96,7 @@ class SmartWalletOnboardingPage extends StatelessWidget {
               showSkipButton: false,
               doneText: Text("Get Started",),
               pageButtonsColor: Colors.indigo,
-              pageButtonTextStyles: new TextStyle(
+              pageButtonTextStyles: TextStyle(
                   // color: Colors.indigo,
                   fontSize: 16.0,
                   fontFamily: "Regular",

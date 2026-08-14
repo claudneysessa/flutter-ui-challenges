@@ -49,7 +49,7 @@ class _SliderDraggerState extends State<SliderDragger> {
         (context.findRenderObject() as RenderBox).localToGlobal(const Offset(0.0, 0.0)).dx;
     final dragHorizontalPercent = (details.globalPosition.dx - sliderLeftPosition) / sliderWidth;
 
-    widget.sliderController!.draggingPercents = new Offset(
+    widget.sliderController!.draggingPercents = Offset(
       dragHorizontalPercent,
       startDragPercent! + dragPercent,
     );

@@ -1,9 +1,3 @@
-/**
- * Author: Ambika Dulal
- * profile: https://github.com/Ambika Dulal
-  */
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MoterBikeShopPage extends StatelessWidget {
