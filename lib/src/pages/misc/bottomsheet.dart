@@ -35,7 +35,7 @@ class _BottomSheetAwesomeState extends State<BottomSheetAwesome> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  progress.length == null ? "0/100" : "${progress.length}/100 ",
+                  "${progress.length}/100 ",
                   style: TextStyle(color: Colors.white),
                 ),
               ),

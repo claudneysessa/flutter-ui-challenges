@@ -106,50 +106,6 @@ class DashboardOnePage extends StatelessWidget {
         ],
       ),
     );
-    SliverToBoxAdapter(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: _buildTitledContainer("Stats",
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Text(
-                      "+500",
-                      style: stats,
-                    ),
-                    const SizedBox(height: 5.0),
-                    Text("Leads".toUpperCase())
-                  ],
-                ),
-                const SizedBox(width: 20.0),
-                const SizedBox(width: 20.0),
-                Column(
-                  children: <Widget>[
-                    Text(
-                      "+600",
-                      style: stats,
-                    ),
-                    const SizedBox(height: 5.0),
-                    Text("Orders".toUpperCase())
-                  ],
-                ),
-                const SizedBox(width: 20.0),
-                Column(
-                  children: <Widget>[
-                    Text(
-                      "+100",
-                      style: stats,
-                    ),
-                    const SizedBox(height: 5.0),
-                    Text("Deliveries".toUpperCase())
-                  ],
-                ),
-              ],
-            )),
-      ),
-    );
   }
 
   SliverPadding _buildActivities(BuildContext context) {
@@ -190,52 +146,6 @@ class DashboardOnePage extends StatelessWidget {
                   .toList(),
             ),
           ),
-        ),
-      ),
-    );
-  }
-
-  SliverToBoxAdapter _buildHeader() {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Stack(
-          children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: NetworkImage(image), fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(20.0)),
-              height: 200,
-              foregroundDecoration: BoxDecoration(
-                  color: Colors.black54,
-                  borderRadius: BorderRadius.circular(20.0)),
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "Good Afternoon".toUpperCase(),
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24.0,
-                      ),
-                    ),
-                    const SizedBox(height: 20.0),
-                    Text(
-                      "Take a glimpses at your dashboard",
-                      style: TextStyle(color: Colors.white, fontSize: 18.0),
-                    ),
-                  ],
-                ),
-              ),
-            )
-          ],
         ),
       ),
     );

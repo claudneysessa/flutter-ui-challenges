@@ -81,7 +81,7 @@ class _LoginPageFourteenState extends State<LoginPageFourteen> {
 }
 
 class HeaderContainer extends StatelessWidget {
-  var text = "Login";
+  final String text;
 
   HeaderContainer(this.text);
 

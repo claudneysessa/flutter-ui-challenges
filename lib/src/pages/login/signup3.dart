@@ -86,7 +86,7 @@ class _SignupThreePageState extends State<SignupThreePage> {
 }
 
 class HeaderContainer extends StatelessWidget {
-  var text = "Signin";
+  final String text;
 
   HeaderContainer(this.text);
 
@@ -123,8 +123,8 @@ class HeaderContainer extends StatelessWidget {
 }
 
 class ButtonWidget extends StatelessWidget {
-  String? btnText = "";
-  var onClick;
+  final String? btnText;
+  final VoidCallback? onClick;
 
   ButtonWidget({this.btnText, this.onClick});
 

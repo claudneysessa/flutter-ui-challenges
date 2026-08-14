@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 class Furniture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size deviceSize = MediaQuery.of(context).size;
     return Material(
       color: Colors.white,
       child: SingleChildScrollView(

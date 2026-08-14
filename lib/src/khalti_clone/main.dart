@@ -35,13 +35,10 @@ class KhaltiApp extends StatelessWidget {
         switch(settings.name) {
           case "login":
             return SlideRightRoute(widget: LoginPage());
-            break;
           case "recover":
             return SlideRightRoute(widget: RecoverPasswordPage());
-            break;
           case "register":
             return SlideRightRoute(widget: RegisterPage());
-            break;
           default:
             return null;
         }

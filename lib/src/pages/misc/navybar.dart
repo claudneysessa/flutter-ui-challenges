@@ -93,10 +93,7 @@ class FancyBottomNavigation extends StatefulWidget {
       this.inactiveColor,
       this.backgroundColor,
       required this.items,
-      required this.onItemSelected}) {
-    assert(items != null);
-    assert(onItemSelected != null);
-  }
+      required this.onItemSelected});
 
   @override
   _FancyBottomNavigationState createState() {
@@ -219,8 +216,5 @@ class FancyBottomNavigationItem {
   FancyBottomNavigationItem({
     required this.icon,
     required this.title,
-  }) {
-    assert(icon != null);
-    assert(title != null);
-  }
+  });
 }

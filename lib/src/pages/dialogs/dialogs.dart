@@ -379,7 +379,6 @@ class CustomAlertDialog extends StatelessWidget {
       case AlertDialogType.ERROR:
         return Icons.error;
       case AlertDialogType.INFO:
-      default:
         return Icons.info_outline;
     }
   }
@@ -393,7 +392,6 @@ class CustomAlertDialog extends StatelessWidget {
       case AlertDialogType.ERROR:
         return Colors.red;
       case AlertDialogType.INFO:
-      default:
         return Colors.blue;
     }
   }

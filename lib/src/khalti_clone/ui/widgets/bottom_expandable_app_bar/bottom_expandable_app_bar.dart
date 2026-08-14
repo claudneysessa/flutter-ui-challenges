@@ -147,34 +147,3 @@ class _BottomExpandableAppBarState extends State<BottomExpandableAppBar> {
   }
 }
 
-//Copied from flutter sdk
-class _BottomAppBarClipper extends CustomClipper<Path> {
-  const _BottomAppBarClipper(
-      {required this.geometry, required this.shape, required this.notchMargin, required this.buttonOffset})
-      : assert(geometry != null),
-        assert(shape != null),
-        assert(notchMargin != null),
-        super(reclip: geometry);
-
-  final ValueListenable<ScaffoldGeometry> geometry;
-  final NotchedShape shape;
-  final double notchMargin;
-  final double buttonOffset;
-
-  @override
-  Path getClip(Size size) {
-    // button is the floating action button's bounding rectangle in the
-    // coordinate system whose origin is at the appBar's top left corner,
-    // or null if there is no floating action button.
-    final Rect? button = geometry.value.floatingActionButtonArea?.translate(
-      0.0,
-      geometry.value.bottomNavigationBarTop! * -1.0 - buttonOffset,
-    );
-    return shape.getOuterPath(Offset(0, 0) & size, button?.inflate(notchMargin));
-  }
-
-  @override
-  bool shouldReclip(_BottomAppBarClipper oldClipper) {
-    return oldClipper.geometry != geometry || oldClipper.shape != shape || oldClipper.notchMargin != notchMargin;
-  }
-}

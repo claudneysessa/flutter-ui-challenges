@@ -15,7 +15,6 @@ import 'package:flutter_ui_challenges/src/widgets/springy_slider/slider_dragger.
 import 'package:flutter_ui_challenges/src/widgets/springy_slider/slider_goo.dart';
 import 'package:flutter_ui_challenges/src/widgets/springy_slider/slider_marks.dart';
 import 'package:flutter_ui_challenges/src/widgets/springy_slider/slider_points.dart';
-import 'package:flutter_ui_challenges/src/widgets/springy_slider/slider_state.dart';
 
 class SpringySlider extends StatefulWidget {
   final int? markCount;
@@ -51,11 +50,6 @@ class _SpringySliderState extends State<SpringySlider> with TickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    double? sliderPercent = sliderController!.sliderValue;
-    if (sliderController!.state == SpringySliderState.springing) {
-      sliderPercent = sliderController!.springingPercent;
-    }
-
     return SliderDragger(
       sliderController: sliderController,
       paddingTop: paddingTop,
