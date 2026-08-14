@@ -15,6 +15,10 @@
 source of whichever screen you are looking at.
 Consider contributing if you find this project helpful.
 
+**[Open the live demo](https://claudneysessa.github.io/flutter-ui-challenges/)** — the Flutter
+web build of this fork, published from the `gh-pages` branch. It is the same code as `master`,
+compiled for the browser; the app was designed for phones, so a narrow window looks best.
+
 > **This is a maintained fork.** The original project by
 > [Damodar Lohani](https://github.com/lohanidamodar/flutter_ui_challenges) was archived by
 > its author in 2024 and no longer compiled with current toolchains. This fork brings it
