@@ -10,7 +10,7 @@ class BottomBarController extends ChangeNotifier {
 
   BottomBarController({
     required TickerProvider vsync,
-    this.snap: true,
+    this.snap = true,
     double? dragLength,
   })  : _animationController = AnimationController(vsync: vsync),
         assert(dragLength == null || dragLength > 0),

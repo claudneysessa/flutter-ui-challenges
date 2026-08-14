@@ -111,13 +111,14 @@ class _CropPageState extends State<CropPage> {
 class CenteredRectangularSliderTrackShape extends RectangularSliderTrackShape {
   @override
   void paint(PaintingContext context, ui.Offset offset,
-      {RenderBox? parentBox,
+      {required RenderBox parentBox,
       required SliderThemeData sliderTheme,
-      Animation<double>? enableAnimation,
-      ui.Offset? thumbCenter,
-      bool isEnabled: false,
-      bool isDiscrete: false,
-      ui.TextDirection? textDirection}) {
+      required Animation<double> enableAnimation,
+      required ui.Offset thumbCenter,
+      ui.Offset? secondaryOffset,
+      bool isEnabled = false,
+      bool isDiscrete = false,
+      required ui.TextDirection textDirection}) {
     // If the slider track height is less than or equal to 0, then it makes no
     // difference whether the track is painted or not, therefore the painting
     // can be a no-op.
@@ -134,12 +135,12 @@ class CenteredRectangularSliderTrackShape extends RectangularSliderTrackShape {
         begin: sliderTheme.disabledInactiveTrackColor,
         end: sliderTheme.inactiveTrackColor);
     final Paint activePaint = Paint()
-      ..color = activeTrackColorTween.evaluate(enableAnimation!)!;
+      ..color = activeTrackColorTween.evaluate(enableAnimation)!;
     final Paint inactivePaint = Paint()
       ..color = inactiveTrackColorTween.evaluate(enableAnimation)!;
 
     final Rect trackRect = getPreferredRect(
-      parentBox: parentBox!,
+      parentBox: parentBox,
       offset: offset,
       sliderTheme: sliderTheme,
       isEnabled: isEnabled,
@@ -163,7 +164,7 @@ class CenteredRectangularSliderTrackShape extends RectangularSliderTrackShape {
     // if (!rightTrackSegment.isEmpty)
     //   context.canvas.drawRect(rightTrackSegment, rightTrackPaint);
 
-    if (trackCenter.dx < thumbCenter!.dx) {
+    if (trackCenter.dx < thumbCenter.dx) {
       final Rect leftTrackSegment = Rect.fromLTRB(
           trackRect.left,
           trackRect.top,

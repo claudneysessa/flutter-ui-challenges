@@ -5,23 +5,25 @@ import 'package:flutter_ui_challenges/src/pages/animations/animation1/animation1
 
 class GalleryPageOne extends StatelessWidget {
   static final String path = "lib/src/pages/misc/gallery1.dart";
-  final List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
-    const StaggeredTile.count(2, 2),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(2, 2),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(1, 1),
-    const StaggeredTile.count(2, 1),
-    const StaggeredTile.count(1, 2),
-    const StaggeredTile.count(1, 1),
+  // flutter_staggered_grid_view 0.7 dropped StaggeredTile in favour of the
+  // cell counts being given directly to StaggeredGridTile.
+  static const List<List<int>> _tileCounts = <List<int>>[
+    [2, 2],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [2, 2],
+    [1, 1],
+    [1, 1],
+    [2, 1],
+    [1, 2],
+    [1, 1],
   ];
   @override
   Widget build(BuildContext context) {
@@ -46,21 +48,28 @@ class GalleryPageOne extends StatelessWidget {
           )
         ],
       ),
-      body: StaggeredGridView.countBuilder(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
-        crossAxisCount: 3,
-        itemCount: 16,
-        itemBuilder: (context, index) => Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(images[index % images.length]),
-                fit: BoxFit.cover,
+        child: StaggeredGrid.count(
+          crossAxisCount: 3,
+          mainAxisSpacing: 8.0,
+          crossAxisSpacing: 8.0,
+          children: [
+            for (var index = 0; index < _tileCounts.length; index++)
+              StaggeredGridTile.count(
+                crossAxisCellCount: _tileCounts[index][0],
+                mainAxisCellCount: _tileCounts[index][1].toDouble(),
+                child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(images[index % images.length]),
+                        fit: BoxFit.cover,
+                      ),
+                      borderRadius: BorderRadius.circular(10.0)),
+                ),
               ),
-              borderRadius: BorderRadius.circular(10.0)),
+          ],
         ),
-        staggeredTileBuilder: (index) => _staggeredTiles[index],
-        mainAxisSpacing: 8.0,
-        crossAxisSpacing: 8.0,
       ),
     );
   }

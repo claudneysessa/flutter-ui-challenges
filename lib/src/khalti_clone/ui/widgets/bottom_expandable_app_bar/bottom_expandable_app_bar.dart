@@ -33,12 +33,12 @@ class BottomExpandableAppBar extends StatefulWidget {
   BottomExpandableAppBar({
     Key? key,
     this.expandedBody,
-    this.horizontalMargin: 16,
-    this.bottomOffset: 10,
+    this.horizontalMargin = 16,
+    this.bottomOffset = 10,
     this.shape,
-    this.expandedHeight: 150,
-    this.appBarHeight: 50,
-    this.attachSide: Side.Bottom,
+    this.expandedHeight = 150,
+    this.appBarHeight = 50,
+    this.attachSide = Side.Bottom,
     this.constraints,
     this.bottomAppBarColor,
     this.appBarDecoration,
@@ -46,7 +46,7 @@ class BottomExpandableAppBar extends StatefulWidget {
     this.expandedBackColor,
     this.expandedDecoration,
     this.controller,
-    this.useMax: false,
+    this.useMax = false,
   })  : assert(!(expandedBackColor != null && expandedDecoration != null)),
         super(key: key);
 

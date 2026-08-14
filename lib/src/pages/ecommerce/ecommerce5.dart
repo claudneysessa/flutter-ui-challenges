@@ -61,20 +61,16 @@ class EcommerceFivePage extends StatelessWidget {
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: 1,
+          // The selected item used to colour its own icon and label; `label`
+          // takes a plain String, so the colour moves to the bar itself.
+          selectedItemColor: Colors.deepOrange,
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.calendar_today),
               label: "Today's Special",
             ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.fastfood,
-                  color: Colors.deepOrange,
-                ),
-                title: Text(
-                  "Foods",
-                  style: TextStyle(color: Colors.deepOrange),
-                )),
+                icon: Icon(Icons.fastfood), label: "Foods"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.settings), label: "Settings"),
           ],
