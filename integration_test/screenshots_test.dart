@@ -12,7 +12,7 @@ import 'package:integration_test/integration_test.dart';
 ///   flutter drive \
 ///     --driver=test_driver/screenshot_driver.dart \
 ///     --target=integration_test/screenshots_test.dart \
-///     -d <device id>
+///     -d DEVICE_ID
 ///
 /// The driver writes the PNGs into assets/screenshots/.
 void main() {
@@ -50,11 +50,31 @@ void main() {
     // --dart-define=LIMIT=n captures only the first n demos, which is enough to
     // check the pipeline without sitting through the whole catalogue.
     const limit = int.fromEnvironment('LIMIT', defaultValue: 0);
+    // --dart-define=ONLY=a,b re-captures just those file names, for when a
+    // couple of screens need redoing without sitting through the catalogue.
+    const only = String.fromEnvironment('ONLY');
+    final wanted = only.isEmpty ? <String>{} : only.split(',').toSet();
     var captured = 0;
+
+    // Two demos in different sections share a title ("Landing Page"), which
+    // would give them the same file name and silently overwrite one. Only the
+    // ambiguous ones get their section prefixed, so every other name stays put.
+    final slugCounts = <String, int>{};
+    for (final section in sections) {
+      for (final entry in section.items ?? const <SubMenuItem>[]) {
+        final s = _slug(entry.title);
+        slugCounts[s] = (slugCounts[s] ?? 0) + 1;
+      }
+    }
 
     for (final section in sections) {
       for (final entry in section.items ?? const <SubMenuItem>[]) {
         if (limit > 0 && captured >= limit) return;
+        final base = _slug(entry.title);
+        final name = (slugCounts[base] ?? 0) > 1
+            ? '${_slug(section.title)}-$base'
+            : base;
+        if (wanted.isNotEmpty && !wanted.contains(name)) continue;
         captured++;
         await tester.pumpWidget(
           MaterialApp(
@@ -63,15 +83,15 @@ void main() {
           ),
         );
 
-        // Let the first frame settle, then give the network images time to
-        // arrive. pumpAndSettle is not usable here: several demos animate
-        // forever by design.
+        // Let the first frames settle. The imagery is bundled, so it decodes
+        // in a frame or two; pumpAndSettle is still not usable here, because
+        // several demos animate forever by design.
         await tester.pump(const Duration(milliseconds: 100));
-        for (var i = 0; i < 24; i++) {
-          await tester.pump(const Duration(milliseconds: 250));
+        for (var i = 0; i < 8; i++) {
+          await tester.pump(const Duration(milliseconds: 120));
         }
 
-        await binding.takeScreenshot(_slug(entry));
+        await binding.takeScreenshot(name);
 
         // Unmount between demos so timers and controllers are disposed.
         await tester.pumpWidget(const SizedBox.shrink());
@@ -83,8 +103,8 @@ void main() {
 
 /// Turns "Login 14" into "login-14", so file names are stable and predictable
 /// from the menu entry alone.
-String _slug(SubMenuItem entry) {
-  return entry.title
+String _slug(String title) {
+  return title
       .toLowerCase()
       .replaceAll(RegExp(r"[^a-z0-9]+"), '-')
       .replaceAll(RegExp(r'^-|-$'), '');
