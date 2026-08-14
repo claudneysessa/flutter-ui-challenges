@@ -290,26 +290,36 @@ class SportsNewsOnePage extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.listAlt),
-            title: Padding(
-              padding: const EdgeInsets.only(top: 4.0),
-              child: Icon(
-                FontAwesomeIcons.solidCircle,
-                size: 8.0,
-                color: primaryColor,
-              ),
+            // The removed `title` slot held a dot marking the selected item.
+            // `label` only takes a String, so the dot moves to `activeIcon`,
+            // which is where a selection marker belongs.
+            activeIcon: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(FontAwesomeIcons.listAlt),
+                Padding(
+                  padding: const EdgeInsets.only(top: 4.0),
+                  child: Icon(
+                    FontAwesomeIcons.solidCircle,
+                    size: 8.0,
+                    color: primaryColor,
+                  ),
+                ),
+              ],
             ),
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.bookmark),
-            title: Text(""),
+            label: "",
           ),
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.chartBar),
-            title: Text(""),
+            label: "",
           ),
           BottomNavigationBarItem(
             icon: Icon(FontAwesomeIcons.clipboard),
-            title: Text(""),
+            label: "",
           ),
         ],
       ),
