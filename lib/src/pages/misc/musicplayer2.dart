@@ -54,7 +54,7 @@ class MusicPlayerTwoPage extends StatelessWidget {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Colors.blue.withOpacity(0.5)),
+                          color: Colors.blue.withValues(alpha: 0.5)),
                       child: Text(
                         "Travel Series",
                         style: TextStyle(

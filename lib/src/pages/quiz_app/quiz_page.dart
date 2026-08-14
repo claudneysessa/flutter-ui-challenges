@@ -41,8 +41,14 @@ class _QuizPageState extends State<QuizPage> {
       options.shuffle();
     }
     
-    return WillPopScope(
-      onWillPop: _onWillPop as Future<bool> Function()?,
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) return;
+        if (await _onWillPop() ?? false) {
+          if (mounted) Navigator.of(context).pop();
+        }
+      },
       child: Scaffold(
         key: _key,
         appBar: AppBar(
@@ -82,20 +88,22 @@ class _QuizPageState extends State<QuizPage> {
 
                   SizedBox(height: 20.0),
                   Card(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        ...options.map((option)=>RadioListTile(
-                          title: Text("$option"),
-                          groupValue: _answers[_currentIndex],
-                          value: option,
-                          onChanged: (dynamic value){
-                            setState(() {
-                              _answers[_currentIndex] = option;
-                            });
-                          },
-                        )),
-                      ],
+                    child: RadioGroup<dynamic>(
+                      groupValue: _answers[_currentIndex],
+                      onChanged: (dynamic value){
+                        setState(() {
+                          _answers[_currentIndex] = value;
+                        });
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          ...options.map((option)=>RadioListTile<dynamic>(
+                            title: Text("$option"),
+                            value: option,
+                          )),
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(

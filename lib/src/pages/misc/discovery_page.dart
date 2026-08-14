@@ -19,7 +19,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
           bottomRight: Radius.circular(5)),
       boxShadow: [
         BoxShadow(
-          color: Colors.grey.withOpacity(0.5),
+          color: Colors.grey.withValues(alpha: 0.5),
           spreadRadius: 1,
           blurRadius: 2,
           offset: Offset(0, 1), // changes position of shadow

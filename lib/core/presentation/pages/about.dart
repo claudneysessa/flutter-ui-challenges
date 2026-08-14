@@ -36,7 +36,7 @@ class AboutPage extends StatelessWidget {
                   color: Colors.grey.shade200,
                   padding: const EdgeInsets.all(16.0),
                   onPressed: () async {
-                    if (await canLaunch(githubRepo)) launch(githubRepo);
+                    await _open(githubRepo);
                   },
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +68,7 @@ class AboutPage extends StatelessWidget {
                   color: Colors.grey.shade200,
                   padding: const EdgeInsets.all(16.0),
                   onPressed: () async {
-                    if (await canLaunch(youtubeChannel)) launch(youtubeChannel);
+                    await _open(youtubeChannel);
                   },
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,8 +108,8 @@ class AboutPage extends StatelessWidget {
                 const SizedBox(height: 10.0),
                 MaterialButton(
                   color: Colors.grey.shade200,
-                  onPressed: () {
-                    launch(privacyUrl);
+                  onPressed: () async {
+                    await _open(privacyUrl);
                   },
                   child: Text("Privacy Policy"),
                 )
@@ -174,9 +174,10 @@ class AboutPage extends StatelessWidget {
     );
   }
 
-  _open(String url) async {
-    if (await canLaunch(url)) {
-      launch(url);
+  Future<void> _open(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
   }
 }

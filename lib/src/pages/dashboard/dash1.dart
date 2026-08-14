@@ -223,8 +223,8 @@ class DonutPieChart extends StatelessWidget {
         sectionsSpace: 10.0,
         sections: seriesList,
       ),
-      swapAnimationDuration: Duration(milliseconds: 150),
-      swapAnimationCurve: Curves.linear,
+      duration: Duration(milliseconds: 150),
+      curve: Curves.linear,
     );
   }
 
@@ -293,9 +293,9 @@ class Activity {
 
 final List<Activity> activities = [
   Activity(title: "Results", icon: FontAwesomeIcons.listOl.data),
-  Activity(title: "Messages", icon: FontAwesomeIcons.sms.data),
+  Activity(title: "Messages", icon: FontAwesomeIcons.commentSms.data),
   Activity(title: "Appointments", icon: FontAwesomeIcons.calendarDay.data),
   Activity(title: "Video Consultation", icon: FontAwesomeIcons.video.data),
-  Activity(title: "Summary", icon: FontAwesomeIcons.fileAlt.data),
+  Activity(title: "Summary", icon: FontAwesomeIcons.fileLines.data),
   Activity(title: "Billing", icon: FontAwesomeIcons.dollarSign.data),
 ];

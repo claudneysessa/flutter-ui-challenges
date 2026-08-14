@@ -64,38 +64,46 @@ class ConfirmOrderPage extends StatelessWidget {
               child: Text("Delivery Address".toUpperCase())),
           Column(
             children: <Widget>[
-              RadioListTile(
-                selected: true,
-                value: address,
+              RadioGroup<String>(
                 groupValue: address,
-                title: Text(address),
-                onChanged: (dynamic value) {},
-              ),
-              RadioListTile(
-                selected: false,
-                value: "New Address",
-                groupValue: address,
-                title: Text("Choose new delivery address"),
-                onChanged: (dynamic value) {},
+                onChanged: (String? value) {},
+                child: Column(
+                  children: <Widget>[
+                    RadioListTile<String>(
+                      selected: true,
+                      value: address,
+                      title: Text(address),
+                    ),
+                    RadioListTile<String>(
+                      selected: false,
+                      value: "New Address",
+                      title: Text("Choose new delivery address"),
+                    ),
+                  ],
+                ),
               ),
               Container(
                   color: Colors.grey.shade200,
                   padding: EdgeInsets.all(8.0),
                   width: double.infinity,
                   child: Text("Contact Number".toUpperCase())),
-              RadioListTile(
-                selected: true,
-                value: phone,
+              RadioGroup<String>(
                 groupValue: phone,
-                title: Text(phone),
-                onChanged: (dynamic value) {},
-              ),
-              RadioListTile(
-                selected: false,
-                value: "New Phone",
-                groupValue: phone,
-                title: Text("Choose new contact number"),
-                onChanged: (dynamic value) {},
+                onChanged: (String? value) {},
+                child: Column(
+                  children: <Widget>[
+                    RadioListTile<String>(
+                      selected: true,
+                      value: phone,
+                      title: Text(phone),
+                    ),
+                    RadioListTile<String>(
+                      selected: false,
+                      value: "New Phone",
+                      title: Text("Choose new contact number"),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -107,11 +115,13 @@ class ConfirmOrderPage extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               width: double.infinity,
               child: Text("Payment Option".toUpperCase())),
-          RadioListTile(
+          RadioGroup<bool>(
             groupValue: true,
-            value: true,
-            title: Text("Cash on Delivery"),
-            onChanged: (dynamic value) {},
+            onChanged: (bool? value) {},
+            child: RadioListTile<bool>(
+              value: true,
+              title: Text("Cash on Delivery"),
+            ),
           ),
           Container(
             width: double.infinity,

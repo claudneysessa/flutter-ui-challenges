@@ -87,12 +87,12 @@ class ProfileSixPage extends StatelessWidget {
           Text(
             dev.location,
             style: TextStyle(
-              color: Colors.white.withOpacity(0.85),
+              color: Colors.white.withValues(alpha: 0.85),
               fontWeight: FontWeight.w500,
             ),
           ),
           Container(
-            color: Colors.white.withOpacity(0.85),
+            color: Colors.white.withValues(alpha: 0.85),
             margin: const EdgeInsets.symmetric(vertical: 16.0),
             width: 225.0,
             height: 1.0,
@@ -100,7 +100,7 @@ class ProfileSixPage extends StatelessWidget {
           Text(
             dev.biography,
             style: TextStyle(
-              color: Colors.white.withOpacity(0.85),
+              color: Colors.white.withValues(alpha: 0.85),
               height: 1.4,
             ),
           ),
@@ -145,7 +145,7 @@ class ProfileSixPage extends StatelessWidget {
           BackdropFilter(
             filter: ui.ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
             child: Container(
-              color: Colors.black.withOpacity(0.5),
+              color: Colors.black.withValues(alpha: 0.5),
               child: _buildContent(context),
             ),
           ),
@@ -162,7 +162,7 @@ class VideoCard extends StatelessWidget {
 
   BoxDecoration _buildShadowAndRoundedCorners() {
     return BoxDecoration(
-      color: Colors.white.withOpacity(0.4),
+      color: Colors.white.withValues(alpha: 0.4),
       borderRadius: BorderRadius.circular(10.0),
       boxShadow: <BoxShadow>[
         BoxShadow(
@@ -196,8 +196,9 @@ class VideoCard extends StatelessWidget {
       type: MaterialType.circle,
       child: InkWell(
         onTap: () async {
-          if (await canLaunch(video.url)) {
-            await launch(video.url);
+          final uri = Uri.parse(video.url);
+          if (await canLaunchUrl(uri)) {
+            await launchUrl(uri, mode: LaunchMode.externalApplication);
           }
         },
         child: Padding(
@@ -216,7 +217,7 @@ class VideoCard extends StatelessWidget {
       padding: const EdgeInsets.only(top: 16.0, left: 4.0, right: 4.0),
       child: Text(
         video.title,
-        style: TextStyle(color: Colors.white.withOpacity(0.85)),
+        style: TextStyle(color: Colors.white.withValues(alpha: 0.85)),
       ),
     );
   }

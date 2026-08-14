@@ -182,7 +182,7 @@ class _HomePageState extends State<HomePage>
           _buildHeaderItem(icon: FontAwesomeIcons.wallet.data, label: "Load Fund"),
           Spacer(),
           _buildHeaderItem(
-              icon: FontAwesomeIcons.mobileAlt.data, label: "Send/Request"),
+              icon: FontAwesomeIcons.mobileScreenButton.data, label: "Send/Request"),
           Spacer(),
           _buildHeaderItem(icon: FontAwesomeIcons.qrcode.data, label: "Scan & Pay"),
           Spacer(),

@@ -58,7 +58,7 @@ class FoodDeliveryHomePage extends StatelessWidget {
           ),
           Container(
             height: 200,
-            color: Colors.black.withOpacity(0.5),
+            color: Colors.black.withValues(alpha: 0.5),
           ),
           Positioned(
             bottom: 20,

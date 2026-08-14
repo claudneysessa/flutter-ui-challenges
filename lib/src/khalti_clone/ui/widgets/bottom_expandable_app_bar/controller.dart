@@ -119,7 +119,7 @@ class _DefaultBottomBarControllerState extends State<DefaultBottomBarController>
   Widget build(BuildContext context) {
     return _BottomBarControllerScope(
       controller: _controller,
-      enabled: TickerMode.of(context),
+      enabled: TickerMode.valuesOf(context).enabled,
       child: widget.child,
     );
   }

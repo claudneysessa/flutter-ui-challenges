@@ -58,7 +58,7 @@ class LoginFivePage extends StatelessWidget {
                   borderSide: BorderSide.none
                 ),
                 filled: true,
-                fillColor: Colors.white.withOpacity(0.1),
+                fillColor: Colors.white.withValues(alpha: 0.1),
               ),
               
             ),
@@ -86,7 +86,7 @@ class LoginFivePage extends StatelessWidget {
                   borderSide: BorderSide.none
                 ),
                 filled: true,
-                fillColor: Colors.white.withOpacity(0.1),
+                fillColor: Colors.white.withValues(alpha: 0.1),
               ),
               obscureText: true,
             ),

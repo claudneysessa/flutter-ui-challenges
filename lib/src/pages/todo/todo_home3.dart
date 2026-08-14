@@ -68,11 +68,11 @@ class TodoHomeThreePage extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child:
-                    _buildWikiCategory(FontAwesomeIcons.calendarCheck.data, "All Wikis", Colors.deepOrange.withOpacity(0.7)),
+                    _buildWikiCategory(FontAwesomeIcons.calendarCheck.data, "All Wikis", Colors.deepOrange.withValues(alpha: 0.7)),
               ),
               const SizedBox(width: 16.0),
               Expanded(
-                child: _buildWikiCategory(FontAwesomeIcons.lock.data, "My private notes", Colors.blue.withOpacity(0.6)),
+                child: _buildWikiCategory(FontAwesomeIcons.lock.data, "My private notes", Colors.blue.withValues(alpha: 0.6)),
               ),
             ],
           ),
@@ -81,7 +81,7 @@ class TodoHomeThreePage extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child:
-                    _buildWikiCategory(FontAwesomeIcons.bookmark.data, "Bookmarked wikis", Colors.indigo.withOpacity(0.7)),
+                    _buildWikiCategory(FontAwesomeIcons.bookmark.data, "Bookmarked wikis", Colors.indigo.withValues(alpha: 0.7)),
               ),
               const SizedBox(width: 16.0),
               Expanded(

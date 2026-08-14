@@ -72,7 +72,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                           onPressed: () => Navigator.pop(context),
                         ),
                         IconButton(
-                          icon: FaIcon(FontAwesomeIcons.sortAmountDown),
+                          icon: FaIcon(FontAwesomeIcons.arrowDownWideShort),
                           iconSize: 25.0,
                           color: Colors.black,
                           onPressed: () => Navigator.pop(context),

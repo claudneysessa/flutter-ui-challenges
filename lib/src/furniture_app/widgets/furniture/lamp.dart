@@ -47,7 +47,7 @@ class Lamp extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color(0xFFE7E9EF).withOpacity(0.0),
+                      Color(0xFFE7E9EF).withValues(alpha: 0.0),
                       Color(0xFFE7E9EF)
                     ],
                     begin: FractionalOffset.topCenter,

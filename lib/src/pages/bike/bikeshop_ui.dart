@@ -207,7 +207,7 @@ class _DetailsPageState extends State<DetailsPage> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
           boxShadow: [BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             blurRadius: 0.5,
             spreadRadius: 0.5,
           )]
@@ -268,7 +268,7 @@ class _DetailsPageState extends State<DetailsPage> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
           boxShadow: [BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.grey.withValues(alpha: 0.2),
             blurRadius: 0.5,
             spreadRadius: 0.5,
           )]

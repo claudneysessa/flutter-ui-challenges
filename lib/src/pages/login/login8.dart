@@ -23,7 +23,7 @@ class LoginEightPage extends StatelessWidget {
               ),
             ),
             child: Container(
-              color: Colors.black.withOpacity(0.5),
+              color: Colors.black.withValues(alpha: 0.5),
               padding: const EdgeInsets.all(32.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,

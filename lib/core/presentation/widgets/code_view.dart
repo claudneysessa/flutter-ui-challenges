@@ -40,13 +40,12 @@ class MyCodeViewState extends State<MyCodeView> {
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: RichText(
-              textScaleFactor: _textScaleFactor,
               text: TextSpan(
                 style: TextStyle(fontFamily: 'monospace', fontSize: 12.0),
                 children: <TextSpan>[
                   DartSyntaxHighlighter(style).format(codeContent)
                 ],
-              ),
+              ), textScaler: TextScaler.linear(_textScaleFactor),
             ),
           ),
         ),
@@ -69,7 +68,8 @@ class MyCodeViewState extends State<MyCodeView> {
       SpeedDialChild(
         label: "Open",
         child: Icon(Icons.open_in_new),
-        onTap: () => url_launcher.launch(widget.githubPath),
+        onTap: () => url_launcher.launchUrl(Uri.parse(widget.githubPath),
+            mode: url_launcher.LaunchMode.externalApplication),
       ),
       SpeedDialChild(
         child: Icon(Icons.zoom_out),

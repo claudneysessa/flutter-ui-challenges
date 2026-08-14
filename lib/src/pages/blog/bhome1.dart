@@ -66,7 +66,7 @@ class BlogHomeOnePage extends StatelessWidget {
         data: ThemeData(
           primaryColor: primaryColor,
           appBarTheme: AppBarTheme(
-            color: Colors.white,
+            backgroundColor: Colors.white,
             iconTheme: IconThemeData(color: secondaryColor),
             actionsIconTheme: IconThemeData(
               color: secondaryColor,

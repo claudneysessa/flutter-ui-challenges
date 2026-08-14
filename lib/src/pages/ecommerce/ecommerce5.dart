@@ -75,7 +75,7 @@ class EcommerceFivePage extends StatelessWidget {
                 icon: Icon(Icons.settings), label: "Settings"),
           ],
         ),
-        backgroundColor: Colors.white70.withOpacity(0.9),
+        backgroundColor: Colors.white70.withValues(alpha: 0.9),
         body: SafeArea(
           child: Stack(
             children: <Widget>[

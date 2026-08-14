@@ -50,7 +50,7 @@ class SettingsThreePage extends StatelessWidget {
                   ),
                   _buildDivider(),
                   SwitchListTile(
-                    activeColor: Colors.purple,
+                    activeThumbColor: Colors.purple,
                     value: true,
                     title: Text("Private Account"),
                     onChanged: (val) {},
@@ -71,28 +71,28 @@ class SettingsThreePage extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   SwitchListTile(
-                    activeColor: Colors.purple,
+                    activeThumbColor: Colors.purple,
                     value: true,
                     title: Text("Received notification"),
                     onChanged: (val) {},
                   ),
                   _buildDivider(),
                   SwitchListTile(
-                    activeColor: Colors.purple,
+                    activeThumbColor: Colors.purple,
                     value: false,
                     title: Text("Received newsletter"),
                     onChanged: null,
                   ),
                   _buildDivider(),
                   SwitchListTile(
-                    activeColor: Colors.purple,
+                    activeThumbColor: Colors.purple,
                     value: true,
                     title: Text("Received Offer Notification"),
                     onChanged: (val) {},
                   ),
                   _buildDivider(),
                   SwitchListTile(
-                    activeColor: Colors.purple,
+                    activeThumbColor: Colors.purple,
                     value: true,
                     title: Text("Received App Updates"),
                     onChanged: null,

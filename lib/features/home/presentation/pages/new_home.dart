@@ -139,7 +139,7 @@ class _NewHomePageState extends State<NewHomePage>
                 const SizedBox(height: 10.0),
                 CategoryItem(
                   title: "About",
-                  icon: FaIcon(FontAwesomeIcons.infoCircle,
+                  icon: FaIcon(FontAwesomeIcons.circleInfo,
                     color: Colors.red,
                   ),
                   onPressed: () => Navigator.pushNamed(context, 'about'),

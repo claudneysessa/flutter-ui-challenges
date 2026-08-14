@@ -23,7 +23,7 @@ class LoginFourPage extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.all(20.0),
-              color: Colors.black.withOpacity(0.7),
+              color: Colors.black.withValues(alpha: 0.7),
             ),
             SingleChildScrollView(
               padding: EdgeInsets.all(20.0),

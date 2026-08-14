@@ -33,7 +33,7 @@ class MenuOnePage extends StatelessWidget {
                           child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withValues(alpha: 0.3),
                 ),
                 width: 150,
                 height: 300,
@@ -49,7 +49,7 @@ class MenuOnePage extends StatelessWidget {
                           child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withValues(alpha: 0.3),
                 ),
                 width: 150,
                 height: 300,
@@ -65,7 +65,7 @@ class MenuOnePage extends StatelessWidget {
                           child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withValues(alpha: 0.3),
                 ),
                 width: 150,
                 height: 200,
@@ -81,7 +81,7 @@ class MenuOnePage extends StatelessWidget {
                           child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
-                  color: Colors.white.withOpacity(0.3),
+                  color: Colors.white.withValues(alpha: 0.3),
                 ),
                 width: 150,
                 height: 200,

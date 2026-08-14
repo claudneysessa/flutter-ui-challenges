@@ -14,8 +14,8 @@ class _HomeScreenState extends State<HomeScreen> {
   List<IconData> _icons = [
     FontAwesomeIcons.plane.data,
     FontAwesomeIcons.bed.data,
-    FontAwesomeIcons.walking.data,
-    FontAwesomeIcons.biking.data,
+    FontAwesomeIcons.personWalking.data,
+    FontAwesomeIcons.personBiking.data,
   ];
 
   Widget _buildIcon(int index) {

@@ -90,24 +90,28 @@ class ProfileElevenPage extends StatelessWidget {
             ),
             leading: Icon(Icons.person),
           ),
-          RadioListTile(
-            value: true,
+          RadioGroup<bool>(
             groupValue: true,
-            title: Text("private"),
-            onChanged: (dynamic value) {},
-            secondary: SizedBox(
-              width: 10,
-            ),
-            controlAffinity: ListTileControlAffinity.trailing,
-          ),
-          RadioListTile(
-            value: false,
-            groupValue: true,
-            controlAffinity: ListTileControlAffinity.trailing,
-            title: Text("public"),
-            onChanged: (dynamic value) {},
-            secondary: SizedBox(
-              width: 10,
+            onChanged: (bool? value) {},
+            child: Column(
+              children: <Widget>[
+                RadioListTile<bool>(
+                  value: true,
+                  title: Text("private"),
+                  secondary: SizedBox(
+                    width: 10,
+                  ),
+                  controlAffinity: ListTileControlAffinity.trailing,
+                ),
+                RadioListTile<bool>(
+                  value: false,
+                  controlAffinity: ListTileControlAffinity.trailing,
+                  title: Text("public"),
+                  secondary: SizedBox(
+                    width: 10,
+                  ),
+                ),
+              ],
             ),
           ),
           _buildDivider(),

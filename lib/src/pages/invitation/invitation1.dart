@@ -84,7 +84,7 @@ class InvitationPageOne extends StatelessWidget {
                     children: <Widget>[
                       Container(
                           height: 200.0,
-                          color: primary.withOpacity(0.1),
+                          color: primary.withValues(alpha: 0.1),
                           padding: const EdgeInsets.all(16.0),
                           width: double.infinity,
                           child: Image.network(
@@ -145,7 +145,7 @@ class InvitationPageOne extends StatelessWidget {
                         Spacer(),
                         Container(height: 20.0,width: 1.0,color: Colors.grey,),
                         Spacer(),
-                        FaIcon(FontAwesomeIcons.calendarTimes),
+                        FaIcon(FontAwesomeIcons.calendarXmark),
                         Spacer(),
                         Container(height: 20.0,width: 1.0,color: Colors.grey,),
                         Spacer(),

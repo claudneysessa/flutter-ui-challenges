@@ -63,8 +63,8 @@ class _GridViewAnimationPageState extends State<GridViewAnimationPage> {
                       borderRadius: BorderRadius.circular(20),
                       gradient:
                           LinearGradient(begin: Alignment.bottomRight, colors: [
-                        Colors.black.withOpacity(.4),
-                        Colors.black.withOpacity(.2),
+                        Colors.black.withValues(alpha: .4),
+                        Colors.black.withValues(alpha: .2),
                       ])),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,

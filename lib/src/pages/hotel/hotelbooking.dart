@@ -155,7 +155,7 @@ class _HotelBookingPageState extends State<HotelBookingPage> {
                         hintStyle: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 16.0,
-                          color: Colors.grey.withOpacity(0.8),
+                          color: Colors.grey.withValues(alpha: 0.8),
                         ),
                       ),
                     ),

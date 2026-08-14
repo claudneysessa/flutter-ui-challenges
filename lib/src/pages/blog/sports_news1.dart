@@ -60,7 +60,7 @@ class SportsNewsOnePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    FaIcon(FontAwesomeIcons.footballBall),
+                    FaIcon(FontAwesomeIcons.football),
                     const SizedBox(height: 16.0),
                     Text(
                       "Football",
@@ -76,7 +76,7 @@ class SportsNewsOnePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    FaIcon(FontAwesomeIcons.basketballBall),
+                    FaIcon(FontAwesomeIcons.basketball),
                     const SizedBox(height: 16.0),
                     Text("Basketball"),
                   ],
@@ -88,7 +88,7 @@ class SportsNewsOnePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    FaIcon(FontAwesomeIcons.basketballBall),
+                    FaIcon(FontAwesomeIcons.basketball),
                     const SizedBox(height: 16.0),
                     Text("Hockey"),
                   ],
@@ -288,14 +288,14 @@ class SportsNewsOnePage extends StatelessWidget {
         elevation: 0,
         items: [
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.listAlt),
+            icon: FaIcon(FontAwesomeIcons.rectangleList),
             // The removed `title` slot held a dot marking the selected item.
             // `label` only takes a String, so the dot moves to `activeIcon`,
             // which is where a selection marker belongs.
             activeIcon: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                FaIcon(FontAwesomeIcons.listAlt),
+                FaIcon(FontAwesomeIcons.rectangleList),
                 Padding(
                   padding: const EdgeInsets.only(top: 4.0),
                   child: FaIcon(FontAwesomeIcons.solidCircle,

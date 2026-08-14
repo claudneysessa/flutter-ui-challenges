@@ -110,7 +110,7 @@ class QuizFinishedPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                      backgroundColor: Colors.pink.withOpacity(0.8),
+                      backgroundColor: Colors.pink.withValues(alpha: 0.8),
                       foregroundColor: Colors.white,
                     ),
                     child: Text("Goto Home"),
@@ -122,7 +122,7 @@ class QuizFinishedPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                      backgroundColor: Colors.deepPurple.withOpacity(0.8),
+                      backgroundColor: Colors.deepPurple.withValues(alpha: 0.8),
                       foregroundColor: Colors.white,
                     ),
                     child: Text("Check Answers"),

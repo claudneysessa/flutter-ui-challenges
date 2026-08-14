@@ -278,7 +278,7 @@ class CardPage extends StatelessWidget {
                         ),
                         Switch(
                           value: true,
-                          activeColor: Color.fromRGBO(50, 172, 121, 1),
+                          activeThumbColor: Color.fromRGBO(50, 172, 121, 1),
                           onChanged: (_) {},
                         )
                       ],
@@ -322,7 +322,7 @@ class CardPage extends StatelessWidget {
                         ),
                         Switch(
                           value: false,
-                          activeColor: Color.fromRGBO(50, 172, 121, 1),
+                          activeThumbColor: Color.fromRGBO(50, 172, 121, 1),
                           onChanged: (_) {},
                         )
                       ],
@@ -366,7 +366,7 @@ class CardPage extends StatelessWidget {
                         ),
                         Switch(
                           value: true,
-                          activeColor: Color.fromRGBO(50, 172, 121, 1),
+                          activeThumbColor: Color.fromRGBO(50, 172, 121, 1),
                           onChanged: (_) {},
                         )
                       ],

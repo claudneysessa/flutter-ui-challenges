@@ -41,7 +41,7 @@ class ProfileNinePage extends StatelessWidget {
                     image: NetworkImage(pancake), fit: BoxFit.cover),
               ),
               foregroundDecoration:
-                  BoxDecoration(color: Colors.pink.withOpacity(0.8)),
+                  BoxDecoration(color: Colors.pink.withValues(alpha: 0.8)),
             ),
           ),
           ListView(
@@ -227,7 +227,7 @@ class ProfileNinePage extends StatelessWidget {
                     image: NetworkImage(images[0]), fit: BoxFit.cover),
                 borderRadius: BorderRadius.circular(10.0)),
             foregroundDecoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.3),
+                color: Colors.blue.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(10.0)),
           ),
           Container(

@@ -116,7 +116,7 @@ class _FancyAppbarAnimationState extends State<FancyAppbarAnimation> {
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(30.0)),
-                color: Colors.white.withOpacity(_getOpacity()),
+                color: Colors.white.withValues(alpha: _getOpacity()),
               ),
               child: DefaultTextStyle(
                 style: TextStyle(),

@@ -32,54 +32,41 @@ class RegisterPage extends StatelessWidget {
               _buildTextField(),
               const SizedBox(height: 20.0),
               Text("Date Type", style: smallText,),
-              Row(
-                children: <Widget>[
-                  Radio(
-                    groupValue: "AD",
-                    value: "AD",
-                    onChanged: (dynamic value){},
-                  ),
-                  Text("AD"),
-                  Spacer(),
-                  Radio(
-                    groupValue: "AD",
-                    value: "BS",
-                    onChanged: (dynamic value){},
-                  ),
-                  Text("BS"),
-                  Spacer(),
-                ],
+              RadioGroup<String>(
+                groupValue: "AD",
+                onChanged: (String? value) {},
+                child: Row(
+                  children: <Widget>[
+                    Radio<String>(value: "AD"),
+                    Text("AD"),
+                    Spacer(),
+                    Radio<String>(value: "BS"),
+                    Text("BS"),
+                    Spacer(),
+                  ],
+                ),
               ),
               const SizedBox(height: 10.0),
               Text("Date of Birth (YYYY-MM-DD)", style: smallText,),
               _buildTextField(),
               const SizedBox(height: 20.0),
               Text("Date Type", style: smallText,),
-              Row(
-                children: <Widget>[
-                  Radio(
-                    groupValue: "Male",
-                    value: "Male",
-                    onChanged: (dynamic value){},
-                  ),
-                  Text("Male"),
-                  Spacer(),
-                  Radio(
-                    groupValue: "Male",
-                    value: "Female",
-                    onChanged: (dynamic value){},
-                  ),
-                  Text("Female"),
-                  Spacer(),
-                  Radio(
-                    groupValue: "Male",
-                    value: "Other",
-                    onChanged: (dynamic value){},
-                  ),
-                  Text("Other"),
-                  Spacer(),
-                  
-                ],
+              RadioGroup<String>(
+                groupValue: "Male",
+                onChanged: (String? value) {},
+                child: Row(
+                  children: <Widget>[
+                    Radio<String>(value: "Male"),
+                    Text("Male"),
+                    Spacer(),
+                    Radio<String>(value: "Female"),
+                    Text("Female"),
+                    Spacer(),
+                    Radio<String>(value: "Other"),
+                    Text("Other"),
+                    Spacer(),
+                  ],
+                ),
               ),
               const SizedBox(height: 10.0),
 

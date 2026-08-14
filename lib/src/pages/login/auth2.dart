@@ -26,7 +26,7 @@ class AuthTwoPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(
                     horizontal: 24.0, vertical: 48.0),
                 decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.white.withValues(alpha: 0.8),
                     borderRadius: BorderRadius.circular(10.0)),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(

@@ -304,7 +304,7 @@ final List<dynamic> pages = [
         ),
         path: CheckAnswersPage.path),
   ]),
-  MenuItem(title: "Todo", icon: FontAwesomeIcons.tasks.data, items: [
+  MenuItem(title: "Todo", icon: FontAwesomeIcons.listCheck.data, items: [
     SubMenuItem("Todo Home Three", TodoHomeThreePage(),
         path: TodoHomeThreePage.path),
     SubMenuItem("Todo Week View", TodoTwoPage(), path: TodoTwoPage.path),

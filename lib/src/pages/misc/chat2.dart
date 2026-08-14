@@ -201,7 +201,7 @@ class _ChatTwoPageState extends State<ChatTwoPage> {
               Text(
                 "2:02",
                 style: TextStyle(
-                    fontSize: 12, color: Colors.black.withOpacity(0.5)),
+                    fontSize: 12, color: Colors.black.withValues(alpha: 0.5)),
               )
             ],
           ),

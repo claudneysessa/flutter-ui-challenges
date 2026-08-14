@@ -196,7 +196,7 @@ class _ChoiceChipState extends State<ChoiceChip> {
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       decoration: widget.isflightSelected
           ? BoxDecoration(
-              color: Colors.white.withOpacity(.15),
+              color: Colors.white.withValues(alpha: .15),
               borderRadius: BorderRadius.all(Radius.circular(20)))
           : null,
       child: Row(
