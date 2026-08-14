@@ -105,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: CircleAvatar(
               radius: 15.0,
-              backgroundImage: NetworkImage('https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F1.jpg?alt=media'),
+              backgroundImage: NetworkImage('https://i.pravatar.cc/300?img=12'),
             ),
             label: '',
           )

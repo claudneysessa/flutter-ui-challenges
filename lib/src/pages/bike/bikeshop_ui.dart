@@ -222,7 +222,7 @@ class _DetailsPageState extends State<DetailsPage> {
               height: 150,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage('https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/bike%2Fbike1.jpg?alt=media'),
+                      image: NetworkImage('https://picsum.photos/seed/bike/1000/700'),
                       fit: BoxFit.contain
                   )
               ),
@@ -284,7 +284,7 @@ class _DetailsPageState extends State<DetailsPage> {
             Container(
               padding:EdgeInsets.all(30),
               child: Center(
-                child: Image.network('https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/bike%2Fbike1.jpg?alt=media'),
+                child: Image.network('https://picsum.photos/seed/bike/1000/700'),
               ),
             ),
             Row(

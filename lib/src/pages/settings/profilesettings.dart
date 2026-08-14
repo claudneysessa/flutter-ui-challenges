@@ -82,7 +82,7 @@ class _EditPageState extends State<EditPage> {
                           image: DecorationImage(
                               fit: BoxFit.cover,
                               image: NetworkImage(
-                                "https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F1.jpg?alt=media",
+                                "https://i.pravatar.cc/300?img=12",
                               ))),
                     ),
                     Positioned(

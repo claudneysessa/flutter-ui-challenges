@@ -1,146 +1,132 @@
+/// Remote imagery for the demos.
+///
+/// Every URL here used to point at the original author's Firebase Storage
+/// bucket. Google withdrew Cloud Storage from the no-cost Spark plan, so that
+/// bucket now answers every request with HTTP 402 and the artwork is gone. The
+/// demos are drawn almost entirely out of these images, so most of the app
+/// rendered as blank rectangles.
+///
+/// They are replaced with two services that need no account and no key:
+///
+/// * https://picsum.photos — seeded, so a given seed always returns the same
+///   photo and the demos stay visually stable between runs.
+/// * https://i.pravatar.cc — portrait avatars, which is what the profile and
+///   chat screens expect in those slots.
+///
+/// Sizes match roughly how each image is used, so the device is not asked to
+/// decode a 4K photo for a 40px avatar. Everything remote lives in this file,
+/// so pointing the app at a bucket of your own is a single-file change.
+///
+/// Note that the original set was themed — Nepali landmarks, specific dishes,
+/// cut-out product shots for the grocery app. That artwork was lost with the
+/// bucket and cannot be reproduced; these are photographs in its place.
+library;
+
 const String appLogo = 'assets/icon/icon.png';
 const String appFeatureImage = 'assets/icon/feature_store.jpg';
-const String fishtail =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Ffishtail.jpg?alt=media';
-const String mountEverest =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Fmount_everest.jpg?alt=media';
-const String tokyo =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Ftokyo.jpg?alt=media';
-const String fewalake =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Ffewalake.jpg?alt=media';
-const String kathmandu1 =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Fkathmandu1.jpg?alt=media';
-const String kathmandu2 =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Fkathmandu2.jpg?alt=media';
-const String pashupatinath =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Fpashupatinath.jpg?alt=media';
 
-const String avocadoF =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Favocado-f.jpg?alt=media';
-const String breakfast =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fbreakfast.jpg?alt=media';
-const String burger =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fburger.jpg?alt=media';
-const String burger1 =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fburger1.jpg?alt=media';
-const String burger2 =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fburger2.jpg?alt=media';
-const String cake =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fcake.png?alt=media';
-const String cherry =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fcherry.jpg?alt=media';
-const String eggs =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Feggs.png?alt=media';
-const String foodLogo =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Flogo.png?alt=media';
-const String sugar =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fsugar.png?alt=media';
-const String vanilla =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fvanilla.png?alt=media';
-const String map =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fmap.png?alt=media';
-const String cupcake =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fcupcake.jpg?alt=media';
-const String frenchFries =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Ffrench-fries.jpg?alt=media';
-const String fries =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Ffries.jpg?alt=media';
-const String meal =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fmeal.jpg?alt=media';
-const String pancake =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/food%2Fpancake.jpg?alt=media';
+const String _photo = 'https://picsum.photos/seed';
+
+// Travel
+const String fishtail = '$_photo/fishtail/800/1200';
+const String mountEverest = '$_photo/everest/800/1200';
+const String tokyo = '$_photo/tokyo/800/1200';
+const String fewalake = '$_photo/fewalake/800/1200';
+const String kathmandu1 = '$_photo/kathmandu1/800/1200';
+const String kathmandu2 = '$_photo/kathmandu2/800/1200';
+const String pashupatinath = '$_photo/pashupatinath/800/1200';
+
+// Food
+const String avocadoF = '$_photo/avocado/800/800';
+const String breakfast = '$_photo/breakfast/800/800';
+const String burger = '$_photo/burger/800/800';
+const String burger1 = '$_photo/burger1/800/800';
+const String burger2 = '$_photo/burger2/800/800';
+const String cake = '$_photo/cake/800/800';
+const String cherry = '$_photo/cherry/800/800';
+const String eggs = '$_photo/eggs/600/600';
+const String foodLogo = '$_photo/foodlogo/300/300';
+const String sugar = '$_photo/sugar/600/600';
+const String vanilla = '$_photo/vanilla/600/600';
+const String map = '$_photo/map/800/800';
+const String cupcake = '$_photo/cupcake/800/800';
+const String frenchFries = '$_photo/frenchfries/800/800';
+const String fries = '$_photo/fries/800/800';
+const String meal = '$_photo/meal/800/800';
+const String pancake = '$_photo/pancake/800/800';
+
+const String _avatar = 'https://i.pravatar.cc/300?img=';
 
 const List<String> avatars = [
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F1.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F4.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F6.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F7.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fdev_damodar.jpg?alt=media&token=aaf47b41-3485-4bab-bcb6-2e472b9afee6',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fdev_sudip.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fdev_sid.png?alt=media',
+  '${_avatar}12',
+  '${_avatar}32',
+  '${_avatar}47',
+  '${_avatar}68',
+  '${_avatar}11',
+  '${_avatar}52',
+  '${_avatar}15',
 ];
 
 const List<String> images = [
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F1.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F2.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F3.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F4.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F5.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F6.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F7.jpg?alt=media',
+  '$_photo/gallery1/1000/1000',
+  '$_photo/gallery2/1000/1000',
+  '$_photo/gallery3/1000/1000',
+  '$_photo/gallery4/1000/1000',
+  '$_photo/gallery5/1000/1000',
+  '$_photo/gallery6/1000/1000',
+  '$_photo/gallery7/1000/1000',
 ];
 
 const List<String> backgroundImages = [
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fb1.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fb2.jpg?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fb3.jpg?alt=media',
+  '$_photo/background1/1000/1600',
+  '$_photo/background2/1000/1600',
+  '$_photo/background3/1000/1600',
 ];
 
-const String backdrop =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fbackdrop.png?alt=media';
+const String backdrop = '$_photo/backdrop/1000/1600';
 
-const String infoIcon =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Finfo-icon.png?alt=media';
-const String origami =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Forigami.png?alt=media';
-const String rocket =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Frocket.png?alt=media';
-const String ledge =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fledge.jpg?alt=media';
-const String photographer =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fphotographer.jpg?alt=media';
+const String infoIcon = '$_photo/infoicon/200/200';
+const String origami = '$_photo/origami/600/600';
+const String rocket = '$_photo/rocket/600/600';
+const String ledge = '$_photo/ledge/1000/1400';
+const String photographer = '$_photo/photographer/1000/1400';
 
-const String loginBack =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Flogin-back.jpg?alt=media';
+const String loginBack = '$_photo/loginback/1000/1600';
 
 const List<String> sidVideoThumbs = [
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fvideo1_thumb.png?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fvideo2_thumb.png?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fvideo3_thumb.png?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fvideo4_thumb.png?alt=media',
+  '$_photo/video1/640/360',
+  '$_photo/video2/640/360',
+  '$_photo/video3/640/360',
+  '$_photo/video4/640/360',
 ];
 
-const String devDamodar =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fdev_damodar.jpg?alt=media&token=aaf47b41-3485-4bab-bcb6-2e472b9afee6';
-const String devSudip =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fdev_sudip.jpg?alt=media';
+const String devDamodar = '${_avatar}13';
+const String devSudip = '${_avatar}53';
 const String devArpana =
     'https://avatars.githubusercontent.com/u/55906788?s=400&u=755774d7c380cd7bbaf7e158bef74fc275853f17&v=4';
-const String devSid =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Fdev_sid.png?alt=media';
+const String devSid = '${_avatar}60';
 
-//grocery app
-const String brocoli =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fbrocoli.png?alt=media';
-const String cabbage =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fcabbage.png?alt=media';
-const String capsicum =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fcapsicum.png?alt=media';
-const String chatIcon =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fchat_icon.png?alt=media';
-const String deliveryIcon =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fdelivery.png?alt=media';
-const String fruit =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Ffruit.png?alt=media';
-const String homeIcon =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fhome_icon.png?alt=media';
-const String mango =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fmango.png?alt=media';
-const String mortar =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fmortar.png?alt=media';
-const String pineapple =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fpineapple.png?alt=media';
-const String vegetables =
-    'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/grocery%2Fvegetables.png?alt=mediroom4ia';
+// Grocery app
+const String brocoli = '$_photo/brocoli/600/600';
+const String cabbage = '$_photo/cabbage/600/600';
+const String capsicum = '$_photo/capsicum/600/600';
+const String chatIcon = '$_photo/chaticon/200/200';
+const String deliveryIcon = '$_photo/deliveryicon/200/200';
+const String fruit = '$_photo/fruit/600/600';
+const String homeIcon = '$_photo/homeicon/200/200';
+const String mango = '$_photo/mango/600/600';
+const String mortar = '$_photo/mortar/600/600';
+const String pineapple = '$_photo/pineapple/600/600';
+const String vegetables = '$_photo/vegetables/600/600';
 
-const INVITE_ILLUSTRATION = "https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2Finvite.png?alt=media";
+const INVITE_ILLUSTRATION = '$_photo/invite/800/800';
 
-const String bike = "https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/bike%2Fbike1.jpg?alt=media";
+const String bike = '$_photo/bike/1000/700';
 
 const String room4 = "assets/hotel/room4.jpg";
 
 const List<String> introIllus = [
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/intro%2F1.png?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/intro%2F2.png?alt=media',
-  'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/intro%2F3.png?alt=media'
+  '$_photo/intro1/800/800',
+  '$_photo/intro2/800/800',
+  '$_photo/intro3/800/800',
 ];

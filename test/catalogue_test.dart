@@ -55,4 +55,21 @@ void main() {
     expect(sections.length, greaterThanOrEqualTo(20));
     expect(entries.length, greaterThanOrEqualTo(130));
   });
+
+  test('no demo still points at the dead Firebase bucket', () {
+    // The original author's Cloud Storage bucket was withdrawn from Firebase's
+    // no-cost plan and answers every request with HTTP 402. A reference
+    // creeping back in means blank screens, and nothing else in the suite
+    // would notice: a failed image throws nothing, it just paints nothing.
+    final offenders = <String>[];
+    for (final file in Directory('lib').listSync(recursive: true)) {
+      if (file is! File || !file.path.endsWith('.dart')) continue;
+      if (file.readAsStringSync().contains('firebasestorage.googleapis.com')) {
+        offenders.add(file.path);
+      }
+    }
+
+    expect(offenders, isEmpty,
+        reason: 'dead bucket referenced in: ${offenders.join(', ')}');
+  });
 }

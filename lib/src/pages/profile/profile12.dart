@@ -37,7 +37,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
-                      'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F1.jpg?alt=media'),
+                      'https://i.pravatar.cc/300?img=12'),
                   fit: BoxFit.cover,
                 ),
               ),

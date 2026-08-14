@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
                             backgroundColor: Colors.white,
                             child: ClipOval(
                               child: Image.network(
-                                'https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/img%2F6.jpg?alt=media',
+                                'https://i.pravatar.cc/300?img=52',
                                 fit: BoxFit.contain,
                               ),
                             ),

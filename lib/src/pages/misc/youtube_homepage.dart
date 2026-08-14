@@ -79,10 +79,10 @@ class _YoutubeHomePageState extends State<YoutubeHomePage> {
         child: Column(
           children: <Widget>[
             eachvideo(
-                "https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Fpashupatinath.jpg?alt=media",
+                "https://picsum.photos/seed/pashupatinath/800/1200",
                 "About PasupatiNath Temple "),
             eachvideo(
-                "https://firebasestorage.googleapis.com/v0/b/dl-flutter-ui-challenges.appspot.com/o/travel%2Fkathmandu2.jpg?alt=media",
+                "https://picsum.photos/seed/kathmandu2/800/1200",
                 "Capital of Nepal "),
           ],
         ),
