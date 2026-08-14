@@ -82,17 +82,17 @@ class ProfileFivePage extends StatelessWidget {
                   children: <Widget>[
                     IconButton(
                       color: Colors.grey,
-                      icon: Icon(FontAwesomeIcons.instagram),
+                      icon: FaIcon(FontAwesomeIcons.instagram),
                       onPressed: (){},
                     ),
                     IconButton(
                       color: Colors.grey,
-                      icon: Icon(FontAwesomeIcons.facebookF),
+                      icon: FaIcon(FontAwesomeIcons.facebookF),
                       onPressed: (){},
                     ),
                     IconButton(
                       color: Colors.grey.shade600,
-                      icon: Icon(FontAwesomeIcons.twitter),
+                      icon: FaIcon(FontAwesomeIcons.twitter),
                       onPressed: (){},
                     ),
                   ],
@@ -114,7 +114,7 @@ class ProfileFivePage extends StatelessWidget {
                           children: <Widget>[
                             IconButton(
                               color: Colors.white,
-                              icon: Icon(FontAwesomeIcons.user),
+                              icon: FaIcon(FontAwesomeIcons.user),
                               onPressed: (){},
                             ),
                             IconButton(

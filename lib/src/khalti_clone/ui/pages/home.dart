@@ -179,15 +179,15 @@ class _HomePageState extends State<HomePage>
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Spacer(),
-          _buildHeaderItem(icon: FontAwesomeIcons.wallet, label: "Load Fund"),
+          _buildHeaderItem(icon: FontAwesomeIcons.wallet.data, label: "Load Fund"),
           Spacer(),
           _buildHeaderItem(
-              icon: FontAwesomeIcons.mobileAlt, label: "Send/Request"),
+              icon: FontAwesomeIcons.mobileAlt.data, label: "Send/Request"),
           Spacer(),
-          _buildHeaderItem(icon: FontAwesomeIcons.qrcode, label: "Scan & Pay"),
+          _buildHeaderItem(icon: FontAwesomeIcons.qrcode.data, label: "Scan & Pay"),
           Spacer(),
           _buildHeaderItem(
-              icon: FontAwesomeIcons.coins, label: "Bank Transfer"),
+              icon: FontAwesomeIcons.coins.data, label: "Bank Transfer"),
           Spacer(),
         ],
       ),

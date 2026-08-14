@@ -12,10 +12,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   int _currentTab = 0;
   List<IconData> _icons = [
-    FontAwesomeIcons.plane,
-    FontAwesomeIcons.bed,
-    FontAwesomeIcons.walking,
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.plane.data,
+    FontAwesomeIcons.bed.data,
+    FontAwesomeIcons.walking.data,
+    FontAwesomeIcons.biking.data,
   ];
 
   Widget _buildIcon(int index) {

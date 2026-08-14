@@ -99,7 +99,7 @@ class _IntroThreePageState extends State<IntroThreePage> {
           IconButton(
             icon: Icon(_currentIndex < _pageCount - 1
                 ? Icons.arrow_forward_ios
-                : FontAwesomeIcons.check),
+                : FontAwesomeIcons.check.data),
             onPressed: () async {
               if (_currentIndex < _pageCount - 1)
                 _swiperController.next();

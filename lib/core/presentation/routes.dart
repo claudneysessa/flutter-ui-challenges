@@ -109,7 +109,6 @@ import 'package:flutter_ui_challenges/src/pages/animations/anim2.dart';
 import 'package:flutter_ui_challenges/src/pages/animations/anim3.dart';
 import 'package:flutter_ui_challenges/src/pages/onboarding/intro2.dart';
 import 'package:flutter_ui_challenges/src/pages/onboarding/intro3.dart';
-import 'package:flutter_ui_challenges/src/pages/onboarding/intro5.dart';
 import 'package:flutter_ui_challenges/src/pages/onboarding/intro4.dart';
 import 'package:flutter_ui_challenges/src/pages/navigation/drawer2.dart';
 import 'package:flutter_ui_challenges/src/pages/quiz_app/quiz_page.dart';
@@ -138,7 +137,7 @@ import 'package:flutter_ui_challenges/src/pages/animations/animation1/animation1
 import 'package:flutter_ui_challenges/src/pages/onboarding/smart_wallet_onboarding.dart';
 
 final List<dynamic> pages = [
-  MenuItem(title: "Animations", icon: FontAwesomeIcons.truckMoving, items: [
+  MenuItem(title: "Animations", icon: FontAwesomeIcons.truckMoving.data, items: [
     SubMenuItem("Fancy Appbar Animation", FancyAppbarAnimation(),
         path: FancyAppbarAnimation.path),
     SubMenuItem("Hero Animation", AnimationOnePage(),
@@ -202,7 +201,7 @@ final List<dynamic> pages = [
   ]),
   MenuItem(
     title: "Quotes App",
-    icon: FontAwesomeIcons.quoteLeft,
+    icon: FontAwesomeIcons.quoteLeft.data,
     items: [
       SubMenuItem("Quote Page Two", QuotesPageTwo(), path: QuotesPageTwo.path),
       SubMenuItem("Quote Page One", QuotesOnePage(), path: QuotesOnePage.path),
@@ -281,7 +280,7 @@ final List<dynamic> pages = [
     SubMenuItem("Food Delivery", FoodDeliveryHomePage(),
         path: FoodDeliveryHomePage.path),
   ]),
-  MenuItem(title: "Quiz app", icon: FontAwesomeIcons.question, items: [
+  MenuItem(title: "Quiz app", icon: FontAwesomeIcons.question.data, items: [
     SubMenuItem("Quiz Home", QuizHomePage(), path: QuizHomePage.path),
     SubMenuItem(
         "Quiz Page",
@@ -305,7 +304,7 @@ final List<dynamic> pages = [
         ),
         path: CheckAnswersPage.path),
   ]),
-  MenuItem(title: "Todo", icon: FontAwesomeIcons.tasks, items: [
+  MenuItem(title: "Todo", icon: FontAwesomeIcons.tasks.data, items: [
     SubMenuItem("Todo Home Three", TodoHomeThreePage(),
         path: TodoHomeThreePage.path),
     SubMenuItem("Todo Week View", TodoTwoPage(), path: TodoTwoPage.path),
@@ -347,7 +346,6 @@ final List<dynamic> pages = [
         path: SmartWalletOnboardingPage.path),
     SubMenuItem("Onboarding 2", IntroTwoPage(), path: IntroTwoPage.path),
     SubMenuItem("Onboarding 3", IntroThreePage(), path: IntroThreePage.path),
-    SubMenuItem("Onboarding 5", Intro5(), path: Intro5.path),
   ]),
   MenuItem(
       title: "UI Kits (Clones)",

@@ -119,7 +119,7 @@ class ProfileElevenPage extends StatelessWidget {
           ListTile(
             title: Text("terms and conditions"),
             subtitle: Text("legal, terms and conditions"),
-            leading: Icon(FontAwesomeIcons.fileContract),
+            leading: FaIcon(FontAwesomeIcons.fileContract),
           ),
           ListTile(
             title: Text("logout"),

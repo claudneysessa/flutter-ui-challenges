@@ -106,8 +106,7 @@ class AuthOnePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(2.0)),
                             backgroundColor: Colors.red,
                           ),
-                          icon: Icon(
-                            FontAwesomeIcons.google,
+                          icon: FaIcon(FontAwesomeIcons.google,
                             color: Colors.white,
                           ),
                           label: Text(
@@ -123,8 +122,7 @@ class AuthOnePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(2.0)),
                             backgroundColor: Colors.indigo,
                           ),
-                          icon: Icon(
-                            FontAwesomeIcons.facebook,
+                          icon: FaIcon(FontAwesomeIcons.facebook,
                             color: Colors.white,
                           ),
                           label: Text(

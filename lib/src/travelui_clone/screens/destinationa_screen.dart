@@ -72,7 +72,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                           onPressed: () => Navigator.pop(context),
                         ),
                         IconButton(
-                          icon: Icon(FontAwesomeIcons.sortAmountDown),
+                          icon: FaIcon(FontAwesomeIcons.sortAmountDown),
                           iconSize: 25.0,
                           color: Colors.black,
                           onPressed: () => Navigator.pop(context),
@@ -99,8 +99,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                     ),
                     Row(
                       children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.locationArrow,
+                        FaIcon(FontAwesomeIcons.locationArrow,
                           size: 15.0,
                           color: Colors.white70,
                         ),

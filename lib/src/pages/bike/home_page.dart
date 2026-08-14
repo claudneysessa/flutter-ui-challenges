@@ -75,8 +75,7 @@ class BikeHomePage extends StatelessWidget {
                           CircleAvatar(
                             backgroundColor: Colors.indigo.shade800,
                             radius: 50,
-                            child: Icon(
-                              FontAwesomeIcons.moneyBill,
+                            child: FaIcon(FontAwesomeIcons.moneyBill,
                               size: 30,
                             ),
                           ),

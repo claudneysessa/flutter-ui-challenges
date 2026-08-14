@@ -131,8 +131,7 @@ class InvitationPageOne extends StatelessWidget {
                         horizontal: 32.0, vertical: 8.0),
                     child: Row(
                       children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.solidThumbsUp,
+                        FaIcon(FontAwesomeIcons.solidThumbsUp,
                           color: primary,
                         ),
                         const SizedBox(width: 5.0),
@@ -140,13 +139,13 @@ class InvitationPageOne extends StatelessWidget {
                         Spacer(),
                         Container(height: 20.0,width: 1.0,color: Colors.grey,),
                         Spacer(),
-                        Icon(FontAwesomeIcons.comment),
+                        FaIcon(FontAwesomeIcons.comment),
                         const SizedBox(width: 5.0),
                         Text("213"),
                         Spacer(),
                         Container(height: 20.0,width: 1.0,color: Colors.grey,),
                         Spacer(),
-                        Icon(FontAwesomeIcons.calendarTimes),
+                        FaIcon(FontAwesomeIcons.calendarTimes),
                         Spacer(),
                         Container(height: 20.0,width: 1.0,color: Colors.grey,),
                         Spacer(),

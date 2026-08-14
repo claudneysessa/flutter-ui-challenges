@@ -79,8 +79,8 @@ class _IntroTwoPageState extends State<IntroTwoPage> {
             color: Colors.white,
             icon: Icon(
               _currentIndex < _pageCount - 1
-                  ? FontAwesomeIcons.arrowCircleRight
-                  : FontAwesomeIcons.checkCircle,
+                  ? FontAwesomeIcons.arrowCircleRight.data
+                  : FontAwesomeIcons.checkCircle.data,
               size: 40,
             ),
             onPressed: () async {

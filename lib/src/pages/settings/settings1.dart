@@ -48,7 +48,7 @@ class _SettingsOnePageState extends State<SettingsOnePage> {
           ),
           actions: <Widget>[
             IconButton(
-              icon: Icon(FontAwesomeIcons.moon),
+              icon: FaIcon(FontAwesomeIcons.moon),
               onPressed: () {
                 setState(() {
                   _dark = !_dark;
@@ -111,8 +111,7 @@ class _SettingsOnePageState extends State<SettingsOnePage> {
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(
-                            FontAwesomeIcons.language,
+                          leading: FaIcon(FontAwesomeIcons.language,
                             color: Colors.purple,
                           ),
                           title: Text("Change Language"),
@@ -194,8 +193,7 @@ class _SettingsOnePageState extends State<SettingsOnePage> {
               bottom: 00,
               left: 00,
               child: IconButton(
-                icon: Icon(
-                  FontAwesomeIcons.powerOff,
+                icon: FaIcon(FontAwesomeIcons.powerOff,
                   color: Colors.white,
                 ),
                 onPressed: () {

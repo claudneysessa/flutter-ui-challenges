@@ -65,8 +65,7 @@ class AvocadoPage extends StatelessWidget {
                         style: TextStyle(color: Colors.grey.shade700),
                       ),
                       Spacer(),
-                      Icon(
-                        FontAwesomeIcons.fire,
+                      FaIcon(FontAwesomeIcons.fire,
                         size: 14.0,
                         color: Colors.pink.shade300,
                       ),

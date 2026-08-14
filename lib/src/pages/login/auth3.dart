@@ -122,7 +122,7 @@ class _AuthThreePageState extends State<AuthThreePage> {
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   ),
-                  icon: Icon(FontAwesomeIcons.google),
+                  icon: FaIcon(FontAwesomeIcons.google),
                   label: Text("Continue with Google"),
                   onPressed: () {},
                 ),

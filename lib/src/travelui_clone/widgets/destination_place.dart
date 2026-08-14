@@ -135,8 +135,7 @@ class DestinationPlacePage extends StatelessWidget {
                                   ),
                                   Row(
                                     children: <Widget>[
-                                      Icon(
-                                        FontAwesomeIcons.locationArrow,
+                                      FaIcon(FontAwesomeIcons.locationArrow,
                                         size: 10.0,
                                         color: Colors.white,
                                       ),

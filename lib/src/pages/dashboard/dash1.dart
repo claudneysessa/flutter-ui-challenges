@@ -382,10 +382,10 @@ class Activity {
 }
 
 final List<Activity> activities = [
-  Activity(title: "Results", icon: FontAwesomeIcons.listOl),
-  Activity(title: "Messages", icon: FontAwesomeIcons.sms),
-  Activity(title: "Appointments", icon: FontAwesomeIcons.calendarDay),
-  Activity(title: "Video Consultation", icon: FontAwesomeIcons.video),
-  Activity(title: "Summary", icon: FontAwesomeIcons.fileAlt),
-  Activity(title: "Billing", icon: FontAwesomeIcons.dollarSign),
+  Activity(title: "Results", icon: FontAwesomeIcons.listOl.data),
+  Activity(title: "Messages", icon: FontAwesomeIcons.sms.data),
+  Activity(title: "Appointments", icon: FontAwesomeIcons.calendarDay.data),
+  Activity(title: "Video Consultation", icon: FontAwesomeIcons.video.data),
+  Activity(title: "Summary", icon: FontAwesomeIcons.fileAlt.data),
+  Activity(title: "Billing", icon: FontAwesomeIcons.dollarSign.data),
 ];

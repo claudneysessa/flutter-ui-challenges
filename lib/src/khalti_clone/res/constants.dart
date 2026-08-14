@@ -14,24 +14,24 @@ final List<IntroItem> introItems = [
 ];
 
 final List<HomeMenuItem> homeMenuItems = [
-  HomeMenuItem("Topup",FontAwesomeIcons.mobileAlt, subtitle: "CASHBACK 2%"),
-  HomeMenuItem("RC Card",FontAwesomeIcons.addressCard, subtitle: "CASHBACK 2-3%"),
-  HomeMenuItem("Landline",FontAwesomeIcons.intercom, subtitle: "CASHBACK 2%"),
-  HomeMenuItem("Electricity",FontAwesomeIcons.idBadge),
-  HomeMenuItem("Khanepani",FontAwesomeIcons.water),
-  HomeMenuItem("TV",FontAwesomeIcons.tv, subtitle: "CASHBACK 2%"),
-  HomeMenuItem("Internet",FontAwesomeIcons.globe, subtitle: "CASHBACK 0.5-5%"),
-  HomeMenuItem("E-Learning",FontAwesomeIcons.readme, subtitle: "CASHBACK 2%"),
-  HomeMenuItem("Antivirus",FontAwesomeIcons.shieldAlt, subtitle: "CASHBACK 30%"),
-  HomeMenuItem("Insurance",FontAwesomeIcons.userShield),
-  HomeMenuItem("Ride",FontAwesomeIcons.motorcycle, subtitle: "CASHBACK 5%"),
-  HomeMenuItem("Share",FontAwesomeIcons.shareSquare),
-  HomeMenuItem("Newspaper",FontAwesomeIcons.newspaper),
-  HomeMenuItem("Credit Card",FontAwesomeIcons.creditCard),
+  HomeMenuItem("Topup",FontAwesomeIcons.mobileAlt.data, subtitle: "CASHBACK 2%"),
+  HomeMenuItem("RC Card",FontAwesomeIcons.addressCard.data, subtitle: "CASHBACK 2-3%"),
+  HomeMenuItem("Landline",FontAwesomeIcons.intercom.data, subtitle: "CASHBACK 2%"),
+  HomeMenuItem("Electricity",FontAwesomeIcons.idBadge.data),
+  HomeMenuItem("Khanepani",FontAwesomeIcons.water.data),
+  HomeMenuItem("TV",FontAwesomeIcons.tv.data, subtitle: "CASHBACK 2%"),
+  HomeMenuItem("Internet",FontAwesomeIcons.globe.data, subtitle: "CASHBACK 0.5-5%"),
+  HomeMenuItem("E-Learning",FontAwesomeIcons.readme.data, subtitle: "CASHBACK 2%"),
+  HomeMenuItem("Antivirus",FontAwesomeIcons.shieldAlt.data, subtitle: "CASHBACK 30%"),
+  HomeMenuItem("Insurance",FontAwesomeIcons.userShield.data),
+  HomeMenuItem("Ride",FontAwesomeIcons.motorcycle.data, subtitle: "CASHBACK 5%"),
+  HomeMenuItem("Share",FontAwesomeIcons.shareSquare.data),
+  HomeMenuItem("Newspaper",FontAwesomeIcons.newspaper.data),
+  HomeMenuItem("Credit Card",FontAwesomeIcons.creditCard.data),
 ];
 final List<HomeMenuItem> homeBookingsItems = [
-  HomeMenuItem("Flight",FontAwesomeIcons.plane),
-  HomeMenuItem("Movie",FontAwesomeIcons.ticketAlt, subtitle: "CASHBACK 2%"),
-  HomeMenuItem("Hotel",FontAwesomeIcons.hotel),
-  HomeMenuItem("Event",FontAwesomeIcons.calendarCheck)
+  HomeMenuItem("Flight",FontAwesomeIcons.plane.data),
+  HomeMenuItem("Movie",FontAwesomeIcons.ticketAlt.data, subtitle: "CASHBACK 2%"),
+  HomeMenuItem("Hotel",FontAwesomeIcons.hotel.data),
+  HomeMenuItem("Event",FontAwesomeIcons.calendarCheck.data)
 ];

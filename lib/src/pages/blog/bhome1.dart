@@ -147,7 +147,7 @@ class BlogHomeOnePage extends StatelessWidget {
                 label: "",
               ),
               BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.folderOpen),
+                icon: FaIcon(FontAwesomeIcons.folderOpen),
                 label: "",
               ),
               BottomNavigationBarItem(

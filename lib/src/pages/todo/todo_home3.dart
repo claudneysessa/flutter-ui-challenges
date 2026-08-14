@@ -70,11 +70,11 @@ class TodoHomeThreePage extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child:
-                    _buildWikiCategory(FontAwesomeIcons.calendarCheck, "All Wikis", Colors.deepOrange.withOpacity(0.7)),
+                    _buildWikiCategory(FontAwesomeIcons.calendarCheck.data, "All Wikis", Colors.deepOrange.withOpacity(0.7)),
               ),
               const SizedBox(width: 16.0),
               Expanded(
-                child: _buildWikiCategory(FontAwesomeIcons.lock, "My private notes", Colors.blue.withOpacity(0.6)),
+                child: _buildWikiCategory(FontAwesomeIcons.lock.data, "My private notes", Colors.blue.withOpacity(0.6)),
               ),
             ],
           ),
@@ -83,11 +83,11 @@ class TodoHomeThreePage extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child:
-                    _buildWikiCategory(FontAwesomeIcons.bookmark, "Bookmarked wikis", Colors.indigo.withOpacity(0.7)),
+                    _buildWikiCategory(FontAwesomeIcons.bookmark.data, "Bookmarked wikis", Colors.indigo.withOpacity(0.7)),
               ),
               const SizedBox(width: 16.0),
               Expanded(
-                child: _buildWikiCategory(FontAwesomeIcons.file, "Templates", Colors.greenAccent),
+                child: _buildWikiCategory(FontAwesomeIcons.file.data, "Templates", Colors.greenAccent),
               ),
             ],
           ),
@@ -161,8 +161,7 @@ class TodoHomeThreePage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Icon(
-          FontAwesomeIcons.circle,
+        FaIcon(FontAwesomeIcons.circle,
           size: 16.0,
         ),
         const SizedBox(width: 10.0),

@@ -91,12 +91,12 @@ class LoginTenPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           IconButton(
-                            icon: Icon(FontAwesomeIcons.facebookF),
+                            icon: FaIcon(FontAwesomeIcons.facebookF),
                             color: Colors.indigo,
                             onPressed: () {},
                           ),
                           IconButton(
-                            icon: Icon(FontAwesomeIcons.twitter),
+                            icon: FaIcon(FontAwesomeIcons.twitter),
                             color: Colors.blue,
                             onPressed: () {},
                           ),

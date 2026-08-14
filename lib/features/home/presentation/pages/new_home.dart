@@ -126,7 +126,7 @@ class _NewHomePageState extends State<NewHomePage>
               children: <Widget>[
                 // CategoryItem(
                 //   icon: Icon(
-                //     FontAwesomeIcons.user,
+                //     FontAwesomeIcons.user.data,
                 //     color: Colors.indigo,
                 //   ),
                 //   title: "Profile",
@@ -139,8 +139,7 @@ class _NewHomePageState extends State<NewHomePage>
                 const SizedBox(height: 10.0),
                 CategoryItem(
                   title: "About",
-                  icon: Icon(
-                    FontAwesomeIcons.infoCircle,
+                  icon: FaIcon(FontAwesomeIcons.infoCircle,
                     color: Colors.red,
                   ),
                   onPressed: () => Navigator.pushNamed(context, 'about'),

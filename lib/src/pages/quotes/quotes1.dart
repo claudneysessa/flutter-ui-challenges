@@ -29,8 +29,7 @@ class QuotesOnePage extends StatelessWidget {
           children: [
             Align(
                 alignment: Alignment.topLeft,
-                child: Icon(
-                  FontAwesomeIcons.quoteLeft,
+                child: FaIcon(FontAwesomeIcons.quoteLeft,
                   size: 30.0,
                   color: Colors.grey,
                 )),

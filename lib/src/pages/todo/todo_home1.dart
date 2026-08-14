@@ -77,7 +77,7 @@ class TodoHomeOnePage extends StatelessWidget {
               Spacer(),
               IconButton(
                 color: Colors.grey.shade700,
-                icon: Icon(FontAwesomeIcons.calendarAlt,size: 30,), onPressed: (){},),
+                icon: FaIcon(FontAwesomeIcons.calendarAlt,size: 30,), onPressed: (){},),
               SizedBox(width: 20.0),
             ],
           ),

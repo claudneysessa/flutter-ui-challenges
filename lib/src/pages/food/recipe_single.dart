@@ -76,7 +76,7 @@ class RecipeSinglePage extends StatelessWidget {
                       width: double.infinity,
                       child: Row(
                         children: <Widget>[
-                          Icon(FontAwesomeIcons.fire, color: Colors.white),
+                          FaIcon(FontAwesomeIcons.fire, color: Colors.white),
                           SizedBox(width: 5.0),
                           Text("65%",style: TextStyle(color: Colors.white,fontSize: 18.0),),
                           Spacer(),
@@ -86,7 +86,7 @@ class RecipeSinglePage extends StatelessWidget {
                           Spacer(),
                           VerticalDivider(color: Colors.white),
                           Spacer(),
-                          Icon(FontAwesomeIcons.stopwatch, color: Colors.white),
+                          FaIcon(FontAwesomeIcons.stopwatch, color: Colors.white),
                           SizedBox(width: 5.0),
                           Text("10 min",style: TextStyle(color: Colors.white, fontSize: 18.0),),
                         ],

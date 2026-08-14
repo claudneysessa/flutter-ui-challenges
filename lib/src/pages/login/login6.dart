@@ -74,8 +74,7 @@ class LoginSixPage extends StatelessWidget {
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
                     ),
                     const SizedBox(width: 40.0),
-                    Icon(
-                      FontAwesomeIcons.arrowRight,
+                    FaIcon(FontAwesomeIcons.arrowRight,
                       size: 18.0,
                     )
                   ],
@@ -97,8 +96,7 @@ class LoginSixPage extends StatelessWidget {
                     backgroundColor: Colors.red,
                     foregroundColor: Colors.red,
                   ),
-                  icon: Icon(
-                    FontAwesomeIcons.googlePlusG,
+                  icon: FaIcon(FontAwesomeIcons.googlePlusG,
                     size: 18.0,
                   ),
                   label: Text("Google"),
@@ -116,8 +114,7 @@ class LoginSixPage extends StatelessWidget {
                     backgroundColor: Colors.indigo,
                     foregroundColor: Colors.indigo,
                   ),
-                  icon: Icon(
-                    FontAwesomeIcons.facebookF,
+                  icon: FaIcon(FontAwesomeIcons.facebookF,
                     size: 18.0,
                   ),
                   label: Text("Facebook"),

@@ -61,7 +61,7 @@ class SportsNewsOnePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Icon(FontAwesomeIcons.footballBall),
+                    FaIcon(FontAwesomeIcons.footballBall),
                     const SizedBox(height: 16.0),
                     Text(
                       "Football",
@@ -77,7 +77,7 @@ class SportsNewsOnePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(FontAwesomeIcons.basketballBall),
+                    FaIcon(FontAwesomeIcons.basketballBall),
                     const SizedBox(height: 16.0),
                     Text("Basketball"),
                   ],
@@ -89,7 +89,7 @@ class SportsNewsOnePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Icon(FontAwesomeIcons.basketballBall),
+                    FaIcon(FontAwesomeIcons.basketballBall),
                     const SizedBox(height: 16.0),
                     Text("Hockey"),
                   ],
@@ -289,18 +289,17 @@ class SportsNewsOnePage extends StatelessWidget {
         elevation: 0,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.listAlt),
+            icon: FaIcon(FontAwesomeIcons.listAlt),
             // The removed `title` slot held a dot marking the selected item.
             // `label` only takes a String, so the dot moves to `activeIcon`,
             // which is where a selection marker belongs.
             activeIcon: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(FontAwesomeIcons.listAlt),
+                FaIcon(FontAwesomeIcons.listAlt),
                 Padding(
                   padding: const EdgeInsets.only(top: 4.0),
-                  child: Icon(
-                    FontAwesomeIcons.solidCircle,
+                  child: FaIcon(FontAwesomeIcons.solidCircle,
                     size: 8.0,
                     color: primaryColor,
                   ),
@@ -310,15 +309,15 @@ class SportsNewsOnePage extends StatelessWidget {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.bookmark),
+            icon: FaIcon(FontAwesomeIcons.bookmark),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.chartBar),
+            icon: FaIcon(FontAwesomeIcons.chartBar),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.clipboard),
+            icon: FaIcon(FontAwesomeIcons.clipboard),
             label: "",
           ),
         ],

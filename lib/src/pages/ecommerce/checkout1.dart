@@ -144,8 +144,7 @@ class CheckoutOnePage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(
-                  FontAwesomeIcons.paypal,
+                leading: FaIcon(FontAwesomeIcons.paypal,
                   color: Colors.indigo,
                 ),
                 title: Text("Paypal"),
@@ -156,8 +155,7 @@ class CheckoutOnePage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(
-                  FontAwesomeIcons.googleWallet,
+                leading: FaIcon(FontAwesomeIcons.googleWallet,
                   color: Colors.indigo,
                 ),
                 title: Text("Google Pay"),
@@ -168,8 +166,7 @@ class CheckoutOnePage extends StatelessWidget {
               margin: const EdgeInsets.all(8.0),
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(
-                  FontAwesomeIcons.applePay,
+                leading: FaIcon(FontAwesomeIcons.applePay,
                   color: Colors.indigo,
                 ),
                 title: Text("Apple Pay"),

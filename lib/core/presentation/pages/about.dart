@@ -45,8 +45,7 @@ class AboutPage extends StatelessWidget {
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          Icon(
-                            FontAwesomeIcons.github,
+                          FaIcon(FontAwesomeIcons.github,
                             color: Colors.red,
                           ),
                           const SizedBox(width: 10.0),
@@ -78,8 +77,7 @@ class AboutPage extends StatelessWidget {
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          Icon(
-                            FontAwesomeIcons.youtube,
+                          FaIcon(FontAwesomeIcons.youtube,
                             color: Colors.red,
                           ),
                           const SizedBox(width: 10.0),
@@ -158,8 +156,7 @@ class AboutPage extends StatelessWidget {
                 SizedBox(height: 5.0),
                 Row(
                   children: <Widget>[
-                    Icon(
-                      FontAwesomeIcons.map,
+                    FaIcon(FontAwesomeIcons.map,
                       size: 12.0,
                       color: Colors.black54,
                     ),

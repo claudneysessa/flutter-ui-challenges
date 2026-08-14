@@ -21,8 +21,7 @@ class ProfileFourPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: <Widget>[
           IconButton(
-            icon: Icon(
-              FontAwesomeIcons.commentDots,
+            icon: FaIcon(FontAwesomeIcons.commentDots,
               color: Colors.black54,
             ),
             onPressed: () {},
@@ -134,7 +133,7 @@ class ProfileFourPage extends StatelessWidget {
         SizedBox(width: 20.0),
         IconButton(
           color: Colors.indigo,
-          icon: Icon(FontAwesomeIcons.facebookF),
+          icon: FaIcon(FontAwesomeIcons.facebookF),
           onPressed: () {
             _launchURL("https://facebook.com/lohanidamodar");
           },
@@ -142,7 +141,7 @@ class ProfileFourPage extends StatelessWidget {
         SizedBox(width: 5.0),
         IconButton(
           color: Colors.indigo,
-          icon: Icon(FontAwesomeIcons.github),
+          icon: FaIcon(FontAwesomeIcons.github),
           onPressed: () {
             _launchURL("https://github.com/lohanidamodar");
           },
@@ -150,7 +149,7 @@ class ProfileFourPage extends StatelessWidget {
         SizedBox(width: 5.0),
         IconButton(
           color: Colors.red,
-          icon: Icon(FontAwesomeIcons.youtube),
+          icon: FaIcon(FontAwesomeIcons.youtube),
           onPressed: () {
             _launchURL("https://youtube.com/c/reactbits");
           },
@@ -173,8 +172,7 @@ class ProfileFourPage extends StatelessWidget {
     return ListTile(
       leading: Padding(
         padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-        child: Icon(
-          FontAwesomeIcons.solidCircle,
+        child: FaIcon(FontAwesomeIcons.solidCircle,
           size: 12.0,
           color: Colors.black54,
         ),
@@ -252,8 +250,7 @@ class ProfileFourPage extends StatelessWidget {
             SizedBox(height: 5.0),
             Row(
               children: <Widget>[
-                Icon(
-                  FontAwesomeIcons.map,
+                FaIcon(FontAwesomeIcons.map,
                   size: 12.0,
                   color: Colors.black54,
                 ),

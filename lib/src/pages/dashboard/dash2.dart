@@ -45,8 +45,7 @@ class DashboardTwoPage extends StatelessWidget {
                             title: Text(
                               "9,850",
                             ),
-                            trailing: Icon(
-                              FontAwesomeIcons.walking,
+                            trailing: FaIcon(FontAwesomeIcons.walking,
                               color: Colors.white,
                             ),
                           ),
@@ -71,8 +70,7 @@ class DashboardTwoPage extends StatelessWidget {
                             title: Text(
                               "70 bpm",
                             ),
-                            trailing: Icon(
-                              FontAwesomeIcons.heartbeat,
+                            trailing: FaIcon(FontAwesomeIcons.heartbeat,
                               color: Colors.white,
                             ),
                           ),
@@ -103,8 +101,7 @@ class DashboardTwoPage extends StatelessWidget {
                             title: Text(
                               "2,430",
                             ),
-                            trailing: Icon(
-                              FontAwesomeIcons.fire,
+                            trailing: FaIcon(FontAwesomeIcons.fire,
                               color: Colors.white,
                             ),
                           ),
@@ -129,8 +126,7 @@ class DashboardTwoPage extends StatelessWidget {
                             title: Text(
                               "15 kms",
                             ),
-                            trailing: Icon(
-                              FontAwesomeIcons.road,
+                            trailing: FaIcon(FontAwesomeIcons.road,
                               color: Colors.black,
                             ),
                           ),
