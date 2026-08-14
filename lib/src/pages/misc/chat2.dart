@@ -129,7 +129,7 @@ class _ChatTwoPageState extends State<ChatTwoPage> {
         SizedBox(width: current ? 30.0 : 20.0),
         if (!current) ...[
           CircleAvatar(
-            backgroundImage: NetworkImage(
+            backgroundImage: AssetImage(
               current ? avatars[0] : avatars[1],
             ),
             radius: 20.0,
@@ -209,7 +209,7 @@ class _ChatTwoPageState extends State<ChatTwoPage> {
         if (current) ...[
           const SizedBox(width: 5.0),
           CircleAvatar(
-            backgroundImage: NetworkImage(
+            backgroundImage: AssetImage(
               current ? avatars[0] : avatars[1],
             ),
             radius: 10.0,

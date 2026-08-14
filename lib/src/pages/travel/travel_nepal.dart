@@ -19,7 +19,7 @@ class TravelNepalPage extends StatelessWidget {
             height: 300,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage(mountEverest), fit: BoxFit.cover)),
+                    image: AssetImage(mountEverest), fit: BoxFit.cover)),
           ),
           Container(
             height: 300,

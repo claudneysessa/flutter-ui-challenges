@@ -273,21 +273,21 @@ final Widget homeScreenBottom = Column(
 
 List<CityCard> cityCards = [
   CityCard(
-      "https://cdn.pixabay.com/photo/2013/03/02/02/41/city-89197_960_720.jpg",
+      "assets/images/city-89197-960-720.jpg",
       "Kathmandu",
       "12 Feb",
       "10",
       "500",
       '440'),
   CityCard(
-      "https://cdn.pixabay.com/photo/2017/12/10/17/40/prague-3010407_960_720.jpg",
+      "assets/images/prague-3010407-960-720.jpg",
       "Bhaktapur",
       "12 Feb",
       "10",
       "500",
       '440'),
   CityCard(
-      "https://cdn.pixabay.com/photo/2014/07/01/12/35/taxi-cab-381233_960_720.jpg",
+      "assets/images/taxi-cab-381233-960-720.jpg",
       "Morang",
       "12 Feb",
       "10",

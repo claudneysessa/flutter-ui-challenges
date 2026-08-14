@@ -54,7 +54,7 @@ class Lists extends StatelessWidget {
         ratings: "5.0/80",
         discount: "10 %",
         image:
-            "https://images.pexels.com/photos/672142/pexels-photo-672142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+            "assets/images/pexels-photo-672142.jpg"),
     Item(
         title: 'Singapore Zoo',
         catagory: "Parks",
@@ -62,7 +62,7 @@ class Lists extends StatelessWidget {
         ratings: "4.5/90",
         discount: null,
         image:
-            "https://images.pexels.com/photos/1736222/pexels-photo-1736222.jpeg?cs=srgb&dl=adult-adventure-backpacker-1736222.jpg&fm=jpg"),
+            "assets/images/pexels-photo-1736222.jpg"),
     Item(
         title: 'National Orchid Garden',
         catagory: "Parks",
@@ -70,7 +70,7 @@ class Lists extends StatelessWidget {
         ratings: "4.5/90",
         discount: "12 %",
         image:
-            "https://images.pexels.com/photos/62403/pexels-photo-62403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+            "assets/images/pexels-photo-62403.jpg"),
     Item(
         title: 'Godabari',
         catagory: "Parks",
@@ -78,7 +78,7 @@ class Lists extends StatelessWidget {
         ratings: "4.5/90",
         discount: "15 %",
         image:
-            "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+            "assets/images/pexels-photo-189296.jpg"),
     Item(
         title: 'Rara National Park',
         catagory: "Parks",
@@ -86,7 +86,7 @@ class Lists extends StatelessWidget {
         ratings: "4.5/90",
         discount: "12 %",
         image:
-            "https://images.pexels.com/photos/1319515/pexels-photo-1319515.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+            "assets/images/pexels-photo-1319515.jpg"),
   ];
 
   @override
@@ -107,7 +107,7 @@ class Lists extends StatelessWidget {
                     EdgeInsets.only(left: 0, top: 10, bottom: 70, right: 20),
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: NetworkImage(item.image!), fit: BoxFit.cover)),
+                        image: AssetImage(item.image!), fit: BoxFit.cover)),
                 child: item.discount == null
                     ? Container()
                     : Container(

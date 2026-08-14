@@ -100,7 +100,7 @@ class EcommerceFourPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               color: Colors.grey,
               image: DecorationImage(
-                image: NetworkImage(images[0]),
+                image: AssetImage(images[0]),
                 fit: BoxFit.cover,
               ),
             ),
@@ -146,7 +146,7 @@ class EcommerceFourPage extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.black12,
-                image: DecorationImage(image: NetworkImage(images[2]), fit: BoxFit.cover)),
+                image: DecorationImage(image: AssetImage(images[2]), fit: BoxFit.cover)),
             alignment: Alignment.center,
             margin: EdgeInsets.symmetric(horizontal: 10),
             width: 100,
@@ -187,7 +187,7 @@ class ProductListItem extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.black,
                 image: DecorationImage(
-                  image: NetworkImage(images[1]),
+                  image: AssetImage(images[1]),
                   fit: BoxFit.cover,
                   alignment: Alignment.center,
                 ),

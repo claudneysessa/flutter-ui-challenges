@@ -1,132 +1,121 @@
-/// Remote imagery for the demos.
+/// Imagery for the demos, all of it stored in this repository.
 ///
-/// Every URL here used to point at the original author's Firebase Storage
-/// bucket. Google withdrew Cloud Storage from the no-cost Spark plan, so that
-/// bucket now answers every request with HTTP 402 and the artwork is gone. The
-/// demos are drawn almost entirely out of these images, so most of the app
-/// rendered as blank rectangles.
+/// It did not start out that way. Every path here was a URL into the original
+/// author's Firebase Storage bucket, which Google withdrew from its no-cost
+/// plan; those now return HTTP 402. Pointing them at a placeholder service
+/// instead only moved the problem, and a handful of the remaining third-party
+/// URLs scattered through the demos had already gone the same way — two
+/// pixabay images returning 403, one host no longer resolving at all.
 ///
-/// They are replaced with two services that need no account and no key:
+/// So the images live in assets/images/ and are declared in pubspec.yaml. The
+/// app now renders identically with no network at all, and nothing outside
+/// this repository can break it again.
 ///
-/// * https://picsum.photos — seeded, so a given seed always returns the same
-///   photo and the demos stay visually stable between runs.
-/// * https://i.pravatar.cc — portrait avatars, which is what the profile and
-///   chat screens expect in those slots.
-///
-/// Sizes match roughly how each image is used, so the device is not asked to
-/// decode a 4K photo for a 40px avatar. Everything remote lives in this file,
-/// so pointing the app at a bucket of your own is a single-file change.
-///
-/// Note that the original set was themed — Nepali landmarks, specific dishes,
-/// cut-out product shots for the grocery app. That artwork was lost with the
-/// bucket and cannot be reproduced; these are photographs in its place.
+/// The original artwork was themed — Nepali landmarks, specific dishes, cut-out
+/// product shots for the grocery app — and was lost with the bucket. These are
+/// stand-in photographs, sized to roughly how each one is used.
 library;
 
 const String appLogo = 'assets/icon/icon.png';
 const String appFeatureImage = 'assets/icon/feature_store.jpg';
 
-const String _photo = 'https://picsum.photos/seed';
-
 // Travel
-const String fishtail = '$_photo/fishtail/800/1200';
-const String mountEverest = '$_photo/everest/800/1200';
-const String tokyo = '$_photo/tokyo/800/1200';
-const String fewalake = '$_photo/fewalake/800/1200';
-const String kathmandu1 = '$_photo/kathmandu1/800/1200';
-const String kathmandu2 = '$_photo/kathmandu2/800/1200';
-const String pashupatinath = '$_photo/pashupatinath/800/1200';
+const String fishtail = 'assets/images/fishtail.jpg';
+const String mountEverest = 'assets/images/mountEverest.jpg';
+const String tokyo = 'assets/images/tokyo.jpg';
+const String fewalake = 'assets/images/fewalake.jpg';
+const String kathmandu1 = 'assets/images/kathmandu1.jpg';
+const String kathmandu2 = 'assets/images/kathmandu2.jpg';
+const String pashupatinath = 'assets/images/pashupatinath.jpg';
 
 // Food
-const String avocadoF = '$_photo/avocado/800/800';
-const String breakfast = '$_photo/breakfast/800/800';
-const String burger = '$_photo/burger/800/800';
-const String burger1 = '$_photo/burger1/800/800';
-const String burger2 = '$_photo/burger2/800/800';
-const String cake = '$_photo/cake/800/800';
-const String cherry = '$_photo/cherry/800/800';
-const String eggs = '$_photo/eggs/600/600';
-const String foodLogo = '$_photo/foodlogo/300/300';
-const String sugar = '$_photo/sugar/600/600';
-const String vanilla = '$_photo/vanilla/600/600';
-const String map = '$_photo/map/800/800';
-const String cupcake = '$_photo/cupcake/800/800';
-const String frenchFries = '$_photo/frenchfries/800/800';
-const String fries = '$_photo/fries/800/800';
-const String meal = '$_photo/meal/800/800';
-const String pancake = '$_photo/pancake/800/800';
-
-const String _avatar = 'https://i.pravatar.cc/300?img=';
+const String avocadoF = 'assets/images/avocadoF.jpg';
+const String breakfast = 'assets/images/breakfast.jpg';
+const String burger = 'assets/images/burger.jpg';
+const String burger1 = 'assets/images/burger1.jpg';
+const String burger2 = 'assets/images/burger2.jpg';
+const String cake = 'assets/images/cake.jpg';
+const String cherry = 'assets/images/cherry.jpg';
+const String eggs = 'assets/images/eggs.jpg';
+const String foodLogo = 'assets/images/foodLogo.jpg';
+const String sugar = 'assets/images/sugar.jpg';
+const String vanilla = 'assets/images/vanilla.jpg';
+const String map = 'assets/images/map.jpg';
+const String cupcake = 'assets/images/cupcake.jpg';
+const String frenchFries = 'assets/images/frenchFries.jpg';
+const String fries = 'assets/images/fries.jpg';
+const String meal = 'assets/images/meal.jpg';
+const String pancake = 'assets/images/pancake.jpg';
 
 const List<String> avatars = [
-  '${_avatar}12',
-  '${_avatar}32',
-  '${_avatar}47',
-  '${_avatar}68',
-  '${_avatar}11',
-  '${_avatar}52',
-  '${_avatar}15',
+  'assets/images/avatars_1.jpg',
+  'assets/images/avatars_2.jpg',
+  'assets/images/avatars_3.jpg',
+  'assets/images/avatars_4.jpg',
+  'assets/images/avatars_5.jpg',
+  'assets/images/avatars_6.jpg',
+  'assets/images/avatars_7.jpg',
 ];
 
 const List<String> images = [
-  '$_photo/gallery1/1000/1000',
-  '$_photo/gallery2/1000/1000',
-  '$_photo/gallery3/1000/1000',
-  '$_photo/gallery4/1000/1000',
-  '$_photo/gallery5/1000/1000',
-  '$_photo/gallery6/1000/1000',
-  '$_photo/gallery7/1000/1000',
+  'assets/images/images_1.jpg',
+  'assets/images/images_2.jpg',
+  'assets/images/images_3.jpg',
+  'assets/images/images_4.jpg',
+  'assets/images/images_5.jpg',
+  'assets/images/images_6.jpg',
+  'assets/images/images_7.jpg',
 ];
 
 const List<String> backgroundImages = [
-  '$_photo/background1/1000/1600',
-  '$_photo/background2/1000/1600',
-  '$_photo/background3/1000/1600',
+  'assets/images/backgroundimages_1.jpg',
+  'assets/images/backgroundimages_2.jpg',
+  'assets/images/backgroundimages_3.jpg',
 ];
 
-const String backdrop = '$_photo/backdrop/1000/1600';
+const String backdrop = 'assets/images/backdrop.jpg';
 
-const String infoIcon = '$_photo/infoicon/200/200';
-const String origami = '$_photo/origami/600/600';
-const String rocket = '$_photo/rocket/600/600';
-const String ledge = '$_photo/ledge/1000/1400';
-const String photographer = '$_photo/photographer/1000/1400';
+const String infoIcon = 'assets/images/infoIcon.jpg';
+const String origami = 'assets/images/origami.jpg';
+const String rocket = 'assets/images/rocket.jpg';
+const String ledge = 'assets/images/ledge.jpg';
+const String photographer = 'assets/images/photographer.jpg';
 
-const String loginBack = '$_photo/loginback/1000/1600';
+const String loginBack = 'assets/images/loginBack.jpg';
 
 const List<String> sidVideoThumbs = [
-  '$_photo/video1/640/360',
-  '$_photo/video2/640/360',
-  '$_photo/video3/640/360',
-  '$_photo/video4/640/360',
+  'assets/images/sidvideothumbs_1.jpg',
+  'assets/images/sidvideothumbs_2.jpg',
+  'assets/images/sidvideothumbs_3.jpg',
+  'assets/images/sidvideothumbs_4.jpg',
 ];
 
-const String devDamodar = '${_avatar}13';
-const String devSudip = '${_avatar}53';
-const String devArpana =
-    'https://avatars.githubusercontent.com/u/55906788?s=400&u=755774d7c380cd7bbaf7e158bef74fc275853f17&v=4';
-const String devSid = '${_avatar}60';
+const String devDamodar = 'assets/images/devDamodar.jpg';
+const String devSudip = 'assets/images/devSudip.jpg';
+const String devArpana = 'assets/images/devArpana.jpg';
+const String devSid = 'assets/images/devSid.jpg';
 
 // Grocery app
-const String brocoli = '$_photo/brocoli/600/600';
-const String cabbage = '$_photo/cabbage/600/600';
-const String capsicum = '$_photo/capsicum/600/600';
-const String chatIcon = '$_photo/chaticon/200/200';
-const String deliveryIcon = '$_photo/deliveryicon/200/200';
-const String fruit = '$_photo/fruit/600/600';
-const String homeIcon = '$_photo/homeicon/200/200';
-const String mango = '$_photo/mango/600/600';
-const String mortar = '$_photo/mortar/600/600';
-const String pineapple = '$_photo/pineapple/600/600';
-const String vegetables = '$_photo/vegetables/600/600';
+const String brocoli = 'assets/images/brocoli.jpg';
+const String cabbage = 'assets/images/cabbage.jpg';
+const String capsicum = 'assets/images/capsicum.jpg';
+const String chatIcon = 'assets/images/chatIcon.jpg';
+const String deliveryIcon = 'assets/images/deliveryIcon.jpg';
+const String fruit = 'assets/images/fruit.jpg';
+const String homeIcon = 'assets/images/homeIcon.jpg';
+const String mango = 'assets/images/mango.jpg';
+const String mortar = 'assets/images/mortar.jpg';
+const String pineapple = 'assets/images/pineapple.jpg';
+const String vegetables = 'assets/images/vegetables.jpg';
 
-const INVITE_ILLUSTRATION = '$_photo/invite/800/800';
+const INVITE_ILLUSTRATION = 'assets/images/inviteIllustration.jpg';
 
-const String bike = '$_photo/bike/1000/700';
+const String bike = 'assets/images/bike.jpg';
 
 const String room4 = "assets/hotel/room4.jpg";
 
 const List<String> introIllus = [
-  '$_photo/intro1/800/800',
-  '$_photo/intro2/800/800',
-  '$_photo/intro3/800/800',
+  'assets/images/introillus_1.jpg',
+  'assets/images/introillus_2.jpg',
+  'assets/images/introillus_3.jpg',
 ];

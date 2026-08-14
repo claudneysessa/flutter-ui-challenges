@@ -113,7 +113,7 @@ class SportsNewsOnePage extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   CircleAvatar(
-                    backgroundImage: NetworkImage(avatars[0]),
+                    backgroundImage: AssetImage(avatars[0]),
                   ),
                   Spacer(),
                   Column(
@@ -163,7 +163,7 @@ class SportsNewsOnePage extends StatelessWidget {
                   ),
                   Spacer(),
                   CircleAvatar(
-                    backgroundImage: NetworkImage(avatars[2]),
+                    backgroundImage: AssetImage(avatars[2]),
                   ),
                 ],
               ),
@@ -187,7 +187,7 @@ class SportsNewsOnePage extends StatelessWidget {
                             topRight: Radius.circular(10.0),
                           ),
                           image: DecorationImage(
-                            image: NetworkImage(images[1]),
+                            image: AssetImage(images[1]),
                             fit: BoxFit.cover,
                           )),
                     ),
@@ -255,7 +255,7 @@ class SportsNewsOnePage extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   image: DecorationImage(
-                    image: NetworkImage(images[4]),
+                    image: AssetImage(images[4]),
                     fit: BoxFit.cover,
                   )),
             ),
@@ -272,7 +272,7 @@ class SportsNewsOnePage extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   image: DecorationImage(
-                    image: NetworkImage(images[1]),
+                    image: AssetImage(images[1]),
                     fit: BoxFit.cover,
                   )),
             ),

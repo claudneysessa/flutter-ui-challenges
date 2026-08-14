@@ -19,7 +19,7 @@ class LoginFourPage extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(background), fit: BoxFit.cover)),
+                      image: AssetImage(background), fit: BoxFit.cover)),
             ),
             Container(
               padding: EdgeInsets.all(20.0),

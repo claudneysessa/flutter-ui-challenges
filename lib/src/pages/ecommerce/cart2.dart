@@ -36,7 +36,7 @@ class CartTwoPage extends StatelessWidget {
             width: 130,
             decoration: BoxDecoration(
                 image: DecorationImage(
-              image: NetworkImage(images[1]),
+              image: AssetImage(images[1]),
               fit: BoxFit.cover,
             )),
           ),

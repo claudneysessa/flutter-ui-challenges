@@ -22,7 +22,7 @@ class LoginNinePage extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(images[0]),
+                      image: AssetImage(images[0]),
                       fit: BoxFit.cover,
                     ),
                   ),

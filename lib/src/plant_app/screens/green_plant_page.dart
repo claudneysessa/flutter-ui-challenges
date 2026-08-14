@@ -49,7 +49,7 @@ class GreenPlantPage extends StatelessWidget {
                         children: [
                           Hero(
                             tag: plants[index].title!,
-                            child: Image.network(plants[index].image!),
+                            child: Image.asset(plants[index].image!),
                           ),
                           SizedBox(height: 10),
                           Text(

@@ -105,7 +105,7 @@ class _IntroTwoPageState extends State<IntroTwoPage> {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30.0),
           image: DecorationImage(
-              image: NetworkImage(icon),
+              image: AssetImage(icon),
               fit: BoxFit.cover,
               colorFilter:
                   ColorFilter.mode(Colors.black38, BlendMode.multiply))),

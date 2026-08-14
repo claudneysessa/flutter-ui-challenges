@@ -82,7 +82,7 @@ class _SettingsOnePageState extends State<SettingsOnePage> {
                         ),
                       ),
                       leading: CircleAvatar(
-                        backgroundImage: NetworkImage(avatars[0]),
+                        backgroundImage: AssetImage(avatars[0]),
                       ),
                       trailing: Icon(
                         Icons.edit,

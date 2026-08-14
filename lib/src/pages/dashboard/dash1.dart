@@ -173,7 +173,7 @@ class DashboardOnePage extends StatelessWidget {
       padding: EdgeInsets.all(0),
       icon: CircleAvatar(
         backgroundColor: Colors.grey.shade300,
-        child: CircleAvatar(radius: 16, backgroundImage: NetworkImage(image)),
+        child: CircleAvatar(radius: 16, backgroundImage: AssetImage(image)),
       ),
       onPressed: () {},
     );

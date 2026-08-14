@@ -8,7 +8,7 @@ class PNetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(
+    return Image.asset(
       image!,
       // placeholder: (context, url) => Center(child: CircularProgressIndicator()),
       // errorWidget: (context, url, error) => Image.asset('assets/placeholder.jpg',fit: BoxFit.cover,),

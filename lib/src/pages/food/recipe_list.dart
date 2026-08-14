@@ -133,7 +133,7 @@ class RecipeListPage extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.0),
                   image: DecorationImage(
-                    image: NetworkImage(
+                    image: AssetImage(
                       images[index % images.length],
                     ),
                     fit: BoxFit.cover,

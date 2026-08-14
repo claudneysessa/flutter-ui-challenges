@@ -21,7 +21,7 @@ class DestinationPage extends StatelessWidget {
             decoration: BoxDecoration(
                 // color: Colors.blue,
                 image: DecorationImage(
-                    image: NetworkImage(kathmandu1), fit: BoxFit.cover)),
+                    image: AssetImage(kathmandu1), fit: BoxFit.cover)),
           ),
           ListView(
             padding: EdgeInsets.symmetric(horizontal: 20.0),

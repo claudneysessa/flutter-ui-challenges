@@ -55,8 +55,8 @@ class _GridViewAnimationPageState extends State<GridViewAnimationPage> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                        image: NetworkImage(
-                            'https://cdn.pixabay.com/photo/2017/08/31/11/55/wedding-2700495__340.jpg'),
+                        image: AssetImage(
+                            'assets/images/wedding-2700495-340.jpg'),
                         fit: BoxFit.cover)),
                 child: Container(
                   decoration: BoxDecoration(
@@ -116,7 +116,7 @@ class _GridViewAnimationPageState extends State<GridViewAnimationPage> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
-                                    image: NetworkImage(item),
+                                    image: AssetImage(item),
                                     fit: BoxFit.cover)),
                             child: Transform.translate(
                               offset: Offset(50, -50),

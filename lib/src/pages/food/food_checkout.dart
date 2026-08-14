@@ -181,7 +181,7 @@ class OrderListItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: item!.image != null
-                ? Image.network(
+                ? Image.asset(
                     item!.image!,
                     fit: BoxFit.cover,
                   )

@@ -23,7 +23,7 @@ class AuthOnePage extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.pink,
                       image: DecorationImage(
-                          image: NetworkImage(backgroundImages[2]),
+                          image: AssetImage(backgroundImages[2]),
                           fit: BoxFit.cover),
                     ),
                     foregroundDecoration:

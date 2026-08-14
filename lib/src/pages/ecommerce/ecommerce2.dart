@@ -148,7 +148,7 @@ class EcommerceTwoPage extends StatelessWidget {
               child: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage(item["image"]), fit: BoxFit.cover),
+                    image: AssetImage(item["image"]), fit: BoxFit.cover),
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 boxShadow: [
                   BoxShadow(

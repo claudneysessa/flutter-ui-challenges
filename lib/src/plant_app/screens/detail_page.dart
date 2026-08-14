@@ -39,7 +39,7 @@ class DetailPage extends StatelessWidget {
                   Container(
                     child: Hero(
                       tag: plant!.title!,
-                      child: Image.network(plant!.image!),
+                      child: Image.asset(plant!.image!),
                     ),
                   ),
                   SizedBox(height: 10),

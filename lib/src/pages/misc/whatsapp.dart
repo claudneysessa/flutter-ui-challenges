@@ -16,15 +16,15 @@ class _WhatsAppCloneState extends State<WhatsAppClone> {
   Color mainColor = Color(0xFF177767);
   var containerRadius = Radius.circular(30.0);
   List<String> imageUrl = [
-    "https://cdn.pixabay.com/photo/2019/08/06/08/26/man-4387721__340.jpg",
-    "https://cdn.pixabay.com/photo/2017/02/23/13/05/profile-2092113__340.png",
-    "https://cdn.pixabay.com/photo/2017/09/12/19/31/girl-2743378__340.png",
-    "https://cdn.pixabay.com/photo/2016/05/17/22/16/baby-1399332__340.jpg",
-    "https://cdn.pixabay.com/photo/2016/02/17/00/09/girl-looking-profile-1204289__340.jpg",
-    "https://cdn.pixabay.com/photo/2016/10/07/19/59/profile-1722502__340.jpg",
-    "https://cdn.pixabay.com/photo/2019/07/10/11/45/girl-4328462__340.jpg",
-    "https://cdn.pixabay.com/photo/2016/08/31/02/10/girl-1632515__340.jpg",
-    "https://cdn.pixabay.com/photo/2016/08/31/02/10/girl-1632515__340.jpg"
+    "assets/images/man-4387721-340.jpg",
+    "assets/images/profile-2092113-340.jpg",
+    "assets/images/girl-2743378-340.jpg",
+    "assets/images/baby-1399332-340.jpg",
+    "assets/images/girl-looking-profile-1204289-340.jpg",
+    "assets/images/profile-1722502-340.jpg",
+    "assets/images/girl-4328462-340.jpg",
+    "assets/images/girl-1632515-340.jpg",
+    "assets/images/girl-1632515-340.jpg"
   ];
 
   @override
@@ -106,7 +106,7 @@ Widget storyButton(String imgUrl, String userName) {
     child: Column(
       children: [
         CircleAvatar(
-          backgroundImage: NetworkImage(imgUrl),
+          backgroundImage: AssetImage(imgUrl),
           radius: 26.0,
         ),
         SizedBox(
@@ -132,7 +132,7 @@ Widget chatTile(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           CircleAvatar(
-            backgroundImage: NetworkImage(imgUrl),
+            backgroundImage: AssetImage(imgUrl),
             radius: 28.0,
           ),
           SizedBox(

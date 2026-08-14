@@ -103,8 +103,8 @@ class _HotelBookingPageState extends State<HotelBookingPage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     image: DecorationImage(
-                      image: NetworkImage(
-                          'https://cdn.pixabay.com/photo/2015/05/18/23/53/norway-772991__340.jpg'),
+                      image: AssetImage(
+                          'assets/images/norway-772991-340.jpg'),
                       fit: BoxFit.cover,
                     ),
                     boxShadow: [

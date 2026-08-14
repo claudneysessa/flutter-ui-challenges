@@ -18,8 +18,8 @@ class ProfileEightPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               ProfileHeader(
-                avatar: NetworkImage(avatars[0]),
-                coverImage: NetworkImage(images[1]),
+                avatar: AssetImage(avatars[0]),
+                coverImage: AssetImage(images[1]),
                 title: "Ramesh Mana",
                 subtitle: "Manager",
                 actions: <Widget>[

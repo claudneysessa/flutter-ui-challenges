@@ -88,11 +88,7 @@ class _BottomExpandableAppBarState extends State<BottomExpandableAppBar> {
     final BottomBarController? newController = widget.controller ?? DefaultBottomBarController.of(context);
     assert(() {
       if (newController == null) {
-        throw FlutterError('No BottomBarController for ${widget.runtimeType}.\n'
-            'When creating a ${widget.runtimeType}, you must either provide an explicit '
-            'BottomBarController using the "controller" property, or you must ensure that there '
-            'is a DefaultBottomBarController above the ${widget.runtimeType}.\n'
-            'In this case, there was neither an explicit controller nor a default controller.');
+        throw FlutterError('No BottomBarController for ${widget.runtimeType}.\nWhen creating a ${widget.runtimeType}, you must either provide an explicit BottomBarController using the "controller" property, or you must ensure that there is a DefaultBottomBarController above the ${widget.runtimeType}.\nIn this case, there was neither an explicit controller nor a default controller.');
       }
       return true;
     }());

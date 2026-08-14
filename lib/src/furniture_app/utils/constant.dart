@@ -11,16 +11,16 @@ const Color profile_info_notification = Color(0xFF5DD1D3);
 const Color profile_item_color = Color(0xFFC4C5C9);
 const String imagePath = 'assets/image';
 
-const String devMausam = 'https://i.pravatar.cc/300?img=33';
+const String devMausam = 'assets/images/avatars_5.jpg';
 
 const Color furnitureCateDisableColor = Color(0xFF939BA9);
 const List lampsImage = [
-  {'image': 'https://picsum.photos/seed/furniture-a/800/800'},
-  {'image': 'https://picsum.photos/seed/furniture-b/800/800'},
-  {'image': 'https://picsum.photos/seed/furniture-c/800/800'},
-  {'image': 'https://picsum.photos/seed/furniture-d/800/800'},
-  {'image': 'https://picsum.photos/seed/furniture-e/800/800'},
-  {'image': 'https://picsum.photos/seed/furniture-f/800/800'},
+  {'image': 'assets/images/800.jpg'},
+  {'image': 'assets/images/800-085d32.jpg'},
+  {'image': 'assets/images/800-d82d85.jpg'},
+  {'image': 'assets/images/800-26ef63.jpg'},
+  {'image': 'assets/images/800-18e7de.jpg'},
+  {'image': 'assets/images/800-437d3e.jpg'},
 ];
 List<ProfileMenu> lampList = [
   ProfileMenu(title: 'Landscape', subTitle: '384'),

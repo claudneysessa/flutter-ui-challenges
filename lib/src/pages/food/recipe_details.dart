@@ -156,7 +156,7 @@ class RecipeDetailsPage extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
           image:
-              DecorationImage(image: NetworkImage(image), fit: BoxFit.cover)),
+              DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
     );
   }
 

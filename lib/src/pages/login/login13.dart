@@ -27,8 +27,8 @@ class LoginPageThirdteen extends StatelessWidget {
                         bottomRight: Radius.circular(300),
                       ),
                       image: DecorationImage(
-                          image: NetworkImage(
-                              'https://cdn.pixabay.com/photo/2015/03/30/12/37/jellyfish-698521__340.jpg'),
+                          image: AssetImage(
+                              'assets/images/jellyfish-698521-340.jpg'),
                           fit: BoxFit.fill)),
                   child: Stack(
                     children: <Widget>[
@@ -39,8 +39,8 @@ class LoginPageThirdteen extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: NetworkImage(
-                                      'https://cdn.pixabay.com/photo/2019/12/24/08/54/flying-dandelions-4716287__340.png'))),
+                                  image: AssetImage(
+                                      'assets/images/flying-dandelions-4716287-340.jpg'))),
                         ),
                       ),
                       Positioned(
@@ -50,8 +50,8 @@ class LoginPageThirdteen extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: NetworkImage(
-                                      'https://cdn.pixabay.com/photo/2016/08/25/07/30/red-1618916__340.png'))),
+                                  image: AssetImage(
+                                      'assets/images/red-1618916-340.jpg'))),
                         ),
                       ),
                       Positioned(
@@ -62,8 +62,8 @@ class LoginPageThirdteen extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: NetworkImage(
-                                      'https://cdn.pixabay.com/photo/2019/10/22/07/52/dandelions-4567966__340.png'))),
+                                  image: AssetImage(
+                                      'assets/images/dandelions-4567966-340.jpg'))),
                         ),
                       ),
                       Positioned(

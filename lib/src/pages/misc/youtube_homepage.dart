@@ -16,7 +16,7 @@ class _YoutubeHomePageState extends State<YoutubeHomePage> {
       children: <Widget>[
         Stack(
           children: <Widget>[
-            Image.network(assets),
+            Image.asset(assets),
             Positioned.fill(
               bottom: 10.0,
               right: 10.0,
@@ -40,8 +40,8 @@ class _YoutubeHomePageState extends State<YoutubeHomePage> {
           color: Colors.black,
           child: ListTile(
             leading: CircleAvatar(
-              backgroundImage: NetworkImage(
-                  'https://cdn.logo.com/hotlink-ok/logo-social.png'),
+              backgroundImage: AssetImage(
+                  'assets/images/logo-social.jpg'),
             ),
             title: Text(
               "$title",
@@ -79,10 +79,10 @@ class _YoutubeHomePageState extends State<YoutubeHomePage> {
         child: Column(
           children: <Widget>[
             eachvideo(
-                "https://picsum.photos/seed/pashupatinath/800/1200",
+                "assets/images/1200.jpg",
                 "About PasupatiNath Temple "),
             eachvideo(
-                "https://picsum.photos/seed/kathmandu2/800/1200",
+                "assets/images/1200-4da3e1.jpg",
                 "Capital of Nepal "),
           ],
         ),
@@ -93,8 +93,8 @@ class _YoutubeHomePageState extends State<YoutubeHomePage> {
 
 AppBar topbar = AppBar(
   backgroundColor: Colors.black,
-  title: Image.network(
-    'https://cdn.logo.com/hotlink-ok/logo-social.png',
+  title: Image.asset(
+    'assets/images/logo-social.jpg',
     height: 30,
     fit: BoxFit.cover,
     width: 30.0,

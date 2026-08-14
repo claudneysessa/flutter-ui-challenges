@@ -24,8 +24,7 @@ List<Plant> plants = [
       discription: "Small leaf plant for your home and office decoration",
       height: "40.0 cm to 50cm",
       temprature: "18c to 25c",
-      image: "https://img.pngio.com/download-artificial"
-          "-potted-plant-oregano-png-image-for-free-potted-plants-png-2000_2000.png",
+      image: "assets/images/download-artificial-potted-plant-oregano-png-ima.jpg",
       port: "Self Growing pot",
       price: "59.00"),
   Plant(
@@ -34,7 +33,7 @@ List<Plant> plants = [
       height: "40.0 cm to 50cm",
       temprature: "18c to 25c",
       image:
-          "https://purepng.com/public/uploads/large/purepng.com-plantnatureplant-961524678664sj8de.png",
+          "assets/images/purepng-com-plantnatureplant-961524678664sj8de.jpg",
       port: "Self Growing pot",
       price: "59.00"),
 ];
@@ -44,7 +43,7 @@ List<Plant> Indoor = [
       discription: "Indoor plant for your home and office decoration",
       height: "40.0 cm to 50cm",
       temprature: "18c to 25c",
-      image: 'https://purepng.com/public/uploads/large/purepng.com-classic-duo-cactusgrassbushplantnaturegreen-541521125305jqngl.png',
+      image: 'assets/images/purepng-com-classic-duo-cactusgrassbushplantnatu.jpg',
       port: "Self Growing pot",
       price: "59.00"),
        Plant(
@@ -52,7 +51,7 @@ List<Plant> Indoor = [
       discription: "Plant for your home and office decoration",
       height: "40.0 cm to 50cm",
       temprature: "18c to 25c",
-      image: "https://purepng.com/public/uploads/large/purepng.com-green-cactusgrassbushplantnaturegreen-541521125231377lf.png",
+      image: "assets/images/purepng-com-green-cactusgrassbushplantnaturegree.jpg",
       port: "Self Growing pot",
       price: "59.00"),
 ];
@@ -62,7 +61,7 @@ List<Plant> Shape = [
       discription: "Indoor plant for your home and office decoration",
       height: "40.0 cm to 50cm",
       temprature: "18c to 25c",
-      image: 'https://purepng.com/public/uploads/large/clover-heart-bi1.png',
+      image: 'assets/images/clover-heart-bi1.jpg',
       port: "Self Growing pot",
       price: "59.00"),
        Plant(
@@ -70,7 +69,7 @@ List<Plant> Shape = [
       discription: "Plant for your home and office decoration",
       height: "40.0 cm to 50cm",
       temprature: "18c to 25c",
-      image: "https://purepng.com/public/uploads/large/plant-1hn.png",
+      image: "assets/images/plant-1hn.jpg",
       port: "Self Growing pot",
       price: "59.00"),
 ];

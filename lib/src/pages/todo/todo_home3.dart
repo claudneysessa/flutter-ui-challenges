@@ -52,7 +52,7 @@ class TodoHomeThreePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
             child: CircleAvatar(
               maxRadius: 15.0,
-              backgroundImage: NetworkImage(avatars[0]),
+              backgroundImage: AssetImage(avatars[0]),
             ),
           )
         ],
@@ -178,7 +178,7 @@ class TodoHomeThreePage extends StatelessWidget {
       children: <Widget>[
         CircleAvatar(
           radius: 15.0,
-          backgroundImage: NetworkImage(avatar),
+          backgroundImage: AssetImage(avatar),
         ),
         const SizedBox(width: 10.0),
         Text(

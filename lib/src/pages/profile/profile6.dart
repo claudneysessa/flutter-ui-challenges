@@ -288,9 +288,7 @@ final DEV sid = DEV(
   avatar: devSid,
   backdropPhoto: backdrop,
   location: 'Mahendranagar, Nepal',
-  biography: 'Siddhartha  Joshi is a Flutter dev  '
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.  '
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+  biography: 'Siddhartha  Joshi is a Flutter dev  Lorem Ipsum is simply dummy text of the printing and typesetting industry.  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
   videos: <Video>[
     Video(
       title: 'WIFI hacking part 1',

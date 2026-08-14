@@ -94,7 +94,7 @@ class DarkDrawerPage extends StatelessWidget {
                             colors: [Colors.pink, Colors.deepPurple])),
                     child: CircleAvatar(
                       radius: 40,
-                      backgroundImage: NetworkImage(image),
+                      backgroundImage: AssetImage(image),
                     ),
                   ),
                   SizedBox(height: 5.0),

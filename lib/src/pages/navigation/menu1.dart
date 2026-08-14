@@ -107,7 +107,7 @@ class MenuOnePage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
                       image: DecorationImage(
-                        image: NetworkImage(avatars[0]),
+                        image: AssetImage(avatars[0]),
                         fit: BoxFit.cover,
                       )
                     ),

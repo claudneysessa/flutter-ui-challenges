@@ -25,56 +25,56 @@ class _SchoolListState extends State<SchoolList> {
       "location": "572 Statan NY, 12483",
       "type": "Higher Secondary School",
       "logoText":
-          "https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_960_720.png"
+          "assets/images/logo-2150297-960-720.jpg"
     },
     {
       "name": "Xaviers International",
       "location": "234 Road Kathmandu, Nepal",
       "type": "Higher Secondary School",
       "logoText":
-          "https://cdn.pixabay.com/photo/2017/01/31/13/14/animal-2023924_960_720.png"
+          "assets/images/animal-2023924-960-720.jpg"
     },
     {
       "name": "Kinder Garden",
       "location": "572 Statan NY, 12483",
       "type": "Play Group School",
       "logoText":
-          "https://cdn.pixabay.com/photo/2016/06/09/18/36/logo-1446293_960_720.png"
+          "assets/images/logo-1446293-960-720.jpg"
     },
     {
       "name": "WilingTon Cambridge",
       "location": "Kasai Pantan NY, 12483",
       "type": "Lower Secondary School",
       "logoText":
-          "https://cdn.pixabay.com/photo/2017/01/13/01/22/rocket-1976107_960_720.png"
+          "assets/images/rocket-1976107-960-720.jpg"
     },
     {
       "name": "Fredik Panlon",
       "location": "572 Statan NY, 12483",
       "type": "Higher Secondary School",
       "logoText":
-          "https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_960_720.png"
+          "assets/images/logo-2150297-960-720.jpg"
     },
     {
       "name": "Whitehouse International",
       "location": "234 Road Kathmandu, Nepal",
       "type": "Higher Secondary School",
       "logoText":
-          "https://cdn.pixabay.com/photo/2017/01/31/13/14/animal-2023924_960_720.png"
+          "assets/images/animal-2023924-960-720.jpg"
     },
     {
       "name": "Haward Play",
       "location": "572 Statan NY, 12483",
       "type": "Play Group School",
       "logoText":
-          "https://cdn.pixabay.com/photo/2016/06/09/18/36/logo-1446293_960_720.png"
+          "assets/images/logo-1446293-960-720.jpg"
     },
     {
       "name": "Campare Handeson",
       "location": "Kasai Pantan NY, 12483",
       "type": "Lower Secondary School",
       "logoText":
-          "https://cdn.pixabay.com/photo/2017/01/13/01/22/rocket-1976107_960_720.png"
+          "assets/images/rocket-1976107-960-720.jpg"
     },
   ];
 
@@ -195,7 +195,7 @@ class _SchoolListState extends State<SchoolList> {
               borderRadius: BorderRadius.circular(50),
               border: Border.all(width: 3, color: secondary),
               image: DecorationImage(
-                  image: NetworkImage(schoolLists[index]['logoText']),
+                  image: AssetImage(schoolLists[index]['logoText']),
                   fit: BoxFit.fill),
             ),
           ),

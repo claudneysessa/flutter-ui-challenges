@@ -17,12 +17,12 @@ class UserProfilePage extends StatefulWidget {
 class _UserProfilePageState extends State<UserProfilePage> {
   bool _isOpen = false;
   var imageList = [
-    'https://cdn.pixabay.com/photo/2016/11/19/15/32/business-1839876__340.jpg',
-    'https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010__340.jpg',
-    'https://cdn.pixabay.com/photo/2020/04/04/13/41/corona-5002341__340.jpg',
-    'https://cdn.pixabay.com/photo/2014/04/17/23/26/environmental-protection-326923__340.jpg',
-    'https://cdn.pixabay.com/photo/2016/12/01/18/17/mobile-phone-1875813__340.jpg',
-    'https://cdn.pixabay.com/photo/2018/08/09/10/46/phone-3594206__340.jpg',
+    'assets/images/business-1839876-340.jpg',
+    'assets/images/glasses-1052010-340.jpg',
+    'assets/images/corona-5002341-340.jpg',
+    'assets/images/environmental-protection-326923-340.jpg',
+    'assets/images/mobile-phone-1875813-340.jpg',
+    'assets/images/phone-3594206-340.jpg',
   ];
   @override
   Widget build(BuildContext context) {
@@ -36,8 +36,8 @@ class _UserProfilePageState extends State<UserProfilePage> {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(
-                      'https://i.pravatar.cc/300?img=12'),
+                  image: AssetImage(
+                      'assets/images/avatars_1.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -90,7 +90,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
             itemBuilder: (BuildContext context, int index) => Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(imageList[index]),
+                  image: AssetImage(imageList[index]),
                   fit: BoxFit.cover,
                 ),
               ),

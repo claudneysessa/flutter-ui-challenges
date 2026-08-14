@@ -49,7 +49,7 @@ class ShapePlantPage extends StatelessWidget {
                         children: [
                           Hero(
                             tag: Shape[index].title!,
-                            child: Image.network(Shape[index].image!),
+                            child: Image.asset(Shape[index].image!),
                           ),
                           SizedBox(height: 10),
                           Text(

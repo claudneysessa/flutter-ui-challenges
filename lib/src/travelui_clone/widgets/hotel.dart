@@ -106,7 +106,7 @@ class HotelDestinationPage extends StatelessWidget {
                         child: Image(
                           height: 180.0,
                           width: 220.0,
-                          image: NetworkImage(hotel.imageUrl!),
+                          image: AssetImage(hotel.imageUrl!),
                           fit: BoxFit.cover,
                         ),
                       ),

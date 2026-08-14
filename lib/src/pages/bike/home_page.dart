@@ -168,7 +168,7 @@ class CategoryChooser extends StatelessWidget {
                   width: 60.0,
                   height: 60.0,
                   decoration: BoxDecoration(
-                    image: DecorationImage(image: NetworkImage(bike), fit: BoxFit.cover),
+                    image: DecorationImage(image: AssetImage(bike), fit: BoxFit.cover),
                     color: Colors.white,
                     shape: BoxShape.circle,
                   ),
@@ -296,7 +296,7 @@ class BikeListItem extends StatelessWidget {
                 bottomLeft: Radius.circular(4.0),
               ),
         image: DecorationImage(
-          image: NetworkImage(bike),
+          image: AssetImage(bike),
           fit: BoxFit.cover,
         ),
       ),

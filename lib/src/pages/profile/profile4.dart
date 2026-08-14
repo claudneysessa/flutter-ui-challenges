@@ -230,7 +230,7 @@ class ProfileFourPage extends StatelessWidget {
                 radius: 40,
                 backgroundColor: Colors.grey,
                 child: CircleAvatar(
-                    radius: 35.0, backgroundImage: NetworkImage(avatars[4])))),
+                    radius: 35.0, backgroundImage: AssetImage(avatars[4])))),
         SizedBox(width: 20.0),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,

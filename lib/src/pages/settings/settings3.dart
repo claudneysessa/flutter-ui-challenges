@@ -43,7 +43,7 @@ class SettingsThreePage extends StatelessWidget {
                 children: <Widget>[
                   ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: NetworkImage(avatars[4]),
+                      backgroundImage: AssetImage(avatars[4]),
                     ),
                     title: Text("Damodar Lohani"),
                     onTap: () {},

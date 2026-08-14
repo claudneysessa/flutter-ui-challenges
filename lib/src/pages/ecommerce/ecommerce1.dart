@@ -243,7 +243,7 @@ class EcommerceOnePage extends StatelessWidget {
               // color: Colors.blue,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(flashSaleImages[index]),
+                      image: AssetImage(flashSaleImages[index]),
                       fit: BoxFit.cover)),
             ),
             SizedBox(

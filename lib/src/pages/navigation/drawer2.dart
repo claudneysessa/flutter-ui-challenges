@@ -95,7 +95,7 @@ class LightDrawerPage extends StatelessWidget {
                             colors: [Colors.orange, Colors.deepOrange])),
                     child: CircleAvatar(
                       radius: 40,
-                      backgroundImage: NetworkImage(image),
+                      backgroundImage: AssetImage(image),
                     ),
                   ),
                   SizedBox(height: 5.0),

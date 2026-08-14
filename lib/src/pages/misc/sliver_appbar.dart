@@ -193,7 +193,7 @@ class SliverAppbarPage extends StatelessWidget {
             child: ListTile(
               leading: CircleAvatar(
                 radius: 40,
-                backgroundImage: NetworkImage(images[index % images.length]),
+                backgroundImage: AssetImage(images[index % images.length]),
               ),
               title: Text(
                 'Top Quality fashion item',

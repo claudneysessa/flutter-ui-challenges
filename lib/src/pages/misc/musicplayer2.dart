@@ -24,7 +24,7 @@ class MusicPlayerTwoPage extends StatelessWidget {
             onPressed: () {},
             child: CircleAvatar(
               maxRadius: 15.0,
-              backgroundImage: NetworkImage(avatars[0]),
+              backgroundImage: AssetImage(avatars[0]),
             ),
           ),
         ],
@@ -46,7 +46,7 @@ class MusicPlayerTwoPage extends StatelessWidget {
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10.0),
                           image: DecorationImage(
-                            image: NetworkImage(images[index]),
+                            image: AssetImage(images[index]),
                             fit: BoxFit.cover,
                           )),
                     ),

@@ -91,7 +91,7 @@ class SlidersPage extends StatelessWidget {
                                 topLeft: Radius.circular(10.0),
                                 topRight: Radius.circular(10.0)),
                             image: DecorationImage(
-                                image: NetworkImage(images[index]),
+                                image: AssetImage(images[index]),
                                 fit: BoxFit.cover)),
                       ),
                       Container(

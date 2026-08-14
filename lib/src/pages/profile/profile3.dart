@@ -77,7 +77,7 @@ class ProfileThreePage extends StatelessWidget {
                         width: 80,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10.0),
-                            image: DecorationImage(image: NetworkImage(image), fit: BoxFit.cover)),
+                            image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
                         margin: EdgeInsets.only(left: 16.0),
                       ),
                     ],

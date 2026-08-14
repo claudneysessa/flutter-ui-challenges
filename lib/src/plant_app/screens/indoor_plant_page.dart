@@ -49,7 +49,7 @@ class IndoorPlantPage extends StatelessWidget {
                         children: [
                           Hero(
                             tag: Indoor[index].title!,
-                            child: Image.network(Indoor[index].image!),
+                            child: Image.asset(Indoor[index].image!),
                           ),
                           SizedBox(height: 10),
                           Text(

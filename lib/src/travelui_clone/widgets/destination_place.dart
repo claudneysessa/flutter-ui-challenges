@@ -113,7 +113,7 @@ class DestinationPlacePage extends StatelessWidget {
                                 child: Image(
                                   height: 180.0,
                                   width: 180.0,
-                                  image: NetworkImage(destination.imageUrl!),
+                                  image: AssetImage(destination.imageUrl!),
                                   fit: BoxFit.cover,
                                 ),
                               ),

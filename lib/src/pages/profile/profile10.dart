@@ -29,7 +29,7 @@ class ProfileTenPage extends StatelessWidget {
                   Container(
                     height: double.infinity,
                     width: double.infinity,
-                    child: Image.network(
+                    child: Image.asset(
                       avatars[1],
                       fit: BoxFit.cover,
                     ),

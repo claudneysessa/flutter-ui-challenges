@@ -15,7 +15,7 @@ class AvocadoPage extends StatelessWidget {
             height: 450,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage(image), fit: BoxFit.cover)),
+                    image: AssetImage(image), fit: BoxFit.cover)),
           ),
           AppBar(
             elevation: 0,

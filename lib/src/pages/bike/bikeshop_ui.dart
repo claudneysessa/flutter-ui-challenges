@@ -222,7 +222,7 @@ class _DetailsPageState extends State<DetailsPage> {
               height: 150,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage('https://picsum.photos/seed/bike/1000/700'),
+                      image: AssetImage('assets/images/700.jpg'),
                       fit: BoxFit.contain
                   )
               ),
@@ -284,7 +284,7 @@ class _DetailsPageState extends State<DetailsPage> {
             Container(
               padding:EdgeInsets.all(30),
               child: Center(
-                child: Image.network('https://picsum.photos/seed/bike/1000/700'),
+                child: Image.asset('assets/images/700.jpg'),
               ),
             ),
             Row(

@@ -37,8 +37,8 @@ class HomePage extends StatelessWidget {
                             radius: 25,
                             backgroundColor: Colors.white,
                             child: ClipOval(
-                              child: Image.network(
-                                'https://i.pravatar.cc/300?img=52',
+                              child: Image.asset(
+                                'assets/images/avatars_6.jpg',
                                 fit: BoxFit.contain,
                               ),
                             ),

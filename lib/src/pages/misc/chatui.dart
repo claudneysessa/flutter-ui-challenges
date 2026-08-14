@@ -24,7 +24,7 @@ class ChatUi extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.transparent,
                       image: DecorationImage(
-                          image: NetworkImage(friend.image), fit: BoxFit.cover),
+                          image: AssetImage(friend.image), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(50.0),
                     ),
                   ),
@@ -250,7 +250,7 @@ class OnlinePersonAction extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50.0),
                 image: DecorationImage(
-                    image: NetworkImage(personImagePath!), fit: BoxFit.cover),
+                    image: AssetImage(personImagePath!), fit: BoxFit.cover),
               ),
             ),
           ),

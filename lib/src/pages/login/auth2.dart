@@ -17,7 +17,7 @@ class AuthTwoPage extends StatelessWidget {
         height: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(backImg), fit: BoxFit.cover)),
+                image: AssetImage(backImg), fit: BoxFit.cover)),
         child: Stack(
           children: <Widget>[
             Center(

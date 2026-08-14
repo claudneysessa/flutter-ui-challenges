@@ -55,7 +55,7 @@ class InvitationPageOne extends StatelessWidget {
           children: <Widget>[
             ListTile(
               leading: CircleAvatar(
-                backgroundImage: NetworkImage(avatars[0]),
+                backgroundImage: AssetImage(avatars[0]),
               ),
               title: Text(
                 "Shakwat Shamim JD",
@@ -87,7 +87,7 @@ class InvitationPageOne extends StatelessWidget {
                           color: primary.withValues(alpha: 0.1),
                           padding: const EdgeInsets.all(16.0),
                           width: double.infinity,
-                          child: Image.network(
+                          child: Image.asset(
                             cake,
                             fit: BoxFit.contain,
                           )),

@@ -42,7 +42,7 @@ class SettingsTwoPage extends StatelessWidget {
                         color: Colors.white,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                          image: NetworkImage(avatars[1]),
+                          image: AssetImage(avatars[1]),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(

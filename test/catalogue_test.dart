@@ -56,20 +56,28 @@ void main() {
     expect(entries.length, greaterThanOrEqualTo(130));
   });
 
-  test('no demo still points at the dead Firebase bucket', () {
-    // The original author's Cloud Storage bucket was withdrawn from Firebase's
-    // no-cost plan and answers every request with HTTP 402. A reference
-    // creeping back in means blank screens, and nothing else in the suite
-    // would notice: a failed image throws nothing, it just paints nothing.
+  test('no demo loads an image from the network', () {
+    // The imagery is in this repository on purpose. It used to come from the
+    // original author's Firebase bucket, which was withdrawn and now returns
+    // 402, and from third-party hosts, two of which have since started
+    // returning 403 and one of which no longer resolves. A remote image throws
+    // nothing when it fails, it just paints nothing, so nothing else in this
+    // suite would notice a URL creeping back in.
     final offenders = <String>[];
+    // Word boundary so PNetworkImage, this project's own widget, is not a hit,
+    // and a scheme so the host names only match in URLs rather than in prose.
+    final remote = RegExp(
+      r'''(?<![A-Za-z])(NetworkImage|Image\.network)\(|https?://[^\s'"]*(firebasestorage|picsum\.photos|pravatar|pixabay|pexels|purepng|pngio)''',
+    );
+
     for (final file in Directory('lib').listSync(recursive: true)) {
       if (file is! File || !file.path.endsWith('.dart')) continue;
-      if (file.readAsStringSync().contains('firebasestorage.googleapis.com')) {
+      if (remote.hasMatch(file.readAsStringSync())) {
         offenders.add(file.path);
       }
     }
 
     expect(offenders, isEmpty,
-        reason: 'dead bucket referenced in: ${offenders.join(', ')}');
+        reason: 'remote imagery referenced in: ${offenders.join(', ')}');
   });
 }

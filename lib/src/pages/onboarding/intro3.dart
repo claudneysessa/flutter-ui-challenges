@@ -138,7 +138,7 @@ class _IntroThreePageState extends State<IntroThreePage> {
               width: 300,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(icon), fit: BoxFit.cover)),
+                      image: AssetImage(icon), fit: BoxFit.cover)),
             )),
           ),
           SizedBox(height: 50.0),

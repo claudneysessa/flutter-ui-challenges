@@ -191,7 +191,7 @@ class ProfileTwoPage extends StatelessWidget {
                 shape: CircleBorder(),
                 child: CircleAvatar(
                   radius: 40.0,
-                  backgroundImage: NetworkImage(avatars[0]),
+                  backgroundImage: AssetImage(avatars[0]),
                 ),
               ),
             ],

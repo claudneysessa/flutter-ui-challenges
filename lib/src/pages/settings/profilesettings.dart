@@ -81,8 +81,8 @@ class _EditPageState extends State<EditPage> {
                           shape: BoxShape.circle,
                           image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(
-                                "https://i.pravatar.cc/300?img=12",
+                              image: AssetImage(
+                                "assets/images/avatars_1.jpg",
                               ))),
                     ),
                     Positioned(

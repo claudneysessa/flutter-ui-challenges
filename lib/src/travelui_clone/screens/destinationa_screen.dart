@@ -46,7 +46,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30.0),
                     child: Image(
-                      image: NetworkImage(widget.destination!.imageUrl!),
+                      image: AssetImage(widget.destination!.imageUrl!),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -235,7 +235,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image(
                           width: 110.0,
-                          image: NetworkImage(
+                          image: AssetImage(
                             activity.imageUrl!,
                           ),
                           fit: BoxFit.cover,

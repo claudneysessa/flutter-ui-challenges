@@ -57,7 +57,7 @@ class EcommerceDetailOnePage extends StatelessWidget {
                   height: 320,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: NetworkImage(images[1]), fit: BoxFit.cover)),
+                          image: AssetImage(images[1]), fit: BoxFit.cover)),
                 ),
                 SizedBox(
                   height: 20.0,

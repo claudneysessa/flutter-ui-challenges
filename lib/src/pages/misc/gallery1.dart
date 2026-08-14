@@ -61,7 +61,7 @@ class GalleryPageOne extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage(images[index % images.length]),
+                        image: AssetImage(images[index % images.length]),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(10.0)),

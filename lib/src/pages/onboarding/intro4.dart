@@ -114,7 +114,7 @@ class _IntroFourPageState extends State<IntroFourPage> {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30.0),
           image: DecorationImage(
-              image: NetworkImage(icon),
+              image: AssetImage(icon),
               fit: BoxFit.cover,
               colorFilter:
                   ColorFilter.mode(Colors.black38, BlendMode.multiply)),

@@ -44,7 +44,7 @@ class LandingOnePage extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               image: DecorationImage(
-                                  image: NetworkImage(image),
+                                  image: AssetImage(image),
                                   fit: BoxFit.cover),
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(10.0),

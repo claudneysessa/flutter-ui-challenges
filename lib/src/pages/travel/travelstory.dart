@@ -8,10 +8,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 List<String> images = [
-'https://cdn.pixabay.com/photo/2017/03/10/00/19/nepal-2131320__340.jpg',
-'https://cdn.pixabay.com/photo/2020/06/27/10/32/travel-5345468__340.jpg',
-'https://cdn.pixabay.com/photo/2020/07/10/16/25/nepal-5391217__340.jpg',
-'https://cdn.pixabay.com/photo/2016/05/12/20/28/nepal-1388600__340.jpg',
+'assets/images/nepal-2131320-340.jpg',
+'assets/images/travel-5345468-340.jpg',
+'assets/images/nepal-5391217-340.jpg',
+'assets/images/nepal-1388600-340.jpg',
 ];
 List<String> title = [
   "We love Nepal",
@@ -199,7 +199,7 @@ class _TravelStoryPageState extends State<TravelStoryPage> {
                     padding: EdgeInsets.only(left: 18.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20.0),
-                      child: Image.network("https://cdn.pixabay.com/photo/2020/04/14/19/41/nepal-5044097__340.jpg",
+                      child: Image.asset("assets/images/nepal-5044097-340.jpg",
                           width: 296.0, height: 222.0),
                     ),
                   )
@@ -267,7 +267,7 @@ class CardScrollWidget extends StatelessWidget {
                   child: Stack(
                     fit: StackFit.expand,
                     children: <Widget>[
-                      Image.network(images[i], fit: BoxFit.cover),
+                      Image.asset(images[i], fit: BoxFit.cover),
                       Align(
                         alignment: Alignment.bottomLeft,
                         child: Column(

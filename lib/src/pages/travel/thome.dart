@@ -34,7 +34,7 @@ class TravelHomePage extends StatelessWidget {
                     ],
                   ),
                   CircleAvatar(
-                    backgroundImage: NetworkImage(avatars[3]),
+                    backgroundImage: AssetImage(avatars[3]),
                     radius: 40,
                   )
                 ],
