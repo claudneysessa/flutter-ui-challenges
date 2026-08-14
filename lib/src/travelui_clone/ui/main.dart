@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_challenges/src/travelui_clone/screens/home_screen.dart';
 
 class TravelUiClone extends StatelessWidget {
-    static const String path = 'lib/src/travelui_clone/main.dart';
+    static const String path = 'lib/src/travelui_clone/ui/main.dart';
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

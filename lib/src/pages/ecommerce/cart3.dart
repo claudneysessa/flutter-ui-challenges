@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
  */
 
 class CartThreePage extends StatefulWidget {
-  static final String path = "lib/src/pages/ecommerece/cart3.dart";
+  static final String path = "lib/src/pages/ecommerce/cart3.dart";
 
   @override
   _CartThreePageState createState() => _CartThreePageState();

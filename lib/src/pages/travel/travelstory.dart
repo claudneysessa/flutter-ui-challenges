@@ -20,7 +20,7 @@ List<String> title = [
   "Bhaktapur and patan darbar Temple",
 ];
 class TravelStoryPage extends StatefulWidget {
-    static final String path = "lib/src/pages/travel/tstory.dart";
+    static final String path = "lib/src/pages/travel/travelstory.dart";
   @override
   _TravelStoryPageState createState() => _TravelStoryPageState();
 }

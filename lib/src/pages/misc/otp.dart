@@ -110,10 +110,10 @@ class _OTPFieldsState extends State<OTPFields> {
 
   @override
   void dispose() {
-    super.dispose();
     pin2FN?.dispose();
     pin3FN?.dispose();
     pin4FN?.dispose();
+    super.dispose();
   }
 
   void nextField(String value, FocusNode? focusNode) {

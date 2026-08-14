@@ -75,7 +75,8 @@ class QuizFinishedPage extends StatelessWidget {
                 child: ListTile(
                   contentPadding: const EdgeInsets.all(16.0),
                   title: Text("Score", style: titleStyle),
-                  trailing: Text("${correct/questions.length * 100}%", style: trailingStyle),
+                  trailing: Text("${(correct / questions.length * 100).toStringAsFixed(0)}%",
+                      style: trailingStyle),
                 ),
               ),
               SizedBox(height: 10.0),
