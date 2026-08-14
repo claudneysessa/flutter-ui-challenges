@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 60.0,
         decoration: BoxDecoration(
           color: _selectedIndex == index
-              ? Theme.of(context).accentColor
+              ? Theme.of(context).colorScheme.secondary
               : Color(0xFFE7EBEE),
           borderRadius: BorderRadius.circular(30.0),
         ),

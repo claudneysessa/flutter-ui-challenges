@@ -21,7 +21,11 @@ class KhaltiApp extends StatelessWidget {
       title: 'Khalti',
       debugShowCheckedModeBanner: false,
       color: primary,
-      theme: ThemeData(primaryColor: primary, accentColor: accent),
+      theme: ThemeData(
+        primaryColor: primary,
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: primary).copyWith(secondary: accent),
+      ),
       routes: {
         "/": (_) => IntroPage(),
         "home": (_) => HomePage(),

@@ -83,7 +83,7 @@ class ProfileTenPage extends StatelessWidget {
                   const SizedBox(height: 10.0),
                   Text(
                     "Interests",
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(height: 5.0),
                   Wrap(

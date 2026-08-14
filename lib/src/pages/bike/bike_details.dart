@@ -219,7 +219,7 @@ class BikeDetailsPage extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Theme.of(context).accentColor,
+                backgroundColor: Theme.of(context).colorScheme.secondary,
                 foregroundColor: Colors.white,
               ),
               icon: Icon(Icons.message),

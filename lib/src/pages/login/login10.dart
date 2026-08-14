@@ -42,14 +42,14 @@ class LoginTenPage extends StatelessWidget {
                     children: [
                       Text(
                         "Hello",
-                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                        style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                               fontWeight: FontWeight.bold,
                               color: Colors.grey.shade800,
                             ),
                       ),
                       Text(
                         "Sign in your account",
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                       const SizedBox(height: 20.0),
                       TextField(
@@ -85,7 +85,7 @@ class LoginTenPage extends StatelessWidget {
                       const SizedBox(height: 10.0),
                       Text(
                         "Or Login using social media",
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

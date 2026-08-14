@@ -45,7 +45,7 @@ class QuotesOnePage extends StatelessWidget {
               },
               child: Text(
                 "Anyone who has never made a mistake has never tried anything new",
-                style: Theme.of(context).textTheme.headline3!.copyWith(
+                style: Theme.of(context).textTheme.displaySmall!.copyWith(
                       color: Colors.grey.shade800,
                     ),
               ),
@@ -62,7 +62,7 @@ class QuotesOnePage extends StatelessWidget {
               },
               child: Text(
                 "Albert einstein",
-                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       color: Colors.grey.shade600,
                       fontSize: 20.0,
                     ),

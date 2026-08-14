@@ -4,6 +4,7 @@
   */
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_ui_challenges/core/presentation/res/text_styles.dart';
 
 import 'main_menu.dart';
@@ -26,13 +27,14 @@ class _HomePageState extends State<HomePage> {
     return Theme(
       data: ThemeData(
         primarySwatch: Colors.deepOrange,
-        accentColor: Colors.indigo,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange)
+            .copyWith(secondary: Colors.indigo),
       ),
       child: Scaffold(
         backgroundColor: Colors.grey.shade300,
         appBar: AppBar(
           backgroundColor: Colors.grey.shade300,
-          brightness: Brightness.light,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
           iconTheme: IconThemeData(color: Colors.black),
           title: Text('Ui Challenges', style: blackText),
           elevation: 0,

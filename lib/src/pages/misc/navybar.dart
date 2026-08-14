@@ -179,10 +179,10 @@ class _FancyBottomNavigationState extends State<FancyBottomNavigation> {
   @override
   Widget build(BuildContext context) {
     activeColor =
-        (activeColor == null) ? Theme.of(context).accentColor : activeColor;
+        (activeColor == null) ? Theme.of(context).colorScheme.secondary : activeColor;
 
     backgroundColor = (backgroundColor == null)
-        ? Theme.of(context).bottomAppBarColor
+        ? Theme.of(context).bottomAppBarTheme.color ?? Theme.of(context).canvasColor
         : backgroundColor;
 
     return Container(

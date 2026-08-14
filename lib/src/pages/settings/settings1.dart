@@ -4,6 +4,7 @@
   */
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -37,7 +38,8 @@ class _SettingsOnePageState extends State<SettingsOnePage> {
         backgroundColor: _dark ? null : Colors.grey.shade200,
         appBar: AppBar(
           elevation: 0,
-          brightness: _getBrightness(),
+          systemOverlayStyle:
+              _dark ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark,
           iconTheme: IconThemeData(color: _dark ? Colors.white : Colors.black),
           backgroundColor: Colors.transparent,
           title: Text(

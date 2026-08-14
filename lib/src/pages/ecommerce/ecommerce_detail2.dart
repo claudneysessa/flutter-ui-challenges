@@ -4,6 +4,7 @@
   */
   
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
 import 'package:flutter_ui_challenges/src/widgets/network_image.dart';
 
@@ -88,7 +89,7 @@ class EcommerceDetailTwoPage extends StatelessWidget {
                 iconTheme: IconThemeData(
                   color: Colors.black
                 ),
-                brightness: Brightness.light,
+                systemOverlayStyle: SystemUiOverlayStyle.dark,
                 backgroundColor: Colors.transparent,
                 elevation: 0,
                 title: Text("Back to Shopping", style: TextStyle(color: Colors.black),),

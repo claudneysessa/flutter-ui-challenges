@@ -8,11 +8,12 @@ ThemeData buildDefaultTheme() {
   return ThemeData(
       primarySwatch: Colors.green,
       primaryColor: Colors.green,
-      accentColor: Colors.orange,
+      colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
+          .copyWith(secondary: Colors.orange),
       scaffoldBackgroundColor: bgColor,
       appBarTheme: AppBarTheme(),
       textTheme: TextTheme(
-        button: buttonText,
+        labelLarge: buttonText,
       ),
       buttonTheme: ButtonThemeData(
         minWidth: 150,

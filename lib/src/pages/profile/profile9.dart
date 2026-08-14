@@ -55,7 +55,7 @@ class ProfileNinePage extends StatelessWidget {
                 "Damodar Lohani",
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
+                    .titleLarge!
                     .copyWith(color: Colors.white),
                 textAlign: TextAlign.center,
               ),
@@ -87,12 +87,12 @@ class ProfileNinePage extends StatelessWidget {
                           children: [
                             Text(
                               "255K",
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             ),
                             const SizedBox(height: 10.0),
                             Text(
                               "Followers",
-                              style: Theme.of(context).textTheme.subtitle1,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],
                         ),
@@ -102,12 +102,12 @@ class ProfileNinePage extends StatelessWidget {
                           children: [
                             Text(
                               "105K",
-                              style: Theme.of(context).textTheme.headline4,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             ),
                             const SizedBox(height: 10.0),
                             Text(
                               "Following",
-                              style: Theme.of(context).textTheme.subtitle1,
+                              style: Theme.of(context).textTheme.titleMedium,
                             ),
                           ],
                         ),
@@ -119,7 +119,7 @@ class ProfileNinePage extends StatelessWidget {
               const SizedBox(height: 20.0),
               Text(
                 "Favorite",
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               const SizedBox(height: 10.0),
               SizedBox(
@@ -139,7 +139,7 @@ class ProfileNinePage extends StatelessWidget {
               const SizedBox(height: 20.0),
               Text(
                 "Friends",
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               Container(
                 height: 60,
@@ -240,7 +240,7 @@ class ProfileNinePage extends StatelessWidget {
               title,
               style: Theme.of(context)
                   .textTheme
-                  .headline6!
+                  .titleLarge!
                   .copyWith(color: Colors.white),
             ),
           ),

@@ -128,7 +128,7 @@ class _BottomExpandableAppBarState extends State<BottomExpandableAppBar> {
                   height: panelState! * finalHeight + widget.appBarHeight + widget.bottomOffset,
                   decoration: widget.expandedDecoration ??
                       BoxDecoration(
-                        color: widget.expandedBackColor ?? Theme.of(context).backgroundColor,
+                        color: widget.expandedBackColor ?? Theme.of(context).colorScheme.surface,
                         borderRadius: BorderRadius.circular(25),
                       ),
                   child: Opacity(opacity: panelState! > 0.25 ? 1 : panelState! * 4, child: widget.expandedBody),
@@ -137,7 +137,7 @@ class _BottomExpandableAppBarState extends State<BottomExpandableAppBar> {
             ),
           ),
           Container(
-            color: widget.bottomAppBarColor ?? Theme.of(context).bottomAppBarColor,
+            color: widget.bottomAppBarColor ?? Theme.of(context).bottomAppBarTheme.color ?? Theme.of(context).canvasColor,
             height: widget.appBarHeight,
             child: widget.bottomAppBarBody,
           ),

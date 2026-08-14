@@ -74,7 +74,7 @@ class BlogHomeOnePage extends StatelessWidget {
           ),
         ),
         child: Scaffold(
-          backgroundColor: Theme.of(context).buttonColor,
+          backgroundColor: Colors.grey.shade300,
           appBar: AppBar(
             centerTitle: true,
             title: Text('Categories'),

@@ -20,7 +20,7 @@ class ProfileElevenPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "my profile",
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
@@ -50,7 +50,7 @@ class ProfileElevenPage extends StatelessWidget {
                       child: Icon(Icons.camera_alt),
                       onPressed: (){},
                       textColor: Colors.white,
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                       elevation: 0,
                       shape: CircleBorder(),
                     ),

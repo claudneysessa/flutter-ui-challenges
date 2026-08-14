@@ -4,6 +4,7 @@
   */
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 final List<String> weekDays = ["S", "M", "T", "W", "T", "F", "S"];
 final List<int> dates = [5, 6, 7, 8, 9, 10, 11];
@@ -24,7 +25,7 @@ class TodoTwoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.light,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
         iconTheme: IconThemeData(color: Colors.black),
         title: Text('My Week'),
         backgroundColor: Colors.white,

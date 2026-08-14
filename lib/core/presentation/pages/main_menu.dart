@@ -96,7 +96,7 @@ class _MainMenuState extends State<MainMenu> {
           item.title,
           style: Theme.of(context)
               .textTheme
-              .subtitle1!
+              .titleMedium!
               .copyWith(color: Colors.black87),
         ),
         onTap: () => _openPage(context, item, OpenMode.PREVIEW),

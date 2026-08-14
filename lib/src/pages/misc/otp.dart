@@ -64,7 +64,7 @@ class OTPPage extends StatelessWidget {
             const SizedBox(height: 30.0),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.pink,
+                backgroundColor: Colors.pink,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0)),
                 padding: const EdgeInsets.all(16.0),

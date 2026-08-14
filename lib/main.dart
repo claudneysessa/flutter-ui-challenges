@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.grey.shade300,
         primarySwatch: Colors.red,
-        accentColor: Colors.indigo,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
+            .copyWith(secondary: Colors.indigo),
       ),
       home: NewHomePage(),
       routes: {

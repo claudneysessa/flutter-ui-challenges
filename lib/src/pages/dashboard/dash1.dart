@@ -15,7 +15,7 @@ class DashboardOnePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).buttonColor,
+      backgroundColor: Colors.grey.shade300,
       appBar: _buildAppBar(context),
       body: _buildBody(context),
     );
@@ -169,7 +169,7 @@ class DashboardOnePage extends StatelessWidget {
                       children: <Widget>[
                         CircleAvatar(
                           radius: 20,
-                          backgroundColor: Theme.of(context).buttonColor,
+                          backgroundColor: Colors.grey.shade300,
                           child: activity.icon != null
                               ? Icon(
                                   activity.icon,

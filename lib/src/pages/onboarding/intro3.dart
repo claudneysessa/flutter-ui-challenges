@@ -42,7 +42,7 @@ class _IntroThreePageState extends State<IntroThreePage> {
               height: 300,
               margin: const EdgeInsets.only(left: 8.0, right: 8.0),
               decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   borderRadius: BorderRadius.circular(5.0)),
             ),
           ),
